@@ -1,0 +1,523 @@
+/************************
+ FORMS PREDEFINED STYLES
+************************/
+
+body {
+    .ui-inputtext {
+        background: transparent no-repeat;
+        background-image: -webkit-gradient(linear, left top, left bottom, from($primaryColor), to($primaryColor)), -webkit-gradient(linear, left top, left bottom, from($inputBorderColor), to($inputBorderColor));
+        background-image: linear-gradient(to bottom, $primaryColor, $primaryColor), linear-gradient(to bottom, $inputBorderColor, $inputBorderColor);
+        background-size: 0 2px, 100% 1px;
+        background-position: 50% 100%, 50% 100%;
+        -webkit-transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+        transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+        border-width: 0;
+        padding: 2px;
+        font-size: $fontSize;
+        @include border-radius(0px);
+
+        &:focus,
+        &.ui-state-focus {
+            border-width: 0;
+            background-size: 100% 2px, 100% 1px;
+            outline: none;
+            padding-bottom: 2px;
+        }
+
+        &:disabled,
+        &.ui-state-disabled {
+            border-bottom: 1px dotted;
+        }
+
+        &.ui-widget-content {
+            border-width: 1px;
+            background: transparent;
+            background-image: none;
+        }
+
+        &.ui-state-error {
+            border-color: $inputInvalidBorderColor;
+            background-image: -webkit-gradient(linear, left top, left bottom, from($inputInvalidBorderColor), to($inputInvalidBorderColor)), -webkit-gradient(linear, left top, left bottom, from($inputInvalidBorderColor), to($inputInvalidBorderColor));
+            background-image: linear-gradient(to bottom, $inputInvalidBorderColor, $inputInvalidBorderColor), linear-gradient(to bottom, $inputInvalidBorderColor, $inputInvalidBorderColor);
+        }
+    }
+
+    .ui-widget-header:not(.ui-dataview-header) {
+        .ui-inputtext {
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff)), -webkit-gradient(linear, left top, left bottom, from(desaturate(lighten($inputAccentColor, 25%), 25%)), to(desaturate(lighten($inputAccentColor, 25%), 25%)));
+            background-image: linear-gradient(to bottom, #ffffff, #ffffff), linear-gradient(to bottom, desaturate(lighten($inputAccentColor, 25%), 25%), desaturate(lighten($inputAccentColor, 25%), 25%));
+            padding-bottom: 2px;
+        }
+    }
+
+
+    .md-inputfield {
+        display: block;
+        position: relative;
+
+        >label {
+            color: #999;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            left: 5px;
+            top: 1px;
+            transition: $transitionDuration ease all;
+            -moz-transition: $transitionDuration ease all;
+            -webkit-transition: $transitionDuration ease all;
+        }
+
+        input:focus~label,
+        input.ui-state-filled~label,
+        .ui-inputwrapper-focus~label,
+        .ui-inputwrapper-filled~label {
+            top: -20px;
+            font-size: 12px;
+            color: $primaryColor;
+        }
+
+        .input:-webkit-autofill~label {
+            top: -20px;
+            font-size: 12px;
+            color: $primaryColor;
+        }
+
+        input.ng-dirty.ng-invalid~label {
+            color: $inputErrorTextColor;
+        }
+
+        .ui-message {
+            &.ui-messages-error {
+                background-color: transparent;
+                border: 0 none;
+                margin: 0px;
+                color: $inputErrorTextColor;
+                font-size: $errorMessageFontSize;
+            }
+        }
+
+        &.md-inputfield-fill {
+            input {
+                background-color: transparent;
+                padding-left: 4px;
+                padding-right: 4px;
+                padding-top: 4px;
+            }
+
+            label {
+                top: 2px;
+            }
+        }
+
+        &.md-inputfield-box {
+            input {
+                background-color: transparent;
+                padding-left: 4px;
+                padding-right: 4px;
+                padding-top: 24px;
+            }
+
+            label {
+                top: 23px;
+            }
+
+            input:focus~label,
+            input.ui-state-filled~label,
+            .ui-inputwrapper-focus~label,
+            .ui-inputwrapper-filled~label {
+                top: 1px;
+            }
+
+            .input:-webkit-autofill~label {
+                top: 1px;
+            }
+        }
+    }
+
+    .ui-material-message {
+        &.ui-message {
+            &.ui-messages-error {
+                background-color: transparent;
+                border: 0 none;
+                margin: 0px;
+                color: #e62a10;
+                font-size: .75em;
+            }
+        }
+    }
+
+    .ui-button,
+    .ui-datepicker-buttonpane>button {
+        overflow: hidden;
+        background-color: $primaryColor;
+        color: #FFFFFF;
+        height: 2.143em;
+        font-size: $fontSize;
+        font-family: $fontContent;
+        padding: 0 1em;
+        border: 0 none;
+        -webkit-box-shadow: 0 1px 2.5px 0 rgba(0, 0, 0, 0.26), 0 1px 5px 0 rgba(0, 0, 0, 0.16);
+        box-shadow: 0 1px 2.5px 0 rgba(0, 0, 0, 0.26), 0 1px 5px 0 rgba(0, 0, 0, 0.16);
+        @include transition(background-color $transitionDuration);
+
+        &:enabled:not(:focus):hover {
+            background-color: $primaryDarkColor;
+        }
+
+        &:enabled:focus {
+            outline: 0 none;
+            background-color: lighten($primaryColor, 10%);
+        }
+
+        .ui-button-text {
+            padding: 0;
+            line-height: 2.143em;
+        }
+
+        .pi {
+            color: #FFFFFF;
+        }
+
+        &.ui-button-icon-only {
+            @include border-radius(50%);
+            width: 2.143em;
+            height: 2.143em;
+        }
+
+        &.ui-button-text-icon-left {
+            padding-left: 2.571em;
+        }
+
+        &.ui-button-text-icon-right {
+            padding-right: 2.571em;
+        }
+
+        &.secondary-btn {
+            background-color: $accentColor;
+            color: $accentTextColor;
+
+            &:enabled:not(:focus):hover {
+                background-color: $accentDarkColor;
+            }
+
+            &:focus {
+                outline: 0 none;
+                background-color: lighten($accentColor, 10%);
+            }
+        }
+
+        &.blue-grey-btn {
+            background-color: #607D8B;
+
+            &:enabled:not(:focus):hover {
+                background-color: #37474F;
+            }
+
+            &:focus {
+                outline: 0 none;
+                background-color: lighten(#607D8B, 10%);
+            }
+        }
+
+        &.cyan-btn {
+            background-color: #00BCD4;
+
+            &:enabled:not(:focus):hover {
+                background-color: #00838F;
+            }
+
+            &:focus {
+                outline: 0 none;
+                background-color: lighten(#00BCD4, 10%);
+            }
+        }
+
+        &.teal-btn {
+            background-color: #009688;
+
+            &:enabled:not(:focus):hover {
+                background-color: #00695C;
+            }
+
+            &:focus {
+                outline: 0 none;
+                background-color: lighten(#009688, 10%);
+            }
+        }
+
+        &.red-btn {
+            background-color: #F44336;
+
+            &:enabled:not(:focus):hover {
+                background-color: #C62828;
+            }
+
+            &:focus {
+                outline: 0 none;
+                background-color: lighten(#F44336, 10%);
+            }
+        }
+
+        &.green-btn {
+            background-color: #4CAF50;
+
+            &:enabled:not(:focus):hover {
+                background-color: #2E7D32;
+            }
+
+            &:focus {
+                outline: 0 none;
+                background-color: lighten(#4CAF50, 10%);
+            }
+        }
+
+        &.deep-orange-btn {
+            background-color: #FF5722;
+
+            &:enabled:not(:focus):hover {
+                background-color: #D84315;
+            }
+
+            &:focus {
+                outline: 0 none;
+                background-color: lighten(#FF5722, 10%);
+            }
+        }
+
+        &.purple-btn {
+            background-color: #673AB7;
+
+            &:enabled:not(:focus):hover {
+                background-color: #4527A0;
+            }
+
+            &:focus {
+                outline: 0 none;
+                background-color: lighten(#673AB7, 10%);
+            }
+        }
+
+        &.pink-btn {
+            background-color: #E91E63;
+
+            &:enabled:not(:focus):hover {
+                background-color: #AD1457;
+            }
+
+            &:focus {
+                outline: 0 none;
+                background-color: lighten(#E91E63, 10%);
+            }
+        }
+
+        &.amber-btn {
+            background-color: #FFC107;
+            color: #212121;
+
+            &:enabled:not(:focus):hover {
+                background-color: #FF8F00;
+            }
+
+            &:focus {
+                outline: 0 none;
+                background-color: lighten(#FFC107, 10%);
+            }
+        }
+
+        &.orange-btn {
+            background-color: #FF9800;
+
+            &:enabled:not(:focus):hover {
+                background-color: #EF6C00;
+            }
+
+            &:focus {
+                outline: 0 none;
+                background-color: lighten(#FF9800, 10%);
+            }
+        }
+
+        &.brown-btn {
+            background-color: #795548;
+
+            &:enabled:not(:focus):hover {
+                background-color: #4E342E;
+            }
+
+            &:focus {
+                outline: 0 none;
+                background-color: lighten(#795548, 10%);
+            }
+        }
+
+        &.indigo-btn {
+            background-color: #3F51B5;
+
+            &:enabled:not(:focus):hover {
+                background-color: #283593;
+            }
+
+            &:focus {
+                outline: 0 none;
+                background-color: lighten(#3F51B5, 10%);
+            }
+        }
+
+        &.flat {
+            @include no-shadow();
+        }
+    }
+
+    .ui-button.ui-state-default.ui-button-secondary,
+    .ui-buttonset.ui-button-secondary>.ui-button.ui-state-default {
+        color: $textColor;
+        background-color: #ffffff;
+
+        .ui-button-icon-left {
+            color: $textSecondaryColor;
+        }
+
+        .ui-button-icon-right {
+            color: $textSecondaryColor;
+        }
+
+        &:enabled:hover {
+            @include hover-element();
+        }
+
+        &:enabled:focus {
+            background-color: darken(#ffffff, 10%);
+        }
+    }
+
+    .ui-button.ui-state-default.ui-button-info,
+    .ui-buttonset.ui-button-info>.ui-button.ui-state-default {
+        color: #ffffff;
+        background-color: #03A9F4;
+
+        &:enabled:hover {
+            background-color: #0277BD;
+        }
+
+        &:enabled:focus {
+            outline: 0 none;
+            background-color: lighten(#03A9F4, 10%);
+        }
+    }
+
+    .ui-button.ui-state-default.ui-button-success,
+    .ui-buttonset.ui-button-success>.ui-button.ui-state-default {
+        color: #ffffff;
+        background-color: #4CAF50;
+
+        &:enabled:hover {
+            background-color: #2E7D32;
+        }
+
+        &:enabled:focus {
+            outline: 0 none;
+            background-color: lighten(#4CAF50, 10%);
+        }
+    }
+
+    .ui-button.ui-state-default.ui-button-warning,
+    .ui-buttonset.ui-button-warning>.ui-button.ui-state-default {
+        color: #212121;
+        background-color: #FFC107;
+
+        &:enabled:hover {
+            background-color: #FF8F00;
+        }
+
+        &:enabled:focus {
+            outline: 0 none;
+            background-color: lighten(#FFC107, 10%);
+        }
+    }
+
+    .ui-button.ui-state-default.ui-button-danger,
+    .ui-buttonset.ui-button-danger>.ui-button.ui-state-default {
+        color: #ffffff;
+        background-color: #F44336;
+
+        &:enabled:hover {
+            background-color: #C62828;
+        }
+
+        &:enabled:focus {
+            outline: 0 none;
+            background-color: lighten(#F44336, 10%);
+        }
+    }
+
+    .ui-buttonset {
+        .ui-button {
+            &:not(.ui-state-disabled):not(.ui-state-active):hover {
+                background-color: $primaryDarkColor;
+            }
+
+            &.ui-state-active {
+                background-color: $accentColor;
+                color: $accentTextColor;
+            }
+        }
+    }
+
+    .ui-togglebutton {
+        &:not(.ui-state-active):not(.ui-state-disabled):hover {
+            background-color: $primaryDarkColor;
+        }
+
+        &.ui-state-active {
+            background-color: $accentColor;
+            color: $accentTextColor;
+        }
+    }
+
+    .ui-splitbutton {
+        @include border-radius($borderRadius + 1);
+        -webkit-box-shadow: 0 1px 2.5px 0 rgba(0, 0, 0, 0.26), 0 1px 5px 0 rgba(0, 0, 0, 0.16);
+        box-shadow: 0 1px 2.5px 0 rgba(0, 0, 0, 0.26), 0 1px 5px 0 rgba(0, 0, 0, 0.16);
+
+        >.ui-button {
+            @include no-shadow();
+            vertical-align: top;
+
+            &:active {
+                background-color: lighten($primaryColor, 10%);
+            }
+        }
+
+        .ui-splitbutton-menubutton {
+            height: 2.143em;
+            @include border-radius-left(0);
+            @include border-radius-right(3px);
+        }
+
+        .ui-menu {
+            width: 100%;
+            min-width: 12.5em;
+        }
+    }
+
+    .ui-selectbutton {
+        .ui-button {
+            &:not(.ui-state-disabled):not(.ui-state-active):hover {
+                background-color: $primaryDarkColor;
+            }
+
+            &:not(.ui-state-disabled):not(.ui-state-active):focus {
+                outline: 0 none;
+                background-color: lighten($primaryColor, 10%);
+            }
+        }
+    }
+
+    .ui-fluid {
+        .ui-splitbutton {
+            .ui-button:first-child {
+                width: calc(100% - 2em);
+            }
+        }
+    }
+}

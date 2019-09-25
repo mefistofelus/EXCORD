@@ -1,0 +1,66 @@
+/* Roboto-300 Light */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'),
+    url("../fonts/Roboto/RobotoLight.woff2") format('woff2'),
+    /* Super Modern Browsers */
+    url("../fonts/Roboto/RobotoLight.woff") format('woff'),
+    /* Modern Browsers */
+    url("../fonts/Roboto/RobotoLight.ttf") format('truetype'),
+    /* Safari, Android, iOS */
+}
+
+/* Roboto-Regular - 400 */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'),
+    url("../fonts/Roboto/Roboto.woff2") format('woff2'),
+    /* Super Modern Browsers */
+    url("../fonts/Roboto/Roboto.woff") format('woff'),
+    /* Modern Browsers */
+    url("../fonts/Roboto/Roboto.ttf") format('truetype'),
+    /* Safari, Android, iOS */
+}
+
+/* Roboto-700 - Bold */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+    url("../fonts/Roboto/RobotoBold.woff2") format('woff2'),
+    /* Super Modern Browsers */
+    url("../fonts/Roboto/RobotoBold.woff") format('woff'),
+    /* Modern Browsers */
+    url("../fonts/Roboto/RobotoBold.ttf") format('truetype'),
+    /* Safari, Android, iOS */
+}
+
+/* Gotham Pro -700 - Bold */
+@font-face {
+  font-family: 'Gotham Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
+    url('../fonts/GothamPro/GothamPro-Bold.woff2') format('woff2'),
+    url('../fonts/GothamPro/GothamPro-Bold.woff') format('woff'),
+    url('../fonts/GothamPro/GothamPro-Bold.ttf') format('truetype');
+}
+
+/* Material Icons */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/MaterialIcons/MaterialIcons-Regular.eot");
+  /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url("../fonts/MaterialIcons/MaterialIcons-Regular.woff2") format('woff2'),
+    url("../fonts/MaterialIcons/MaterialIcons-Regular.woff") format('woff'),
+    url("../fonts/MaterialIcons/MaterialIcons-Regular.ttf") format('truetype');
+}

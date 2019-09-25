@@ -1,0 +1,58 @@
+/******************
+ DEFAULT STYLES
+******************/
+html {
+  font-size: ($fontSize)+px;
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-family: 'Roboto',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 1rem;
+  color: $textColor;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+  background-color: $bodyBgColor;
+}
+
+*,
+*::before,
+*::after {
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  color: $primaryColor;
+}
+
+p {
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
