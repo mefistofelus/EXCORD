@@ -1,0 +1,40 @@
+// Стилизация формы (обертки)
+.container {
+  margin: 0 auto;
+  max-width: rem(840);
+}
+
+.auth-block {
+  padding-top: 14vh;
+
+  @include _979 {
+    padding-top: 25vh;
+  }
+
+  @include _767 {
+    padding-top: 18vh;
+    padding-left: rem(15);
+    padding-right: rem(15);
+  }
+
+  @include _560 {
+    padding-top: 5vh;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include _360 {
+    padding-top: 0;
+  }
+
+  .auth-block_inner {
+    background-color: $bodyBgColor;
+    border: 1px solid $borderColor;
+    border-radius: $borderRadius;
+
+
+    @include _560 {
+      padding: 0;
+    }
+  }
+}

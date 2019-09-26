@@ -1,6 +1,4 @@
-/**********************************
-***JUST SIMPLE IMPORT SCSS-FILES***
-**********************************/
+// JUST SIMPLE IMPORT SCSS-FILES
 @import "variables";
 @import "fonts";
 @import "mixins";
@@ -14,4 +12,14 @@
 @import "login";
 @import "forms";
 @import "helpers";
-@import "main";
+
+// IMPORT BLOCKS
+@import "components/auth-body"; // Стилизация корневых элементов
+@import "components/auth-form_image"; // стилизация фонового изображения
+@import "components/auth-block"; // Стилизация формы (обертки)
+@import "components/auth-form_header"; // Стилизация шапки
+@import "components/form-text"; // Стилизация заголовка формы (над инпутами)
+@import "components/auth-form_inner-block"; // Стилизация блока-обертки для полей регистрации (инпутов и кнопок соц.сетей)
+@import "components/form__wrapper--left"; // Стилизация левого блока формы
+@import "components/form__wrapper--right"; // Стилизация правого блока формы
+@import "components/footer-content"; // Стилизация футера

@@ -1,0 +1,57 @@
+// Стилизация правого блока формы
+.form__wrapper--right {
+  padding-left: rem(40);
+  padding-top: rem(37);
+
+  @include _767 {
+    padding-left: 0;
+  }
+
+  .auth-form_social-btn {
+    @extend button;
+    margin-bottom: rem(20);
+    color: $textBlackColor;
+    padding: rem(10) 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+
+    .social-btn_icon {
+      width: rem(60);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: rem(60);
+        height: 100%;
+        width: 1px;
+        background-color: rgba(#000000, .1);
+      }
+    }
+
+    .social-btn_descr {
+      padding-left: rem(20);
+    }
+
+    &.btn-facebook {
+      color: $textLightColor;
+      background-color: $btnBgFacebook;
+    }
+
+    &.btn-instagram {
+      background-color: $btnBgInstagram;
+    }
+
+    &.btn-google {
+      background-color: $btnBgGoogle;
+    }
+  }
+}

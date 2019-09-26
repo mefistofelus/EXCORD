@@ -1,0 +1,107 @@
+// Стилизация левого блока формы
+.form__wrapper--left {
+  padding-right: rem(40);
+  border-right: 1px solid $dividerBlackColor;
+  position: relative;
+
+  &::after {
+    padding: rem(10);
+    content: 'или';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: $bodyBgColor;
+    color: $textBlackColor;
+
+    @include _767 {
+      display: none;
+    }
+  }
+
+  @include _767 {
+    padding-right: 0;
+    border-right: none;
+    position: static;
+
+  }
+
+  .inputfield__wrapper {
+    @include _560 {
+      height: 0px;
+      opacity: 0;
+      position: relative;
+      -webkit-transform: translateY(-180px);
+      transform: translateY(-180px);
+      -webkit-transition: all .3s ease-in-out;
+      -webkit-transition: all $transitionDuration ease-in-out;
+      transition: all $transitionDuration ease-in-out;
+    }
+  }
+
+  .auth-form {
+    overflow: hidden;
+
+    &:active .inputfield__wrapper,
+    &:hover .inputfield__wrapper {
+      @include _560 {
+        height: rem(180);
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+
+    }
+  }
+
+  .md-inputfield {
+    margin-bottom: rem(40);
+
+    &>label {
+      padding-left: rem(16);
+      position: absolute;
+      top: rem(15);
+      font-size: rem(16);
+      line-height: 24px;
+      vertical-align: top;
+      letter-spacing: .15px;
+      color: $inputBorderColor;
+    }
+
+    input:focus~label {
+      padding-left: rem(14);
+      top: rem(-2);
+      font-size: rem(12);
+      color: $inputAccentColor;
+    }
+
+    i.pi {
+      position: absolute;
+      right: rem(10);
+      bottom: rem(10);
+      font-size: $iconFontSize;
+    }
+
+    .ui-inputtext {
+      width: 100%;
+      height: rem(54);
+      padding-top: rem(22);
+      padding-left: rem(14);
+      font-size: rem(16);
+      caret-color: $inputAccentColor;
+    }
+  }
+
+  .ui-button {
+    width: 100%;
+  }
+
+  .auth-form_btn {
+    @extend button;
+    color: $textLightColor;
+    background-color: $primaryColor;
+    text-transform: capitalize;
+  }
+
+}

@@ -1,0 +1,29 @@
+// стилизация фонового изображения
+.auth-form_image {
+  padding-top: 4vh;
+  max-width: rem(1500);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: -1;
+
+  @include _1024 {
+    width: 105%;
+  }
+
+  @include _767 {
+    width: 100%;
+    padding: 1vh rem(80);
+  }
+
+  @include _360 {
+    display: none;
+  }
+
+  .auth-form_image-bg {
+    max-width: 100%;
+  }
+}

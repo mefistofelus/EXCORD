@@ -1,0 +1,20 @@
+// Стилизация заголовка формы (над инпутами)
+.form-text {
+  text-align: center;
+
+  &_title {
+    margin-bottom: rem(8);
+    font-family: $fontHeading;
+    font-size: rem(24);
+    color: $accentTextColor;
+  }
+
+  &_description {
+    font-size: 14px;
+    color: $textSecondaryColor;
+
+    @include _560 {
+      padding: 0 rem(15);
+    }
+  }
+}

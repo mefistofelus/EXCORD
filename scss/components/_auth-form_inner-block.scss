@@ -1,0 +1,17 @@
+//Стилизация блока-обертки для полей регистрации
+.auth-form_inner-block {
+  padding: rem(80) rem(52);
+
+  @include _1024 {
+    padding: rem(40) rem(15);
+  }
+
+  @include _767 {
+    padding-left: rem(15);
+    padding-right: rem(15);
+  }
+
+  @include _360 {
+    padding-right: rem(15);
+  }
+}

@@ -1,0 +1,11 @@
+.footer-content {
+  padding-top: rem(40);
+
+  .auth-form_footer {
+    margin: 0 auto;
+    max-width: rem(280);
+    font-size: rem(12);
+    line-height: 17px;
+    color: $textSecondaryColor;
+  }
+}
