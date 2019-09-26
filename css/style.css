@@ -2896,7 +2896,7 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 
 @media all and (max-width: 560px) {
   .auth-block .form-header {
-    padding: 1.42857rem 3.42857rem;
+    padding: 1.42857rem 3.35714rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -3013,10 +3013,29 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 }
 
 @media all and (max-width: 560px) {
-  .auth-block .auth-form_inner-block .form__wrapper--left .inputfield__wrapper {
+  .auth-block .auth-form_inner-block .inputfield__wrapper {
+    height: 0px;
+    opacity: 0;
+    position: relative;
+    -webkit-transform: translateY(-180px);
+    transform: translateY(-180px);
     -webkit-transition: all .3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+  }
+}
+
+.auth-block .auth-form_inner-block .auth-form {
+  overflow: hidden;
+}
+
+@media all and (max-width: 560px) {
+  .auth-block .auth-form_inner-block .auth-form:active .inputfield__wrapper,
+  .auth-block .auth-form_inner-block .auth-form:hover .inputfield__wrapper {
+    height: 12.85714rem;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -3077,12 +3096,6 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   color: #FFFFFF;
   background-color: #1976d2;
   text-transform: capitalize;
-}
-
-@media all and (max-width: 360px) {
-  .auth-block .auth-form_inner-block .auth-form_btn .auth-form_btn:focus .inputfield__wrapper {
-    height: 100%;
-  }
 }
 
 .auth-block .auth-form_inner-block .auth-form_social-btn {

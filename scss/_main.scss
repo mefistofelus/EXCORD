@@ -93,7 +93,7 @@ html {
     border-radius: $borderRadius;
 
     @include _560 {
-      padding: rem(20) rem(48);
+      padding: rem(20) rem(47);
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -119,7 +119,6 @@ html {
 
       }
 
-      @include _360 {}
     }
 
     .form-logo {
@@ -194,12 +193,33 @@ html {
 
       }
 
-      .inputfield__wrapper {
+    }
+
+    .inputfield__wrapper {
+      @include _560 {
+        height: 0px;
+        opacity: 0;
+        position: relative;
+        -webkit-transform: translateY(-180px);
+        transform: translateY(-180px);
+        -webkit-transition: all .3s ease-in-out;
+        -webkit-transition: all $transitionDuration ease-in-out;
+        transition: all $transitionDuration ease-in-out;
+      }
+    }
+
+    .auth-form {
+      overflow: hidden;
+
+      &:active .inputfield__wrapper,
+      &:hover .inputfield__wrapper {
         @include _560 {
-          -webkit-transition: all .3s ease-in-out;
-          -webkit-transition: all $transitionDuration ease-in-out;
-          transition: all $transitionDuration ease-in-out;
+          height: rem(180);
+          opacity: 1;
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
         }
+
       }
     }
 
@@ -210,6 +230,7 @@ html {
       @include _767 {
         padding-left: 0;
       }
+
     }
 
     .md-inputfield {
@@ -259,12 +280,6 @@ html {
       color: $textLightColor;
       background-color: $primaryColor;
       text-transform: capitalize;
-
-      @include _360 {
-        .auth-form_btn:focus .inputfield__wrapper {
-          height: 100%;
-        }
-      }
     }
 
     .auth-form_social-btn {
