@@ -3,6 +3,14 @@
   padding-left: rem(40);
   padding-top: rem(37);
 
+  .reg-form {
+    padding-top: rem(45);
+
+    @include _767 {
+      padding-top: 0;
+    }
+  }
+
   @include _767 {
     padding-left: 0;
   }

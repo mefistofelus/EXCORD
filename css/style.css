@@ -1819,7 +1819,7 @@ li {
 }
 
 /* Button style */
-button, .form__wrapper--left .auth-form_btn, .form__wrapper--right .auth-form_social-btn {
+button, .form__wrapper--left .auth-form .auth-form_btn, .form__wrapper--right .auth-form_social-btn, .form__wrapper--left .register-form .auth-form_btn {
   padding: 0.71429rem 0.71429rem;
   position: relative;
   width: 100%;
@@ -1832,7 +1832,7 @@ button, .form__wrapper--left .auth-form_btn, .form__wrapper--right .auth-form_so
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-button:hover, .form__wrapper--left .auth-form_btn:hover, .form__wrapper--right .auth-form_social-btn:hover {
+button:hover, .form__wrapper--left .auth-form .auth-form_btn:hover, .form__wrapper--right .auth-form_social-btn:hover, .form__wrapper--left .register-form .auth-form_btn:hover {
   -webkit-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
 }
@@ -1936,6 +1936,10 @@ body .ui-inputtext:disabled, body .ui-inputtext.ui-state-disabled {
   border-bottom: 1px dotted;
 }
 
+body .ui-inputtext:valid {
+  border-color: #4CAF50;
+}
+
 body .ui-inputtext.ui-widget-content {
   border-width: 1px;
   background: transparent;
@@ -1987,14 +1991,14 @@ body .md-inputfield .input:-webkit-autofill ~ label {
 }
 
 body .md-inputfield input.ng-dirty.ng-invalid ~ label {
-  color: #e62a10;
+  color: #4CAF50;
 }
 
 body .md-inputfield .ui-message.ui-messages-error {
   background-color: transparent;
   border: 0 none;
   margin: 0px;
-  color: #e62a10;
+  color: #4CAF50;
   font-size: 11px;
 }
 
@@ -2041,10 +2045,12 @@ body .ui-material-message.ui-message.ui-messages-error {
 
 body .ui-button,
 body .ui-datepicker-buttonpane > button,
-body .form__wrapper--left .ui-datepicker-buttonpane > .auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .auth-form_btn {
   overflow: hidden;
   background-color: #1976d2;
   color: #FFFFFF;
@@ -2061,48 +2067,58 @@ body .form__wrapper--right .ui-datepicker-buttonpane > .auth-form_social-btn,
 
 body .ui-button:enabled:not(:focus):hover,
 body .ui-datepicker-buttonpane > button:enabled:not(:focus):hover,
-body .form__wrapper--left .ui-datepicker-buttonpane > .auth-form_btn:enabled:not(:focus):hover,
-.form__wrapper--left body .ui-datepicker-buttonpane > .auth-form_btn:enabled:not(:focus):hover,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .auth-form_btn:enabled:not(:focus):hover,
 body .form__wrapper--right .ui-datepicker-buttonpane > .auth-form_social-btn:enabled:not(:focus):hover,
-.form__wrapper--right body .ui-datepicker-buttonpane > .auth-form_social-btn:enabled:not(:focus):hover {
+.form__wrapper--right body .ui-datepicker-buttonpane > .auth-form_social-btn:enabled:not(:focus):hover,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .auth-form_btn:enabled:not(:focus):hover {
   background-color: #0D47A1;
 }
 
 body .ui-button:enabled:focus,
 body .ui-datepicker-buttonpane > button:enabled:focus,
-body .form__wrapper--left .ui-datepicker-buttonpane > .auth-form_btn:enabled:focus,
-.form__wrapper--left body .ui-datepicker-buttonpane > .auth-form_btn:enabled:focus,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .auth-form_btn:enabled:focus,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .auth-form_btn:enabled:focus,
 body .form__wrapper--right .ui-datepicker-buttonpane > .auth-form_social-btn:enabled:focus,
-.form__wrapper--right body .ui-datepicker-buttonpane > .auth-form_social-btn:enabled:focus {
+.form__wrapper--right body .ui-datepicker-buttonpane > .auth-form_social-btn:enabled:focus,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .auth-form_btn:enabled:focus,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .auth-form_btn:enabled:focus {
   outline: 0 none;
   background-color: #378fe7;
 }
 
 body .ui-button .ui-button-text,
 body .ui-datepicker-buttonpane > button .ui-button-text,
-body .form__wrapper--left .ui-datepicker-buttonpane > .auth-form_btn .ui-button-text,
-.form__wrapper--left body .ui-datepicker-buttonpane > .auth-form_btn .ui-button-text,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .auth-form_btn .ui-button-text,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .auth-form_btn .ui-button-text,
 body .form__wrapper--right .ui-datepicker-buttonpane > .auth-form_social-btn .ui-button-text,
-.form__wrapper--right body .ui-datepicker-buttonpane > .auth-form_social-btn .ui-button-text {
+.form__wrapper--right body .ui-datepicker-buttonpane > .auth-form_social-btn .ui-button-text,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .auth-form_btn .ui-button-text,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .auth-form_btn .ui-button-text {
   padding: 0;
   line-height: 2.143em;
 }
 
 body .ui-button .pi,
 body .ui-datepicker-buttonpane > button .pi,
-body .form__wrapper--left .ui-datepicker-buttonpane > .auth-form_btn .pi,
-.form__wrapper--left body .ui-datepicker-buttonpane > .auth-form_btn .pi,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .auth-form_btn .pi,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .auth-form_btn .pi,
 body .form__wrapper--right .ui-datepicker-buttonpane > .auth-form_social-btn .pi,
-.form__wrapper--right body .ui-datepicker-buttonpane > .auth-form_social-btn .pi {
+.form__wrapper--right body .ui-datepicker-buttonpane > .auth-form_social-btn .pi,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .auth-form_btn .pi,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .auth-form_btn .pi {
   color: #FFFFFF;
 }
 
 body .ui-button.ui-button-icon-only,
 body .ui-datepicker-buttonpane > button.ui-button-icon-only,
-body .form__wrapper--left .ui-datepicker-buttonpane > .ui-button-icon-only.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .ui-button-icon-only.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .ui-button-icon-only.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .ui-button-icon-only.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .ui-button-icon-only.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .ui-button-icon-only.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .ui-button-icon-only.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .ui-button-icon-only.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .ui-button-icon-only.auth-form_btn {
   border-radius: 50%;
   width: 2.143em;
   height: 2.143em;
@@ -2110,394 +2126,478 @@ body .form__wrapper--right .ui-datepicker-buttonpane > .ui-button-icon-only.auth
 
 body .ui-button.ui-button-text-icon-left,
 body .ui-datepicker-buttonpane > button.ui-button-text-icon-left,
-body .form__wrapper--left .ui-datepicker-buttonpane > .ui-button-text-icon-left.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .ui-button-text-icon-left.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .ui-button-text-icon-left.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .ui-button-text-icon-left.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .ui-button-text-icon-left.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .ui-button-text-icon-left.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .ui-button-text-icon-left.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .ui-button-text-icon-left.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .ui-button-text-icon-left.auth-form_btn {
   padding-left: 2.571em;
 }
 
 body .ui-button.ui-button-text-icon-right,
 body .ui-datepicker-buttonpane > button.ui-button-text-icon-right,
-body .form__wrapper--left .ui-datepicker-buttonpane > .ui-button-text-icon-right.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .ui-button-text-icon-right.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .ui-button-text-icon-right.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .ui-button-text-icon-right.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .ui-button-text-icon-right.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .ui-button-text-icon-right.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .ui-button-text-icon-right.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .ui-button-text-icon-right.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .ui-button-text-icon-right.auth-form_btn {
   padding-right: 2.571em;
 }
 
 body .ui-button.secondary-btn,
 body .ui-datepicker-buttonpane > button.secondary-btn,
-body .form__wrapper--left .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .secondary-btn.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .secondary-btn.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .secondary-btn.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn {
   background-color: #FFC107;
   color: #000000;
 }
 
 body .ui-button.secondary-btn:enabled:not(:focus):hover,
 body .ui-datepicker-buttonpane > button.secondary-btn:enabled:not(:focus):hover,
-body .form__wrapper--left .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn:enabled:not(:focus):hover,
-.form__wrapper--left body .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn:enabled:not(:focus):hover,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn:enabled:not(:focus):hover,
 body .form__wrapper--right .ui-datepicker-buttonpane > .secondary-btn.auth-form_social-btn:enabled:not(:focus):hover,
-.form__wrapper--right body .ui-datepicker-buttonpane > .secondary-btn.auth-form_social-btn:enabled:not(:focus):hover {
+.form__wrapper--right body .ui-datepicker-buttonpane > .secondary-btn.auth-form_social-btn:enabled:not(:focus):hover,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn:enabled:not(:focus):hover {
   background-color: #FFA000;
 }
 
 body .ui-button.secondary-btn:focus,
 body .ui-datepicker-buttonpane > button.secondary-btn:focus,
-body .form__wrapper--left .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn:focus,
-.form__wrapper--left body .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn:focus,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn:focus,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn:focus,
 body .form__wrapper--right .ui-datepicker-buttonpane > .secondary-btn.auth-form_social-btn:focus,
-.form__wrapper--right body .ui-datepicker-buttonpane > .secondary-btn.auth-form_social-btn:focus {
+.form__wrapper--right body .ui-datepicker-buttonpane > .secondary-btn.auth-form_social-btn:focus,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn:focus,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .secondary-btn.auth-form_btn:focus {
   outline: 0 none;
   background-color: #ffce3a;
 }
 
 body .ui-button.blue-grey-btn,
 body .ui-datepicker-buttonpane > button.blue-grey-btn,
-body .form__wrapper--left .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn {
   background-color: #607D8B;
 }
 
 body .ui-button.blue-grey-btn:enabled:not(:focus):hover,
 body .ui-datepicker-buttonpane > button.blue-grey-btn:enabled:not(:focus):hover,
-body .form__wrapper--left .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn:enabled:not(:focus):hover,
-.form__wrapper--left body .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn:enabled:not(:focus):hover,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn:enabled:not(:focus):hover,
 body .form__wrapper--right .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_social-btn:enabled:not(:focus):hover,
-.form__wrapper--right body .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_social-btn:enabled:not(:focus):hover {
+.form__wrapper--right body .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_social-btn:enabled:not(:focus):hover,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn:enabled:not(:focus):hover {
   background-color: #37474F;
 }
 
 body .ui-button.blue-grey-btn:focus,
 body .ui-datepicker-buttonpane > button.blue-grey-btn:focus,
-body .form__wrapper--left .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn:focus,
-.form__wrapper--left body .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn:focus,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn:focus,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn:focus,
 body .form__wrapper--right .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_social-btn:focus,
-.form__wrapper--right body .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_social-btn:focus {
+.form__wrapper--right body .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_social-btn:focus,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn:focus,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .blue-grey-btn.auth-form_btn:focus {
   outline: 0 none;
   background-color: #7b96a3;
 }
 
 body .ui-button.cyan-btn,
 body .ui-datepicker-buttonpane > button.cyan-btn,
-body .form__wrapper--left .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .cyan-btn.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .cyan-btn.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .cyan-btn.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn {
   background-color: #00BCD4;
 }
 
 body .ui-button.cyan-btn:enabled:not(:focus):hover,
 body .ui-datepicker-buttonpane > button.cyan-btn:enabled:not(:focus):hover,
-body .form__wrapper--left .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn:enabled:not(:focus):hover,
-.form__wrapper--left body .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn:enabled:not(:focus):hover,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn:enabled:not(:focus):hover,
 body .form__wrapper--right .ui-datepicker-buttonpane > .cyan-btn.auth-form_social-btn:enabled:not(:focus):hover,
-.form__wrapper--right body .ui-datepicker-buttonpane > .cyan-btn.auth-form_social-btn:enabled:not(:focus):hover {
+.form__wrapper--right body .ui-datepicker-buttonpane > .cyan-btn.auth-form_social-btn:enabled:not(:focus):hover,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn:enabled:not(:focus):hover {
   background-color: #00838F;
 }
 
 body .ui-button.cyan-btn:focus,
 body .ui-datepicker-buttonpane > button.cyan-btn:focus,
-body .form__wrapper--left .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn:focus,
-.form__wrapper--left body .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn:focus,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn:focus,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn:focus,
 body .form__wrapper--right .ui-datepicker-buttonpane > .cyan-btn.auth-form_social-btn:focus,
-.form__wrapper--right body .ui-datepicker-buttonpane > .cyan-btn.auth-form_social-btn:focus {
+.form__wrapper--right body .ui-datepicker-buttonpane > .cyan-btn.auth-form_social-btn:focus,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn:focus,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .cyan-btn.auth-form_btn:focus {
   outline: 0 none;
   background-color: #08e3ff;
 }
 
 body .ui-button.teal-btn,
 body .ui-datepicker-buttonpane > button.teal-btn,
-body .form__wrapper--left .ui-datepicker-buttonpane > .teal-btn.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .teal-btn.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .teal-btn.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .teal-btn.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .teal-btn.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .teal-btn.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .teal-btn.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .teal-btn.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .teal-btn.auth-form_btn {
   background-color: #009688;
 }
 
 body .ui-button.teal-btn:enabled:not(:focus):hover,
 body .ui-datepicker-buttonpane > button.teal-btn:enabled:not(:focus):hover,
-body .form__wrapper--left .ui-datepicker-buttonpane > .teal-btn.auth-form_btn:enabled:not(:focus):hover,
-.form__wrapper--left body .ui-datepicker-buttonpane > .teal-btn.auth-form_btn:enabled:not(:focus):hover,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .teal-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .teal-btn.auth-form_btn:enabled:not(:focus):hover,
 body .form__wrapper--right .ui-datepicker-buttonpane > .teal-btn.auth-form_social-btn:enabled:not(:focus):hover,
-.form__wrapper--right body .ui-datepicker-buttonpane > .teal-btn.auth-form_social-btn:enabled:not(:focus):hover {
+.form__wrapper--right body .ui-datepicker-buttonpane > .teal-btn.auth-form_social-btn:enabled:not(:focus):hover,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .teal-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .teal-btn.auth-form_btn:enabled:not(:focus):hover {
   background-color: #00695C;
 }
 
 body .ui-button.teal-btn:focus,
 body .ui-datepicker-buttonpane > button.teal-btn:focus,
-body .form__wrapper--left .ui-datepicker-buttonpane > .teal-btn.auth-form_btn:focus,
-.form__wrapper--left body .ui-datepicker-buttonpane > .teal-btn.auth-form_btn:focus,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .teal-btn.auth-form_btn:focus,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .teal-btn.auth-form_btn:focus,
 body .form__wrapper--right .ui-datepicker-buttonpane > .teal-btn.auth-form_social-btn:focus,
-.form__wrapper--right body .ui-datepicker-buttonpane > .teal-btn.auth-form_social-btn:focus {
+.form__wrapper--right body .ui-datepicker-buttonpane > .teal-btn.auth-form_social-btn:focus,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .teal-btn.auth-form_btn:focus,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .teal-btn.auth-form_btn:focus {
   outline: 0 none;
   background-color: #00c9b6;
 }
 
 body .ui-button.red-btn,
 body .ui-datepicker-buttonpane > button.red-btn,
-body .form__wrapper--left .ui-datepicker-buttonpane > .red-btn.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .red-btn.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .red-btn.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .red-btn.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .red-btn.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .red-btn.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .red-btn.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .red-btn.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .red-btn.auth-form_btn {
   background-color: #F44336;
 }
 
 body .ui-button.red-btn:enabled:not(:focus):hover,
 body .ui-datepicker-buttonpane > button.red-btn:enabled:not(:focus):hover,
-body .form__wrapper--left .ui-datepicker-buttonpane > .red-btn.auth-form_btn:enabled:not(:focus):hover,
-.form__wrapper--left body .ui-datepicker-buttonpane > .red-btn.auth-form_btn:enabled:not(:focus):hover,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .red-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .red-btn.auth-form_btn:enabled:not(:focus):hover,
 body .form__wrapper--right .ui-datepicker-buttonpane > .red-btn.auth-form_social-btn:enabled:not(:focus):hover,
-.form__wrapper--right body .ui-datepicker-buttonpane > .red-btn.auth-form_social-btn:enabled:not(:focus):hover {
+.form__wrapper--right body .ui-datepicker-buttonpane > .red-btn.auth-form_social-btn:enabled:not(:focus):hover,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .red-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .red-btn.auth-form_btn:enabled:not(:focus):hover {
   background-color: #C62828;
 }
 
 body .ui-button.red-btn:focus,
 body .ui-datepicker-buttonpane > button.red-btn:focus,
-body .form__wrapper--left .ui-datepicker-buttonpane > .red-btn.auth-form_btn:focus,
-.form__wrapper--left body .ui-datepicker-buttonpane > .red-btn.auth-form_btn:focus,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .red-btn.auth-form_btn:focus,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .red-btn.auth-form_btn:focus,
 body .form__wrapper--right .ui-datepicker-buttonpane > .red-btn.auth-form_social-btn:focus,
-.form__wrapper--right body .ui-datepicker-buttonpane > .red-btn.auth-form_social-btn:focus {
+.form__wrapper--right body .ui-datepicker-buttonpane > .red-btn.auth-form_social-btn:focus,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .red-btn.auth-form_btn:focus,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .red-btn.auth-form_btn:focus {
   outline: 0 none;
   background-color: #f77066;
 }
 
 body .ui-button.green-btn,
 body .ui-datepicker-buttonpane > button.green-btn,
-body .form__wrapper--left .ui-datepicker-buttonpane > .green-btn.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .green-btn.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .green-btn.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .green-btn.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .green-btn.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .green-btn.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .green-btn.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .green-btn.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .green-btn.auth-form_btn {
   background-color: #4CAF50;
 }
 
 body .ui-button.green-btn:enabled:not(:focus):hover,
 body .ui-datepicker-buttonpane > button.green-btn:enabled:not(:focus):hover,
-body .form__wrapper--left .ui-datepicker-buttonpane > .green-btn.auth-form_btn:enabled:not(:focus):hover,
-.form__wrapper--left body .ui-datepicker-buttonpane > .green-btn.auth-form_btn:enabled:not(:focus):hover,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .green-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .green-btn.auth-form_btn:enabled:not(:focus):hover,
 body .form__wrapper--right .ui-datepicker-buttonpane > .green-btn.auth-form_social-btn:enabled:not(:focus):hover,
-.form__wrapper--right body .ui-datepicker-buttonpane > .green-btn.auth-form_social-btn:enabled:not(:focus):hover {
+.form__wrapper--right body .ui-datepicker-buttonpane > .green-btn.auth-form_social-btn:enabled:not(:focus):hover,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .green-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .green-btn.auth-form_btn:enabled:not(:focus):hover {
   background-color: #2E7D32;
 }
 
 body .ui-button.green-btn:focus,
 body .ui-datepicker-buttonpane > button.green-btn:focus,
-body .form__wrapper--left .ui-datepicker-buttonpane > .green-btn.auth-form_btn:focus,
-.form__wrapper--left body .ui-datepicker-buttonpane > .green-btn.auth-form_btn:focus,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .green-btn.auth-form_btn:focus,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .green-btn.auth-form_btn:focus,
 body .form__wrapper--right .ui-datepicker-buttonpane > .green-btn.auth-form_social-btn:focus,
-.form__wrapper--right body .ui-datepicker-buttonpane > .green-btn.auth-form_social-btn:focus {
+.form__wrapper--right body .ui-datepicker-buttonpane > .green-btn.auth-form_social-btn:focus,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .green-btn.auth-form_btn:focus,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .green-btn.auth-form_btn:focus {
   outline: 0 none;
   background-color: #6ec071;
 }
 
 body .ui-button.deep-orange-btn,
 body .ui-datepicker-buttonpane > button.deep-orange-btn,
-body .form__wrapper--left .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn {
   background-color: #FF5722;
 }
 
 body .ui-button.deep-orange-btn:enabled:not(:focus):hover,
 body .ui-datepicker-buttonpane > button.deep-orange-btn:enabled:not(:focus):hover,
-body .form__wrapper--left .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn:enabled:not(:focus):hover,
-.form__wrapper--left body .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn:enabled:not(:focus):hover,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn:enabled:not(:focus):hover,
 body .form__wrapper--right .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_social-btn:enabled:not(:focus):hover,
-.form__wrapper--right body .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_social-btn:enabled:not(:focus):hover {
+.form__wrapper--right body .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_social-btn:enabled:not(:focus):hover,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn:enabled:not(:focus):hover {
   background-color: #D84315;
 }
 
 body .ui-button.deep-orange-btn:focus,
 body .ui-datepicker-buttonpane > button.deep-orange-btn:focus,
-body .form__wrapper--left .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn:focus,
-.form__wrapper--left body .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn:focus,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn:focus,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn:focus,
 body .form__wrapper--right .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_social-btn:focus,
-.form__wrapper--right body .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_social-btn:focus {
+.form__wrapper--right body .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_social-btn:focus,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn:focus,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .deep-orange-btn.auth-form_btn:focus {
   outline: 0 none;
   background-color: #ff7e55;
 }
 
 body .ui-button.purple-btn,
 body .ui-datepicker-buttonpane > button.purple-btn,
-body .form__wrapper--left .ui-datepicker-buttonpane > .purple-btn.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .purple-btn.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .purple-btn.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .purple-btn.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .purple-btn.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .purple-btn.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .purple-btn.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .purple-btn.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .purple-btn.auth-form_btn {
   background-color: #673AB7;
 }
 
 body .ui-button.purple-btn:enabled:not(:focus):hover,
 body .ui-datepicker-buttonpane > button.purple-btn:enabled:not(:focus):hover,
-body .form__wrapper--left .ui-datepicker-buttonpane > .purple-btn.auth-form_btn:enabled:not(:focus):hover,
-.form__wrapper--left body .ui-datepicker-buttonpane > .purple-btn.auth-form_btn:enabled:not(:focus):hover,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .purple-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .purple-btn.auth-form_btn:enabled:not(:focus):hover,
 body .form__wrapper--right .ui-datepicker-buttonpane > .purple-btn.auth-form_social-btn:enabled:not(:focus):hover,
-.form__wrapper--right body .ui-datepicker-buttonpane > .purple-btn.auth-form_social-btn:enabled:not(:focus):hover {
+.form__wrapper--right body .ui-datepicker-buttonpane > .purple-btn.auth-form_social-btn:enabled:not(:focus):hover,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .purple-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .purple-btn.auth-form_btn:enabled:not(:focus):hover {
   background-color: #4527A0;
 }
 
 body .ui-button.purple-btn:focus,
 body .ui-datepicker-buttonpane > button.purple-btn:focus,
-body .form__wrapper--left .ui-datepicker-buttonpane > .purple-btn.auth-form_btn:focus,
-.form__wrapper--left body .ui-datepicker-buttonpane > .purple-btn.auth-form_btn:focus,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .purple-btn.auth-form_btn:focus,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .purple-btn.auth-form_btn:focus,
 body .form__wrapper--right .ui-datepicker-buttonpane > .purple-btn.auth-form_social-btn:focus,
-.form__wrapper--right body .ui-datepicker-buttonpane > .purple-btn.auth-form_social-btn:focus {
+.form__wrapper--right body .ui-datepicker-buttonpane > .purple-btn.auth-form_social-btn:focus,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .purple-btn.auth-form_btn:focus,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .purple-btn.auth-form_btn:focus {
   outline: 0 none;
   background-color: #8259cb;
 }
 
 body .ui-button.pink-btn,
 body .ui-datepicker-buttonpane > button.pink-btn,
-body .form__wrapper--left .ui-datepicker-buttonpane > .pink-btn.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .pink-btn.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .pink-btn.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .pink-btn.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .pink-btn.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .pink-btn.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .pink-btn.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .pink-btn.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .pink-btn.auth-form_btn {
   background-color: #E91E63;
 }
 
 body .ui-button.pink-btn:enabled:not(:focus):hover,
 body .ui-datepicker-buttonpane > button.pink-btn:enabled:not(:focus):hover,
-body .form__wrapper--left .ui-datepicker-buttonpane > .pink-btn.auth-form_btn:enabled:not(:focus):hover,
-.form__wrapper--left body .ui-datepicker-buttonpane > .pink-btn.auth-form_btn:enabled:not(:focus):hover,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .pink-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .pink-btn.auth-form_btn:enabled:not(:focus):hover,
 body .form__wrapper--right .ui-datepicker-buttonpane > .pink-btn.auth-form_social-btn:enabled:not(:focus):hover,
-.form__wrapper--right body .ui-datepicker-buttonpane > .pink-btn.auth-form_social-btn:enabled:not(:focus):hover {
+.form__wrapper--right body .ui-datepicker-buttonpane > .pink-btn.auth-form_social-btn:enabled:not(:focus):hover,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .pink-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .pink-btn.auth-form_btn:enabled:not(:focus):hover {
   background-color: #AD1457;
 }
 
 body .ui-button.pink-btn:focus,
 body .ui-datepicker-buttonpane > button.pink-btn:focus,
-body .form__wrapper--left .ui-datepicker-buttonpane > .pink-btn.auth-form_btn:focus,
-.form__wrapper--left body .ui-datepicker-buttonpane > .pink-btn.auth-form_btn:focus,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .pink-btn.auth-form_btn:focus,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .pink-btn.auth-form_btn:focus,
 body .form__wrapper--right .ui-datepicker-buttonpane > .pink-btn.auth-form_social-btn:focus,
-.form__wrapper--right body .ui-datepicker-buttonpane > .pink-btn.auth-form_social-btn:focus {
+.form__wrapper--right body .ui-datepicker-buttonpane > .pink-btn.auth-form_social-btn:focus,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .pink-btn.auth-form_btn:focus,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .pink-btn.auth-form_btn:focus {
   outline: 0 none;
   background-color: #ee4c83;
 }
 
 body .ui-button.amber-btn,
 body .ui-datepicker-buttonpane > button.amber-btn,
-body .form__wrapper--left .ui-datepicker-buttonpane > .amber-btn.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .amber-btn.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .amber-btn.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .amber-btn.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .amber-btn.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .amber-btn.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .amber-btn.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .amber-btn.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .amber-btn.auth-form_btn {
   background-color: #FFC107;
   color: #212121;
 }
 
 body .ui-button.amber-btn:enabled:not(:focus):hover,
 body .ui-datepicker-buttonpane > button.amber-btn:enabled:not(:focus):hover,
-body .form__wrapper--left .ui-datepicker-buttonpane > .amber-btn.auth-form_btn:enabled:not(:focus):hover,
-.form__wrapper--left body .ui-datepicker-buttonpane > .amber-btn.auth-form_btn:enabled:not(:focus):hover,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .amber-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .amber-btn.auth-form_btn:enabled:not(:focus):hover,
 body .form__wrapper--right .ui-datepicker-buttonpane > .amber-btn.auth-form_social-btn:enabled:not(:focus):hover,
-.form__wrapper--right body .ui-datepicker-buttonpane > .amber-btn.auth-form_social-btn:enabled:not(:focus):hover {
+.form__wrapper--right body .ui-datepicker-buttonpane > .amber-btn.auth-form_social-btn:enabled:not(:focus):hover,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .amber-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .amber-btn.auth-form_btn:enabled:not(:focus):hover {
   background-color: #FF8F00;
 }
 
 body .ui-button.amber-btn:focus,
 body .ui-datepicker-buttonpane > button.amber-btn:focus,
-body .form__wrapper--left .ui-datepicker-buttonpane > .amber-btn.auth-form_btn:focus,
-.form__wrapper--left body .ui-datepicker-buttonpane > .amber-btn.auth-form_btn:focus,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .amber-btn.auth-form_btn:focus,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .amber-btn.auth-form_btn:focus,
 body .form__wrapper--right .ui-datepicker-buttonpane > .amber-btn.auth-form_social-btn:focus,
-.form__wrapper--right body .ui-datepicker-buttonpane > .amber-btn.auth-form_social-btn:focus {
+.form__wrapper--right body .ui-datepicker-buttonpane > .amber-btn.auth-form_social-btn:focus,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .amber-btn.auth-form_btn:focus,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .amber-btn.auth-form_btn:focus {
   outline: 0 none;
   background-color: #ffce3a;
 }
 
 body .ui-button.orange-btn,
 body .ui-datepicker-buttonpane > button.orange-btn,
-body .form__wrapper--left .ui-datepicker-buttonpane > .orange-btn.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .orange-btn.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .orange-btn.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .orange-btn.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .orange-btn.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .orange-btn.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .orange-btn.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .orange-btn.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .orange-btn.auth-form_btn {
   background-color: #FF9800;
 }
 
 body .ui-button.orange-btn:enabled:not(:focus):hover,
 body .ui-datepicker-buttonpane > button.orange-btn:enabled:not(:focus):hover,
-body .form__wrapper--left .ui-datepicker-buttonpane > .orange-btn.auth-form_btn:enabled:not(:focus):hover,
-.form__wrapper--left body .ui-datepicker-buttonpane > .orange-btn.auth-form_btn:enabled:not(:focus):hover,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .orange-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .orange-btn.auth-form_btn:enabled:not(:focus):hover,
 body .form__wrapper--right .ui-datepicker-buttonpane > .orange-btn.auth-form_social-btn:enabled:not(:focus):hover,
-.form__wrapper--right body .ui-datepicker-buttonpane > .orange-btn.auth-form_social-btn:enabled:not(:focus):hover {
+.form__wrapper--right body .ui-datepicker-buttonpane > .orange-btn.auth-form_social-btn:enabled:not(:focus):hover,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .orange-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .orange-btn.auth-form_btn:enabled:not(:focus):hover {
   background-color: #EF6C00;
 }
 
 body .ui-button.orange-btn:focus,
 body .ui-datepicker-buttonpane > button.orange-btn:focus,
-body .form__wrapper--left .ui-datepicker-buttonpane > .orange-btn.auth-form_btn:focus,
-.form__wrapper--left body .ui-datepicker-buttonpane > .orange-btn.auth-form_btn:focus,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .orange-btn.auth-form_btn:focus,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .orange-btn.auth-form_btn:focus,
 body .form__wrapper--right .ui-datepicker-buttonpane > .orange-btn.auth-form_social-btn:focus,
-.form__wrapper--right body .ui-datepicker-buttonpane > .orange-btn.auth-form_social-btn:focus {
+.form__wrapper--right body .ui-datepicker-buttonpane > .orange-btn.auth-form_social-btn:focus,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .orange-btn.auth-form_btn:focus,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .orange-btn.auth-form_btn:focus {
   outline: 0 none;
   background-color: #ffad33;
 }
 
 body .ui-button.brown-btn,
 body .ui-datepicker-buttonpane > button.brown-btn,
-body .form__wrapper--left .ui-datepicker-buttonpane > .brown-btn.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .brown-btn.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .brown-btn.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .brown-btn.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .brown-btn.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .brown-btn.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .brown-btn.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .brown-btn.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .brown-btn.auth-form_btn {
   background-color: #795548;
 }
 
 body .ui-button.brown-btn:enabled:not(:focus):hover,
 body .ui-datepicker-buttonpane > button.brown-btn:enabled:not(:focus):hover,
-body .form__wrapper--left .ui-datepicker-buttonpane > .brown-btn.auth-form_btn:enabled:not(:focus):hover,
-.form__wrapper--left body .ui-datepicker-buttonpane > .brown-btn.auth-form_btn:enabled:not(:focus):hover,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .brown-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .brown-btn.auth-form_btn:enabled:not(:focus):hover,
 body .form__wrapper--right .ui-datepicker-buttonpane > .brown-btn.auth-form_social-btn:enabled:not(:focus):hover,
-.form__wrapper--right body .ui-datepicker-buttonpane > .brown-btn.auth-form_social-btn:enabled:not(:focus):hover {
+.form__wrapper--right body .ui-datepicker-buttonpane > .brown-btn.auth-form_social-btn:enabled:not(:focus):hover,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .brown-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .brown-btn.auth-form_btn:enabled:not(:focus):hover {
   background-color: #4E342E;
 }
 
 body .ui-button.brown-btn:focus,
 body .ui-datepicker-buttonpane > button.brown-btn:focus,
-body .form__wrapper--left .ui-datepicker-buttonpane > .brown-btn.auth-form_btn:focus,
-.form__wrapper--left body .ui-datepicker-buttonpane > .brown-btn.auth-form_btn:focus,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .brown-btn.auth-form_btn:focus,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .brown-btn.auth-form_btn:focus,
 body .form__wrapper--right .ui-datepicker-buttonpane > .brown-btn.auth-form_social-btn:focus,
-.form__wrapper--right body .ui-datepicker-buttonpane > .brown-btn.auth-form_social-btn:focus {
+.form__wrapper--right body .ui-datepicker-buttonpane > .brown-btn.auth-form_social-btn:focus,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .brown-btn.auth-form_btn:focus,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .brown-btn.auth-form_btn:focus {
   outline: 0 none;
   background-color: #996b5b;
 }
 
 body .ui-button.indigo-btn,
 body .ui-datepicker-buttonpane > button.indigo-btn,
-body .form__wrapper--left .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .indigo-btn.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .indigo-btn.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .indigo-btn.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn {
   background-color: #3F51B5;
 }
 
 body .ui-button.indigo-btn:enabled:not(:focus):hover,
 body .ui-datepicker-buttonpane > button.indigo-btn:enabled:not(:focus):hover,
-body .form__wrapper--left .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn:enabled:not(:focus):hover,
-.form__wrapper--left body .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn:enabled:not(:focus):hover,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn:enabled:not(:focus):hover,
 body .form__wrapper--right .ui-datepicker-buttonpane > .indigo-btn.auth-form_social-btn:enabled:not(:focus):hover,
-.form__wrapper--right body .ui-datepicker-buttonpane > .indigo-btn.auth-form_social-btn:enabled:not(:focus):hover {
+.form__wrapper--right body .ui-datepicker-buttonpane > .indigo-btn.auth-form_social-btn:enabled:not(:focus):hover,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn:enabled:not(:focus):hover,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn:enabled:not(:focus):hover {
   background-color: #283593;
 }
 
 body .ui-button.indigo-btn:focus,
 body .ui-datepicker-buttonpane > button.indigo-btn:focus,
-body .form__wrapper--left .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn:focus,
-.form__wrapper--left body .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn:focus,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn:focus,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn:focus,
 body .form__wrapper--right .ui-datepicker-buttonpane > .indigo-btn.auth-form_social-btn:focus,
-.form__wrapper--right body .ui-datepicker-buttonpane > .indigo-btn.auth-form_social-btn:focus {
+.form__wrapper--right body .ui-datepicker-buttonpane > .indigo-btn.auth-form_social-btn:focus,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn:focus,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .indigo-btn.auth-form_btn:focus {
   outline: 0 none;
   background-color: #606fc7;
 }
 
 body .ui-button.flat,
 body .ui-datepicker-buttonpane > button.flat,
-body .form__wrapper--left .ui-datepicker-buttonpane > .flat.auth-form_btn,
-.form__wrapper--left body .ui-datepicker-buttonpane > .flat.auth-form_btn,
+body .form__wrapper--left .auth-form .ui-datepicker-buttonpane > .flat.auth-form_btn,
+.form__wrapper--left .auth-form body .ui-datepicker-buttonpane > .flat.auth-form_btn,
 body .form__wrapper--right .ui-datepicker-buttonpane > .flat.auth-form_social-btn,
-.form__wrapper--right body .ui-datepicker-buttonpane > .flat.auth-form_social-btn {
+.form__wrapper--right body .ui-datepicker-buttonpane > .flat.auth-form_social-btn,
+body .form__wrapper--left .register-form .ui-datepicker-buttonpane > .flat.auth-form_btn,
+.form__wrapper--left .register-form body .ui-datepicker-buttonpane > .flat.auth-form_btn {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -3003,11 +3103,11 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   }
 }
 
-.form__wrapper--left .md-inputfield {
+.form__wrapper--left .auth-form .md-inputfield {
   margin-bottom: 2.85714rem;
 }
 
-.form__wrapper--left .md-inputfield > label {
+.form__wrapper--left .auth-form .md-inputfield > label {
   padding-left: 1.14286rem;
   position: absolute;
   top: 1.07143rem;
@@ -3018,21 +3118,21 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   color: #BDBDBD;
 }
 
-.form__wrapper--left .md-inputfield input:focus ~ label {
+.form__wrapper--left .auth-form .md-inputfield input:focus ~ label {
   padding-left: 1rem;
   top: -0.14286rem;
   font-size: 0.85714rem;
   color: #006EFC;
 }
 
-.form__wrapper--left .md-inputfield i.pi {
+.form__wrapper--left .auth-form .md-inputfield i.pi {
   position: absolute;
   right: 0.71429rem;
   bottom: 0.71429rem;
   font-size: 32px;
 }
 
-.form__wrapper--left .md-inputfield .ui-inputtext {
+.form__wrapper--left .auth-form .md-inputfield .ui-inputtext {
   width: 100%;
   height: 3.85714rem;
   padding-top: 1.57143rem;
@@ -3041,11 +3141,11 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   caret-color: #006EFC;
 }
 
-.form__wrapper--left .ui-button {
+.form__wrapper--left .auth-form .ui-button {
   width: 100%;
 }
 
-.form__wrapper--left .auth-form_btn {
+.form__wrapper--left .auth-form .auth-form_btn {
   color: #FFFFFF;
   background-color: #1976d2;
   text-transform: capitalize;
@@ -3054,6 +3154,16 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 .form__wrapper--right {
   padding-left: 2.85714rem;
   padding-top: 2.64286rem;
+}
+
+.form__wrapper--right .reg-form {
+  padding-top: 3.21429rem;
+}
+
+@media all and (max-width: 767px) {
+  .form__wrapper--right .reg-form {
+    padding-top: 0;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -3119,4 +3229,117 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   font-size: 0.85714rem;
   line-height: 17px;
   color: #757575;
+}
+
+.footer-content .footer-agriment {
+  font-size: 1rem;
+  text-decoration: underline;
+  color: #006EFC;
+}
+
+.form__wrapper--left {
+  padding-right: 2.85714rem;
+  border-right: 1px solid #353535;
+  position: relative;
+}
+
+.form__wrapper--left::after {
+  padding: 0.71429rem;
+  content: 'или';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  color: #252525;
+}
+
+@media all and (max-width: 767px) {
+  .form__wrapper--left::after {
+    display: none;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .form__wrapper--left {
+    padding-right: 0;
+    border-right: none;
+    position: static;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .form__wrapper--left .inputfield__wrapper {
+    height: 0px;
+    opacity: 0;
+    position: relative;
+    -webkit-transform: translateY(-275px);
+    transform: translateY(-275px);
+    -webkit-transition: all .3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.form__wrapper--left .register-form {
+  overflow: hidden;
+}
+
+@media all and (max-width: 560px) {
+  .form__wrapper--left .register-form:active .inputfield__wrapper,
+  .form__wrapper--left .register-form:hover .inputfield__wrapper {
+    height: 19.64286rem;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.form__wrapper--left .register-form .md-inputfield {
+  margin-bottom: 2.85714rem;
+}
+
+.form__wrapper--left .register-form .md-inputfield > label {
+  padding-left: 1.14286rem;
+  position: absolute;
+  top: 1.07143rem;
+  font-size: 1.14286rem;
+  line-height: 24px;
+  vertical-align: top;
+  letter-spacing: .15px;
+  color: #BDBDBD;
+}
+
+.form__wrapper--left .register-form .md-inputfield input:focus ~ label {
+  padding-left: 1rem;
+  top: -0.14286rem;
+  font-size: 0.85714rem;
+  color: #006EFC;
+}
+
+.form__wrapper--left .register-form .md-inputfield i.pi {
+  position: absolute;
+  right: 0.71429rem;
+  bottom: 0.71429rem;
+  font-size: 32px;
+}
+
+.form__wrapper--left .register-form .md-inputfield .ui-inputtext {
+  width: 100%;
+  height: 3.85714rem;
+  padding-top: 1.57143rem;
+  padding-left: 1rem;
+  font-size: 1.14286rem;
+  caret-color: #006EFC;
+}
+
+.form__wrapper--left .register-form .ui-button {
+  width: 100%;
+}
+
+.form__wrapper--left .register-form .auth-form_btn {
+  color: #FFFFFF;
+  background-color: #1976d2;
+  text-transform: capitalize;
 }

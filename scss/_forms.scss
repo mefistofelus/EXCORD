@@ -29,6 +29,10 @@ body {
             border-bottom: 1px dotted;
         }
 
+        &:valid {
+            border-color: $inputValidBorderColor;
+        }
+
         &.ui-widget-content {
             border-width: 1px;
             background: transparent;

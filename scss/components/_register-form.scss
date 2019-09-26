@@ -1,4 +1,4 @@
-// Стилизация левого блока формы
+// Стилизация левого блока формы регистрации
 .form__wrapper--left {
   padding-right: rem(40);
   border-right: 1px solid $dividerBlackColor;
@@ -32,21 +32,21 @@
       height: 0px;
       opacity: 0;
       position: relative;
-      -webkit-transform: translateY(-180px);
-      transform: translateY(-180px);
+      -webkit-transform: translateY(-275px);
+      transform: translateY(-275px);
       -webkit-transition: all .3s ease-in-out;
       -webkit-transition: all $transitionDuration ease-in-out;
       transition: all $transitionDuration ease-in-out;
     }
   }
 
-  .auth-form {
+  .register-form {
     overflow: hidden;
 
     &:active .inputfield__wrapper,
     &:hover .inputfield__wrapper {
       @include _560 {
-        height: rem(180);
+        height: rem(275);
         opacity: 1;
         -webkit-transform: translateY(0);
         transform: translateY(0);
