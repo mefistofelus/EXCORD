@@ -3050,9 +3050,8 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   position: relative;
 }
 
-.form__wrapper--left::after {
+.form__wrapper--left > span {
   padding: 0.71429rem;
-  content: 'или';
   position: absolute;
   top: 50%;
   left: 100%;
@@ -3063,7 +3062,7 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 }
 
 @media all and (max-width: 767px) {
-  .form__wrapper--left::after {
+  .form__wrapper--left > span {
     display: none;
   }
 }

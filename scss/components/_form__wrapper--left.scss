@@ -4,9 +4,8 @@
   border-right: 1px solid $dividerBlackColor;
   position: relative;
 
-  &::after {
+  &>span {
     padding: rem(10);
-    content: 'или';
     position: absolute;
     top: 50%;
     left: 100%;
