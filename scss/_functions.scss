@@ -1,5 +1,5 @@
 @function strip-unit($number) {
-    @if type-of($number)=='number'and not unitless($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
         @return $number / ($number * 0 + 1);
     }
 
@@ -12,7 +12,23 @@
 
     $b: $b + $units;
 
-    @return calc(#{$k} * 100vw + #{$b});
+    @return calc( #{$k} * 100vw + #{$b} );
+}
+
+@function convertAlignItemsTo($val,$type) {
+    @if($type=='ms') {
+        @if($val=='flex-end') {
+            @return 'end';
+        }
+    }
+
+    @if($type='webkit') {
+        @if($val=='flex-end') {
+            @return 'end';
+        }
+    }
+
+    @return $val
 }
 
 // Авто-вычесление rem из px
