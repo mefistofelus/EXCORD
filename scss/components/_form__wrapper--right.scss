@@ -1,29 +1,46 @@
 // Стилизация правого блока формы
 .form__wrapper--right {
   padding-left: rem(40);
-  padding-top: rem(37);
-
-  .reg-form {
-    padding-top: rem(45);
-
-    @include _767 {
-      padding-top: 0;
-    }
-  }
+  height: 100%;
 
   @include _767 {
     padding-left: 0;
   }
 
+  .social-btn_block {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+
+    @include _767 {
+      padding-top: rem(37);
+      padding-left: 0;
+    }
+  }
+
   .auth-form_social-btn {
     @extend button;
-    margin-bottom: rem(20);
     color: $textBlackColor;
     padding: rem(10) 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     text-align: left;
+
+    @include _767 {
+      margin-bottom: rem(20);
+    }
 
     .social-btn_icon {
       width: rem(60);
