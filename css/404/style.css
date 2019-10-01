@@ -2557,3 +2557,97 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   -webkit-transition: background 0s;
   transition: background 0s;
 }
+
+.not-found-page {
+  height: 100vh;
+  background-color: #039588;
+  overflow: hidden;
+}
+
+.not-found-page .not-found__content {
+  padding: 15.71429rem 1.07143rem 8.78571rem;
+  position: relative;
+}
+
+.not-found-page .not-found__content::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(269.97deg, rgba(0, 0, 0, 0) 0%, #000000 53.65%, rgba(0, 0, 0, 0) 100%);
+  opacity: .2;
+}
+
+.not-found-page .not-found__block {
+  position: relative;
+  /* height: rem(385);
+				background: url("../../img/404/404.svg") no-repeat center center;
+				background-size: contain; */
+}
+
+.not-found-page .not-found__block .img-inner {
+  position: absolute;
+  top: 1.42857rem;
+  left: 50%;
+  -webkit-transform: translateX(-55%);
+  transform: translateX(-55%);
+}
+
+.not-found-page .not-found__block img {
+  max-width: 100%;
+}
+
+.not-found-page .not-found__footer {
+  padding: 4.28571rem 0 8.21429rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.not-found-page .not-found__footer::before {
+  content: '';
+  width: 100%;
+  height: 21.42857rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  background: radial-gradient(50% 100% at 50% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: .25;
+}
+
+.not-found-page .not-found__footer::after {
+  content: '';
+  width: 100%;
+  height: 14.28571rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: radial-gradient(50% 100% at 50% 0%, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: .25;
+}
+
+.not-found-page .not-found__footer .footer-content {
+  padding: 0 1.07143rem;
+  color: #fff;
+  text-align: center;
+}
+
+.not-found-page .not-found__footer .footer-content__title {
+  margin-bottom: 1.42857rem;
+  font-size: 2.57143rem;
+}
+
+.not-found-page .not-found__footer .footer-content__description {
+  font-size: 1.42857rem;
+  color: #E0E0E0;
+}
