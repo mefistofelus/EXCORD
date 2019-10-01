@@ -1,0 +1,49 @@
+// JUST SIMPLE IMPORT SCSS-FILES
+@import "../variables";
+@import "../fonts";
+@import "../mixins";
+@import "../media";
+@import "../functions";
+@import "../primeflex";
+@import "../primeicons";
+@import "../utils";
+@import "../default";
+@import "../components";
+@import "../login";
+@import "../forms";
+@import "../helpers";
+
+// Custom styles
+.error-page {
+
+  .error-img {
+    max-width: 100%;
+  }
+
+  .error-content {
+    padding: rem(100) rem(30) rem(66);
+    max-width: rem(670);
+
+    &__title {
+      margin-bottom: rem(40);
+      font-family: $fontHeading;
+      font-size: rem(36);
+      font-weight: bold;
+      color: $textBlackColor;
+    }
+
+    &__description {
+      font-size: rem(16);
+      line-height: 140%;
+      color: $textSecondaryColor;
+
+      & p+p {
+        margin-top: 1.4em;
+      }
+    }
+
+    &__form {
+      padding: rem(40) 0;
+    }
+  }
+}
