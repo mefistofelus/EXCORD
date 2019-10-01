@@ -14,18 +14,18 @@
 @import "../helpers";
 
 // Custom styles
-.not-found-page{
+.not-found-page {
 	height: 100vh;
-	background-color:#039588;
+	background-color: #039588;
 	overflow: hidden;
-	
+
 	.not-found {
-	
+
 		&__content {
-			padding: rem(220) rem(15) rem(123);
+			padding: 10% rem(15) rem(123);
 			position: relative;
 
-			&::after{
+			&::after {
 				content: '';
 				position: absolute;
 				left: 0;
@@ -36,27 +36,27 @@
 				opacity: .2;
 			}
 		}
-		
-			&__block{
-				position: relative;
-				/* height: rem(385);
+
+		&__block {
+			position: relative;
+			/* height: rem(385);
 				background: url("../../img/404/404.svg") no-repeat center center;
 				background-size: contain; */
 
-				.img-inner{
-					position: absolute;
-					top: rem(20);
-					left: 50%;
-					-webkit-transform: translateX(-55%);
-					        transform: translateX(-55%);
-				}
-
-				img{
-					max-width: 100%;
-				}
+			.img-inner {
+				position: absolute;
+				top: rem(20);
+				left: 50%;
+				-webkit-transform: translateX(-55%);
+				transform: translateX(-55%);
 			}
 
-		&__footer{
+			img {
+				max-width: 100%;
+			}
+		}
+
+		&__footer {
 			padding: rem(60) 0 rem(115);
 			display: -webkit-box;
 			display: -ms-flexbox;
@@ -65,8 +65,8 @@
 			-ms-flex-pack: center;
 			justify-content: center;
 			position: relative;
-			
-			&::before{
+
+			&::before {
 				content: '';
 				width: 100%;
 				height: rem(300);
@@ -75,12 +75,12 @@
 				left: 0;
 				right: 0;
 				-webkit-transform: translateY(-100%);
-				        transform: translateY(-100%);
+				transform: translateY(-100%);
 				background: radial-gradient(50% 100% at 50% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
 				opacity: .25;
 			}
-			
-			&::after{
+
+			&::after {
 				content: '';
 				width: 100%;
 				height: rem(200);
@@ -93,17 +93,17 @@
 
 			}
 
-			.footer-content{
+			.footer-content {
 				padding: 0 rem(15);
 				color: #fff;
 				text-align: center;
 
-				&__title{
+				&__title {
 					margin-bottom: rem(20);
 					font-size: rem(36);
 				}
 
-				&__description{
+				&__description {
 					font-size: rem(20);
 					color: #E0E0E0;
 				}
