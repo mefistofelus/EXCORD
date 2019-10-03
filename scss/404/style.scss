@@ -19,13 +19,13 @@
 	background-color: #039588;
 	overflow: hidden;
 
-	.page__wrapper{
+	.page__wrapper {
 		width: 100%;
 		position: relative;
 		top: 50%;
 		left: 50%;
 		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 
 	.not-found {
@@ -34,32 +34,6 @@
 			padding: 0 rem(15);
 			padding-bottom: 10%;
 			position: relative;
-
-			&::before {
-				content: '';
-				width: 100%;
-				height: rem(300);
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				right: 0;
-				background: radial-gradient(50% 100% at 50% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-				opacity: .25;
-			}
-
-			&::after {
-				content: '';
-				width: 100%;
-				height: rem(200);
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				-webkit-transform: translateY(100%);
-				        transform: translateY(100%);
-				background: radial-gradient(50% 100% at 50% 0%, #000000 0%, rgba(0, 0, 0, 0) 100%);
-				opacity: .25;
-			}
 		}
 
 		&__block {
@@ -89,18 +63,12 @@
 			bottom: 0;
 			left: 50%;
 			-webkit-transform: translateX(-50%);
-							transform: translateX(-50%);
-							
-							@include _767{
-								padding-bottom: 15%;
-							}
-							
-							@include _560{
-								padding-bottom: 20%;
-							}
+			transform: translateX(-50%);
 
 			.footer-content {
 				padding: 0 rem(15);
+				padding-top: 2%;
+				position: relative;
 				color: #fff;
 				text-align: center;
 
@@ -108,7 +76,7 @@
 					margin-bottom: rem(20);
 					font-size: rem(36);
 
-					@include _560{
+					@include _560 {
 						font-size: rem(26);
 					}
 				}
@@ -120,6 +88,32 @@
 					@include _560 {
 						font-size: rem(14);
 					}
+				}
+
+				&::before {
+					content: '';
+					width: 100%;
+					height: rem(300);
+					position: absolute;
+					left: 0;
+					top: 0;
+					right: 0;
+					-webkit-transform: translateY(-100%);
+					transform: translateY(-100%);
+					background: radial-gradient(50% 100% at 50% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+					opacity: .25;
+				}
+
+				&::after {
+					content: '';
+					width: 100%;
+					height: rem(200);
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					background: radial-gradient(50% 100% at 50% 0%, #000000 0%, rgba(0, 0, 0, 0) 100%);
+					opacity: .25;
 				}
 			}
 		}

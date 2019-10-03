@@ -2579,32 +2579,6 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   position: relative;
 }
 
-.not-found-page .not-found__content::before {
-  content: '';
-  width: 100%;
-  height: 21.42857rem;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: radial-gradient(50% 100% at 50% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-  opacity: .25;
-}
-
-.not-found-page .not-found__content::after {
-  content: '';
-  width: 100%;
-  height: 14.28571rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%);
-  background: radial-gradient(50% 100% at 50% 0%, #000000 0%, rgba(0, 0, 0, 0) 100%);
-  opacity: .25;
-}
-
 .not-found-page .not-found__block {
   position: relative;
   text-align: center;
@@ -2635,20 +2609,10 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   transform: translateX(-50%);
 }
 
-@media all and (max-width: 767px) {
-  .not-found-page .not-found__footer {
-    padding-bottom: 15%;
-  }
-}
-
-@media all and (max-width: 560px) {
-  .not-found-page .not-found__footer {
-    padding-bottom: 20%;
-  }
-}
-
 .not-found-page .not-found__footer .footer-content {
   padding: 0 1.07143rem;
+  padding-top: 2%;
+  position: relative;
   color: #fff;
   text-align: center;
 }
@@ -2673,4 +2637,30 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   .not-found-page .not-found__footer .footer-content__description {
     font-size: 1rem;
   }
+}
+
+.not-found-page .not-found__footer .footer-content::before {
+  content: '';
+  width: 100%;
+  height: 21.42857rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  background: radial-gradient(50% 100% at 50% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: .25;
+}
+
+.not-found-page .not-found__footer .footer-content::after {
+  content: '';
+  width: 100%;
+  height: 14.28571rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: radial-gradient(50% 100% at 50% 0%, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: .25;
 }
