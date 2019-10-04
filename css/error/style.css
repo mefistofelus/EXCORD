@@ -2564,7 +2564,6 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 
 .error-page .error-content {
   padding: 7.14286rem 2.14286rem 4.71429rem;
-  max-width: 47.85714rem;
 }
 
 .error-page .error-content__title {
@@ -2587,4 +2586,35 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 
 .error-page .error-content__form {
   padding: 2.85714rem 0;
+}
+
+.error-page .error-content__form .md-inputfield {
+  margin-bottom: 2.85714rem;
+}
+
+.error-page .error-content__form .md-inputfield .comment-input {
+  width: 100%;
+}
+
+.error-page .error-content__form .md-inputfield .ui-inputtext {
+  height: 2.14286rem;
+}
+
+.error-page .error-content__form .md-inputfield > label {
+  left: 1.14286rem;
+}
+
+.error-page .error-content__form button {
+  font-size: 14px;
+  color: #FFFFFF;
+  background-color: #1976d2;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media all and (max-width: 560px) {
+  .error-page .error-content {
+    padding-top: 3.57143rem;
+    font-size: 12px;
+  }
 }
