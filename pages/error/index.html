@@ -56,7 +56,7 @@
 
                 <!-- Кнопка "Входа" -->
                 <button class="ui-button-info ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
-                  label="Отправить" pbutton="" style="width: 50%" type="button">
+                  label="Отправить" pbutton="" style="width: 50%; height: 40px" type="button">
                   <span class="ui-button-text ui-clickable">Отправить</span>
                   <!-- Этот спан со своими классами должен добавляться динамически в момент клика по кнопке. Также динамически должны вычислятся координаты клика по кнопке и подставлятся в значения top и left -->
                   <span class="ink ripple-animate"
@@ -72,6 +72,30 @@
 
       </div>
 
+      <div class="social-block">
+        <h3 class="social-block__title text-center">Отвечаем в мессенджерах</h3>
+        <div class="social-btn__wrapper">
+          <!-- Кнопка "Входа через Facebook" -->
+          <button class="social-btn btn-facebook">
+            <span class="social-btn_icon">
+              <img src="../../img/error/Facebook_Messenger_logo.svg" alt="Facebook_Messenger">
+            </span>
+            <span class="social-btn_descr ui-button-text ui-clickable">Facebook</span>
+            <span class="ink ripple-animate"
+              style="height: 275px; width: 275px; top: -121.469px; left: 50px; pointer-events: none;"></span>
+          </button>
+          <!-- Кнопка "Входа через Телеграм" -->
+          <button class="social-btn btn-telegram">
+            <span class="social-btn_icon">
+              <img src="../../img/error/Telegram_logo.svg" alt="Telegram">
+            </span>
+            <span class="social-btn_descr ui-button-text ui-clickable">Telegram</span>
+            <span class="ink ripple-animate"
+              style="height: 275px; width: 275px; top: -121.469px; left: 50px; pointer-events: none;"></span>
+          </button>
+        </div>
+      </div>
+      <!-- /.social-block -->
     </div>
     <!-- /.error-page -->
 

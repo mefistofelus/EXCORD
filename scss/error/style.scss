@@ -54,6 +54,10 @@
 
         .ui-inputtext {
           height: rem(30);
+
+          @include _560 {
+            width: 100%;
+          }
         }
 
         &>label {
@@ -73,6 +77,73 @@
     @include _560 {
       padding-top: rem(50);
       font-size: 12px;
+    }
+  }
+
+  .social-block {
+    padding: rem(120) 0 rem(60);
+
+    &__title {
+      margin-bottom: rem(20);
+      font-family: $fontHeading;
+      font-size: rem(24);
+      color: $textBlackColor;
+    }
+
+    .social-btn__wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+
+      .social-btn {
+        @extend button;
+        color: $textLightColor;
+        padding: rem(10) 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        text-align: left;
+
+        &+.social-btn {
+          margin-left: 20px;
+        }
+
+        .social-btn_icon {
+          width: rem(60);
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+
+          &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: rem(60);
+            height: 100%;
+            width: 1px;
+            background-color: rgba(#000000, .1);
+          }
+        }
+
+        .social-btn_descr {
+          padding: 0 rem(20);
+          font-size: rem(14);
+        }
+
+        &.btn-facebook {
+          background-color: $btnBgFacebook;
+        }
+
+        &.btn-telegram {
+          background-color: #179CDE;
+        }
+      }
     }
   }
 }
