@@ -1817,24 +1817,6 @@ li {
   list-style-type: none;
 }
 
-/* Button style */
-button, .error-page .social-block .social-btn__wrapper .social-btn {
-  padding: 0.71429rem 0.71429rem;
-  position: relative;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  outline: none;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-button:hover, .error-page .social-block .social-btn__wrapper .social-btn:hover {
-  -webkit-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
 /************************
  FORMS PREDEFINED STYLES
 ************************/
@@ -2042,9 +2024,7 @@ body .ui-material-message.ui-message.ui-messages-error {
 }
 
 body .ui-button,
-body .ui-datepicker-buttonpane > button,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .social-btn {
+body .ui-datepicker-buttonpane > button {
   overflow: hidden;
   background-color: #1976d2;
   color: #FFFFFF;
@@ -2060,350 +2040,256 @@ body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > 
 }
 
 body .ui-button:enabled:not(:focus):hover,
-body .ui-datepicker-buttonpane > button:enabled:not(:focus):hover,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .social-btn:enabled:not(:focus):hover,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .social-btn:enabled:not(:focus):hover {
+body .ui-datepicker-buttonpane > button:enabled:not(:focus):hover {
   background-color: #0D47A1;
 }
 
 body .ui-button:enabled:focus,
-body .ui-datepicker-buttonpane > button:enabled:focus,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .social-btn:enabled:focus,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .social-btn:enabled:focus {
+body .ui-datepicker-buttonpane > button:enabled:focus {
   outline: 0 none;
   background-color: #378fe7;
 }
 
 body .ui-button .ui-button-text,
-body .ui-datepicker-buttonpane > button .ui-button-text,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .social-btn .ui-button-text,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .social-btn .ui-button-text {
+body .ui-datepicker-buttonpane > button .ui-button-text {
   padding: 0;
   line-height: 2.143em;
 }
 
 body .ui-button .pi,
-body .ui-datepicker-buttonpane > button .pi,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .social-btn .pi,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .social-btn .pi {
+body .ui-datepicker-buttonpane > button .pi {
   color: #FFFFFF;
 }
 
 body .ui-button.ui-button-icon-only,
-body .ui-datepicker-buttonpane > button.ui-button-icon-only,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .ui-button-icon-only.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .ui-button-icon-only.social-btn {
+body .ui-datepicker-buttonpane > button.ui-button-icon-only {
   border-radius: 50%;
   width: 2.143em;
   height: 2.143em;
 }
 
 body .ui-button.ui-button-text-icon-left,
-body .ui-datepicker-buttonpane > button.ui-button-text-icon-left,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .ui-button-text-icon-left.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .ui-button-text-icon-left.social-btn {
+body .ui-datepicker-buttonpane > button.ui-button-text-icon-left {
   padding-left: 2.571em;
 }
 
 body .ui-button.ui-button-text-icon-right,
-body .ui-datepicker-buttonpane > button.ui-button-text-icon-right,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .ui-button-text-icon-right.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .ui-button-text-icon-right.social-btn {
+body .ui-datepicker-buttonpane > button.ui-button-text-icon-right {
   padding-right: 2.571em;
 }
 
 body .ui-button.secondary-btn,
-body .ui-datepicker-buttonpane > button.secondary-btn,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .secondary-btn.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .secondary-btn.social-btn {
+body .ui-datepicker-buttonpane > button.secondary-btn {
   background-color: #FFC107;
   color: #000000;
 }
 
 body .ui-button.secondary-btn:enabled:not(:focus):hover,
-body .ui-datepicker-buttonpane > button.secondary-btn:enabled:not(:focus):hover,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .secondary-btn.social-btn:enabled:not(:focus):hover,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .secondary-btn.social-btn:enabled:not(:focus):hover {
+body .ui-datepicker-buttonpane > button.secondary-btn:enabled:not(:focus):hover {
   background-color: #FFA000;
 }
 
 body .ui-button.secondary-btn:focus,
-body .ui-datepicker-buttonpane > button.secondary-btn:focus,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .secondary-btn.social-btn:focus,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .secondary-btn.social-btn:focus {
+body .ui-datepicker-buttonpane > button.secondary-btn:focus {
   outline: 0 none;
   background-color: #ffce3a;
 }
 
 body .ui-button.blue-grey-btn,
-body .ui-datepicker-buttonpane > button.blue-grey-btn,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .blue-grey-btn.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .blue-grey-btn.social-btn {
+body .ui-datepicker-buttonpane > button.blue-grey-btn {
   background-color: #607D8B;
 }
 
 body .ui-button.blue-grey-btn:enabled:not(:focus):hover,
-body .ui-datepicker-buttonpane > button.blue-grey-btn:enabled:not(:focus):hover,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .blue-grey-btn.social-btn:enabled:not(:focus):hover,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .blue-grey-btn.social-btn:enabled:not(:focus):hover {
+body .ui-datepicker-buttonpane > button.blue-grey-btn:enabled:not(:focus):hover {
   background-color: #37474F;
 }
 
 body .ui-button.blue-grey-btn:focus,
-body .ui-datepicker-buttonpane > button.blue-grey-btn:focus,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .blue-grey-btn.social-btn:focus,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .blue-grey-btn.social-btn:focus {
+body .ui-datepicker-buttonpane > button.blue-grey-btn:focus {
   outline: 0 none;
   background-color: #7b96a3;
 }
 
 body .ui-button.cyan-btn,
-body .ui-datepicker-buttonpane > button.cyan-btn,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .cyan-btn.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .cyan-btn.social-btn {
+body .ui-datepicker-buttonpane > button.cyan-btn {
   background-color: #00BCD4;
 }
 
 body .ui-button.cyan-btn:enabled:not(:focus):hover,
-body .ui-datepicker-buttonpane > button.cyan-btn:enabled:not(:focus):hover,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .cyan-btn.social-btn:enabled:not(:focus):hover,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .cyan-btn.social-btn:enabled:not(:focus):hover {
+body .ui-datepicker-buttonpane > button.cyan-btn:enabled:not(:focus):hover {
   background-color: #00838F;
 }
 
 body .ui-button.cyan-btn:focus,
-body .ui-datepicker-buttonpane > button.cyan-btn:focus,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .cyan-btn.social-btn:focus,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .cyan-btn.social-btn:focus {
+body .ui-datepicker-buttonpane > button.cyan-btn:focus {
   outline: 0 none;
   background-color: #08e3ff;
 }
 
 body .ui-button.teal-btn,
-body .ui-datepicker-buttonpane > button.teal-btn,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .teal-btn.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .teal-btn.social-btn {
+body .ui-datepicker-buttonpane > button.teal-btn {
   background-color: #009688;
 }
 
 body .ui-button.teal-btn:enabled:not(:focus):hover,
-body .ui-datepicker-buttonpane > button.teal-btn:enabled:not(:focus):hover,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .teal-btn.social-btn:enabled:not(:focus):hover,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .teal-btn.social-btn:enabled:not(:focus):hover {
+body .ui-datepicker-buttonpane > button.teal-btn:enabled:not(:focus):hover {
   background-color: #00695C;
 }
 
 body .ui-button.teal-btn:focus,
-body .ui-datepicker-buttonpane > button.teal-btn:focus,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .teal-btn.social-btn:focus,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .teal-btn.social-btn:focus {
+body .ui-datepicker-buttonpane > button.teal-btn:focus {
   outline: 0 none;
   background-color: #00c9b6;
 }
 
 body .ui-button.red-btn,
-body .ui-datepicker-buttonpane > button.red-btn,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .red-btn.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .red-btn.social-btn {
+body .ui-datepicker-buttonpane > button.red-btn {
   background-color: #F44336;
 }
 
 body .ui-button.red-btn:enabled:not(:focus):hover,
-body .ui-datepicker-buttonpane > button.red-btn:enabled:not(:focus):hover,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .red-btn.social-btn:enabled:not(:focus):hover,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .red-btn.social-btn:enabled:not(:focus):hover {
+body .ui-datepicker-buttonpane > button.red-btn:enabled:not(:focus):hover {
   background-color: #C62828;
 }
 
 body .ui-button.red-btn:focus,
-body .ui-datepicker-buttonpane > button.red-btn:focus,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .red-btn.social-btn:focus,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .red-btn.social-btn:focus {
+body .ui-datepicker-buttonpane > button.red-btn:focus {
   outline: 0 none;
   background-color: #f77066;
 }
 
 body .ui-button.green-btn,
-body .ui-datepicker-buttonpane > button.green-btn,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .green-btn.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .green-btn.social-btn {
+body .ui-datepicker-buttonpane > button.green-btn {
   background-color: #4CAF50;
 }
 
 body .ui-button.green-btn:enabled:not(:focus):hover,
-body .ui-datepicker-buttonpane > button.green-btn:enabled:not(:focus):hover,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .green-btn.social-btn:enabled:not(:focus):hover,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .green-btn.social-btn:enabled:not(:focus):hover {
+body .ui-datepicker-buttonpane > button.green-btn:enabled:not(:focus):hover {
   background-color: #2E7D32;
 }
 
 body .ui-button.green-btn:focus,
-body .ui-datepicker-buttonpane > button.green-btn:focus,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .green-btn.social-btn:focus,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .green-btn.social-btn:focus {
+body .ui-datepicker-buttonpane > button.green-btn:focus {
   outline: 0 none;
   background-color: #6ec071;
 }
 
 body .ui-button.deep-orange-btn,
-body .ui-datepicker-buttonpane > button.deep-orange-btn,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .deep-orange-btn.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .deep-orange-btn.social-btn {
+body .ui-datepicker-buttonpane > button.deep-orange-btn {
   background-color: #FF5722;
 }
 
 body .ui-button.deep-orange-btn:enabled:not(:focus):hover,
-body .ui-datepicker-buttonpane > button.deep-orange-btn:enabled:not(:focus):hover,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .deep-orange-btn.social-btn:enabled:not(:focus):hover,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .deep-orange-btn.social-btn:enabled:not(:focus):hover {
+body .ui-datepicker-buttonpane > button.deep-orange-btn:enabled:not(:focus):hover {
   background-color: #D84315;
 }
 
 body .ui-button.deep-orange-btn:focus,
-body .ui-datepicker-buttonpane > button.deep-orange-btn:focus,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .deep-orange-btn.social-btn:focus,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .deep-orange-btn.social-btn:focus {
+body .ui-datepicker-buttonpane > button.deep-orange-btn:focus {
   outline: 0 none;
   background-color: #ff7e55;
 }
 
 body .ui-button.purple-btn,
-body .ui-datepicker-buttonpane > button.purple-btn,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .purple-btn.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .purple-btn.social-btn {
+body .ui-datepicker-buttonpane > button.purple-btn {
   background-color: #673AB7;
 }
 
 body .ui-button.purple-btn:enabled:not(:focus):hover,
-body .ui-datepicker-buttonpane > button.purple-btn:enabled:not(:focus):hover,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .purple-btn.social-btn:enabled:not(:focus):hover,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .purple-btn.social-btn:enabled:not(:focus):hover {
+body .ui-datepicker-buttonpane > button.purple-btn:enabled:not(:focus):hover {
   background-color: #4527A0;
 }
 
 body .ui-button.purple-btn:focus,
-body .ui-datepicker-buttonpane > button.purple-btn:focus,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .purple-btn.social-btn:focus,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .purple-btn.social-btn:focus {
+body .ui-datepicker-buttonpane > button.purple-btn:focus {
   outline: 0 none;
   background-color: #8259cb;
 }
 
 body .ui-button.pink-btn,
-body .ui-datepicker-buttonpane > button.pink-btn,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .pink-btn.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .pink-btn.social-btn {
+body .ui-datepicker-buttonpane > button.pink-btn {
   background-color: #E91E63;
 }
 
 body .ui-button.pink-btn:enabled:not(:focus):hover,
-body .ui-datepicker-buttonpane > button.pink-btn:enabled:not(:focus):hover,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .pink-btn.social-btn:enabled:not(:focus):hover,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .pink-btn.social-btn:enabled:not(:focus):hover {
+body .ui-datepicker-buttonpane > button.pink-btn:enabled:not(:focus):hover {
   background-color: #AD1457;
 }
 
 body .ui-button.pink-btn:focus,
-body .ui-datepicker-buttonpane > button.pink-btn:focus,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .pink-btn.social-btn:focus,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .pink-btn.social-btn:focus {
+body .ui-datepicker-buttonpane > button.pink-btn:focus {
   outline: 0 none;
   background-color: #ee4c83;
 }
 
 body .ui-button.amber-btn,
-body .ui-datepicker-buttonpane > button.amber-btn,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .amber-btn.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .amber-btn.social-btn {
+body .ui-datepicker-buttonpane > button.amber-btn {
   background-color: #FFC107;
   color: #212121;
 }
 
 body .ui-button.amber-btn:enabled:not(:focus):hover,
-body .ui-datepicker-buttonpane > button.amber-btn:enabled:not(:focus):hover,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .amber-btn.social-btn:enabled:not(:focus):hover,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .amber-btn.social-btn:enabled:not(:focus):hover {
+body .ui-datepicker-buttonpane > button.amber-btn:enabled:not(:focus):hover {
   background-color: #FF8F00;
 }
 
 body .ui-button.amber-btn:focus,
-body .ui-datepicker-buttonpane > button.amber-btn:focus,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .amber-btn.social-btn:focus,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .amber-btn.social-btn:focus {
+body .ui-datepicker-buttonpane > button.amber-btn:focus {
   outline: 0 none;
   background-color: #ffce3a;
 }
 
 body .ui-button.orange-btn,
-body .ui-datepicker-buttonpane > button.orange-btn,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .orange-btn.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .orange-btn.social-btn {
+body .ui-datepicker-buttonpane > button.orange-btn {
   background-color: #FF9800;
 }
 
 body .ui-button.orange-btn:enabled:not(:focus):hover,
-body .ui-datepicker-buttonpane > button.orange-btn:enabled:not(:focus):hover,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .orange-btn.social-btn:enabled:not(:focus):hover,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .orange-btn.social-btn:enabled:not(:focus):hover {
+body .ui-datepicker-buttonpane > button.orange-btn:enabled:not(:focus):hover {
   background-color: #EF6C00;
 }
 
 body .ui-button.orange-btn:focus,
-body .ui-datepicker-buttonpane > button.orange-btn:focus,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .orange-btn.social-btn:focus,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .orange-btn.social-btn:focus {
+body .ui-datepicker-buttonpane > button.orange-btn:focus {
   outline: 0 none;
   background-color: #ffad33;
 }
 
 body .ui-button.brown-btn,
-body .ui-datepicker-buttonpane > button.brown-btn,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .brown-btn.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .brown-btn.social-btn {
+body .ui-datepicker-buttonpane > button.brown-btn {
   background-color: #795548;
 }
 
 body .ui-button.brown-btn:enabled:not(:focus):hover,
-body .ui-datepicker-buttonpane > button.brown-btn:enabled:not(:focus):hover,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .brown-btn.social-btn:enabled:not(:focus):hover,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .brown-btn.social-btn:enabled:not(:focus):hover {
+body .ui-datepicker-buttonpane > button.brown-btn:enabled:not(:focus):hover {
   background-color: #4E342E;
 }
 
 body .ui-button.brown-btn:focus,
-body .ui-datepicker-buttonpane > button.brown-btn:focus,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .brown-btn.social-btn:focus,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .brown-btn.social-btn:focus {
+body .ui-datepicker-buttonpane > button.brown-btn:focus {
   outline: 0 none;
   background-color: #996b5b;
 }
 
 body .ui-button.indigo-btn,
-body .ui-datepicker-buttonpane > button.indigo-btn,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .indigo-btn.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .indigo-btn.social-btn {
+body .ui-datepicker-buttonpane > button.indigo-btn {
   background-color: #3F51B5;
 }
 
 body .ui-button.indigo-btn:enabled:not(:focus):hover,
-body .ui-datepicker-buttonpane > button.indigo-btn:enabled:not(:focus):hover,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .indigo-btn.social-btn:enabled:not(:focus):hover,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .indigo-btn.social-btn:enabled:not(:focus):hover {
+body .ui-datepicker-buttonpane > button.indigo-btn:enabled:not(:focus):hover {
   background-color: #283593;
 }
 
 body .ui-button.indigo-btn:focus,
-body .ui-datepicker-buttonpane > button.indigo-btn:focus,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .indigo-btn.social-btn:focus,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .indigo-btn.social-btn:focus {
+body .ui-datepicker-buttonpane > button.indigo-btn:focus {
   outline: 0 none;
   background-color: #606fc7;
 }
 
 body .ui-button.flat,
-body .ui-datepicker-buttonpane > button.flat,
-body .error-page .social-block .social-btn__wrapper .ui-datepicker-buttonpane > .flat.social-btn,
-.error-page .social-block .social-btn__wrapper body .ui-datepicker-buttonpane > .flat.social-btn {
+body .ui-datepicker-buttonpane > button.flat {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -2658,25 +2544,37 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 }
 
 .error-page .error-content {
-  padding: 7.14286rem 2.14286rem 4.71429rem;
+  padding: 7.14286rem 2.14286rem 2.14286rem;
+  max-width: 47.85714rem;
 }
 
 .error-page .error-content__title {
-  margin-bottom: 2.85714rem;
+  margin-bottom: 1.11em;
   font-family: "Gotham Pro", sans-serif;
-  font-size: 2.57143rem;
+  font-size: 36px;
   font-weight: bold;
   color: #252525;
 }
 
+@media all and (max-width: 560px) {
+  .error-page .error-content__title {
+    font-size: 26px;
+  }
+}
+
 .error-page .error-content__description {
-  font-size: 1.14286rem;
-  line-height: 140%;
+  font-size: 16px;
   color: #757575;
 }
 
 .error-page .error-content__description p + p {
   margin-top: 1.4em;
+}
+
+@media all and (max-width: 560px) {
+  .error-page .error-content__description {
+    font-size: 14px;
+  }
 }
 
 .error-page .error-content__form {
@@ -2691,43 +2589,59 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   width: 100%;
 }
 
-.error-page .error-content__form .md-inputfield .ui-inputtext {
-  height: 2.14286rem;
+.error-page .error-content__form .md-inputfield .email-input {
+  width: 50%;
 }
 
 @media all and (max-width: 560px) {
-  .error-page .error-content__form .md-inputfield .ui-inputtext {
+  .error-page .error-content__form .md-inputfield .email-input {
     width: 100%;
   }
+}
+
+.error-page .error-content__form .md-inputfield .ui-inputtext {
+  height: 2.14286rem;
+  caret-color: #006EFC;
 }
 
 .error-page .error-content__form .md-inputfield > label {
   left: 1.14286rem;
 }
 
-.error-page .error-content__form button, .error-page .error-content__form .social-block .social-btn__wrapper .social-btn, .error-page .social-block .social-btn__wrapper .error-content__form .social-btn {
+.error-page .error-content__form button {
+  width: 50%;
+  height: 40px;
   font-size: 14px;
   color: #FFFFFF;
   background-color: #1976d2;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 @media all and (max-width: 560px) {
+  .error-page .error-content__form button {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 979px) {
   .error-page .error-content {
     padding-top: 3.57143rem;
-    font-size: 12px;
+    padding-bottom: 0;
   }
 }
 
 .error-page .social-block {
-  padding: 8.57143rem 0 4.28571rem;
+  padding: 6% 0 2%;
 }
 
 .error-page .social-block__title {
-  margin-bottom: 1.42857rem;
+  margin-bottom: 0.83em;
   font-family: "Gotham Pro", sans-serif;
-  font-size: 1.71429rem;
+  font-size: 24px;
   color: #252525;
 }
 
@@ -2741,41 +2655,52 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 }
 
 .error-page .social-block .social-btn__wrapper .social-btn {
+  padding: 0;
+  position: relative;
+  border: none;
+  font-size: 1rem;
   color: #FFFFFF;
-  padding: 0.71429rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: left;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.error-page .social-block .social-btn__wrapper .social-btn:hover {
+  -webkit-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .error-page .social-block .social-btn__wrapper .social-btn + .social-btn {
   margin-left: 20px;
 }
 
+@media all and (max-width: 560px) {
+  .error-page .social-block .social-btn__wrapper .social-btn + .social-btn {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
 .error-page .social-block .social-btn__wrapper .social-btn .social-btn_icon {
-  width: 4.28571rem;
+  padding: 12px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.error-page .social-block .social-btn__wrapper .social-btn .social-btn_icon::after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 4.28571rem;
-  height: 100%;
-  width: 1px;
-  background-color: rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .error-page .social-block .social-btn__wrapper .social-btn .social-btn_descr {
-  padding: 0 1.42857rem;
+  padding: 0.71em 1.42em;
   font-size: 1rem;
+  line-height: 140%;
 }
 
 .error-page .social-block .social-btn__wrapper .social-btn.btn-facebook {
@@ -2784,4 +2709,25 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 
 .error-page .social-block .social-btn__wrapper .social-btn.btn-telegram {
   background-color: #179CDE;
+}
+
+@media all and (max-width: 560px) {
+  .error-page .social-block .social-btn__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 979px) {
+  .error-page .social-block .social-btn__wrapper {
+    padding-top: 0;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .error-page .social-block {
+    padding: 0 2.14286rem;
+  }
 }

@@ -2,13 +2,11 @@
 @import "../variables";
 @import "../fonts";
 @import "../mixins";
-@import "../media";
 @import "../functions";
 @import "../primeflex";
 @import "../primeicons";
 @import "../utils";
 @import "../default";
-@import "../components";
 @import "../login";
 @import "../forms";
 @import "../helpers";
@@ -21,24 +19,31 @@
   }
 
   .error-content {
-    padding: rem(100) rem(30) rem(66);
-    //max-width: rem(670);
+    padding: rem(100) rem(30) rem(30);
+    max-width: rem(670);
 
     &__title {
-      margin-bottom: rem(40);
+      margin-bottom: 1.11em;
       font-family: $fontHeading;
-      font-size: rem(36);
+      font-size: 36px;
       font-weight: bold;
       color: $textBlackColor;
+
+      @include _560 {
+        font-size: 26px;
+      }
     }
 
     &__description {
-      font-size: rem(16);
-      line-height: 140%;
+      font-size: 16px;
       color: $textSecondaryColor;
 
       & p+p {
         margin-top: 1.4em;
+      }
+
+      @include _560 {
+        font-size: 14px;
       }
     }
 
@@ -52,12 +57,17 @@
           width: 100%;
         }
 
-        .ui-inputtext {
-          height: rem(30);
+        .email-input {
+          width: 50%;
 
           @include _560 {
             width: 100%;
           }
+        }
+
+        .ui-inputtext {
+          height: rem(30);
+          caret-color: $inputAccentColor;
         }
 
         &>label {
@@ -66,27 +76,35 @@
       }
 
       button {
+        width: 50%;
+        height: 40px;
         font-size: 14px;
         color: $textLightColor;
         background-color: $primaryColor;
-
+        cursor: pointer;
+        outline: none;
+        @include border-radius($borderRadius);
         @include transition(all $transitionDuration ease-in-out);
+
+        @include _560 {
+          width: 100%;
+        }
       }
     }
 
-    @include _560 {
+    @include _979 {
       padding-top: rem(50);
-      font-size: 12px;
+      padding-bottom: 0;
     }
   }
 
   .social-block {
-    padding: rem(120) 0 rem(60);
+    padding: 6% 0 2%;
 
     &__title {
-      margin-bottom: rem(20);
+      margin-bottom: 0.83em;
       font-family: $fontHeading;
-      font-size: rem(24);
+      font-size: 24px;
       color: $textBlackColor;
     }
 
@@ -99,41 +117,47 @@
       justify-content: center;
 
       .social-btn {
-        @extend button;
+        padding: 0;
+        position: relative;
+        border: none;
+        font-size: rem(14);
         color: $textLightColor;
-        padding: rem(10) 0;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        text-align: left;
+        cursor: pointer;
+        outline: none;
+        @include border-radius($borderRadius);
+        @include button-shadow();
+
+        &:hover {
+          @include button-hover-shadow();
+        }
 
         &+.social-btn {
           margin-left: 20px;
+
+          @include _560 {
+            margin-left: 0;
+            margin-top: 20px;
+          }
         }
 
         .social-btn_icon {
-          width: rem(60);
+          padding: 12px 20px;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
           -webkit-box-pack: center;
           -ms-flex-pack: center;
           justify-content: center;
-
-          &::after {
-            position: absolute;
-            content: '';
-            top: 0;
-            left: rem(60);
-            height: 100%;
-            width: 1px;
-            background-color: rgba(#000000, .1);
-          }
+          border-right: 1px solid rgba(#000000, .1);
         }
 
         .social-btn_descr {
-          padding: 0 rem(20);
+          padding: 0.71em 1.42em;
           font-size: rem(14);
+          line-height: 140%;
         }
 
         &.btn-facebook {
@@ -143,7 +167,23 @@
         &.btn-telegram {
           background-color: #179CDE;
         }
+
       }
+
+      @include _560 {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+
+      @include _979 {
+        padding-top: 0;
+      }
+    }
+
+    @include _560 {
+      padding: 0 rem(30);
     }
   }
 }
