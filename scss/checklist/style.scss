@@ -97,12 +97,10 @@
 					.checklist-step {
 
 						&__title {
-							font-family: Roboto Medium;
-							font-style: normal;
 							font-weight: 500;
 							font-size: 20px;
 							line-height: 26px;
-							color: #252525;
+							color: $textBlackColor;
 
 							@include _560 {
 								font-size: 16px;

@@ -3,7 +3,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  src: local("Roboto Light"), local("Roboto-Light"), url("../fonts/Roboto/RobotoLight.woff2") format("woff2"), url("../fonts/Roboto/RobotoLight.woff") format("woff"), url("../fonts/Roboto/RobotoLight.ttf") format("truetype");
+  src: local("Roboto Light"), local("Roboto-Light"), url("../../fonts/Roboto/RobotoLight.woff2") format("woff2"), url("../../fonts/Roboto/RobotoLight.woff") format("woff"), url("../../fonts/Roboto/RobotoLight.ttf") format("truetype");
 }
 
 /* Roboto-Regular - 400 */
@@ -11,7 +11,15 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/Roboto/Roboto.woff2") format("woff2"), url("../fonts/Roboto/Roboto.woff") format("woff"), url("../fonts/Roboto/Roboto.ttf") format("truetype");
+  src: local("Roboto"), local("Roboto-Regular"), url("../../fonts/Roboto/Roboto.woff2") format("woff2"), url("../../fonts/Roboto/Roboto.woff") format("woff"), url("../../fonts/Roboto/Roboto.ttf") format("truetype");
+}
+
+/* Roboto-Medium - 500 */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto"), local("Roboto-Medium"), url("../../fonts/Roboto/RobotoMedium.woff2") format("woff2"), url("../../fonts/Roboto/RobotoMedium.woff") format("woff"), url("../../fonts/Roboto/RobotoMedium.ttf") format("truetype");
 }
 
 /* Roboto-700 - Bold */
@@ -19,7 +27,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/Roboto/RobotoBold.woff2") format("woff2"), url("../fonts/Roboto/RobotoBold.woff") format("woff"), url("../fonts/Roboto/RobotoBold.ttf") format("truetype");
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../../fonts/Roboto/RobotoBold.woff2") format("woff2"), url("../../fonts/Roboto/RobotoBold.woff") format("woff"), url("../../fonts/Roboto/RobotoBold.ttf") format("truetype");
 }
 
 /* Gotham Pro -700 - Bold */
@@ -27,7 +35,7 @@
   font-family: 'Gotham Pro';
   font-style: normal;
   font-weight: 700;
-  src: local("Gotham Pro Bold"), local("GothamPro-Bold"), url("../fonts/GothamPro/GothamPro-Bold.woff2") format("woff2"), url("../fonts/GothamPro/GothamPro-Bold.woff") format("woff"), url("../fonts/GothamPro/GothamPro-Bold.ttf") format("truetype");
+  src: local("Gotham Pro Bold"), local("GothamPro-Bold"), url("../../fonts/GothamPro/GothamPro-Bold.woff2") format("woff2"), url("../../fonts/GothamPro/GothamPro-Bold.woff") format("woff"), url("../../fonts/GothamPro/GothamPro-Bold.ttf") format("truetype");
 }
 
 /* Material Icons */
@@ -35,9 +43,9 @@
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/MaterialIcons/MaterialIcons-Regular.eot");
+  src: url("../../fonts/MaterialIcons/MaterialIcons-Regular.eot");
   /* For IE6-8 */
-  src: local("Material Icons"), local("MaterialIcons-Regular"), url("../fonts/MaterialIcons/MaterialIcons-Regular.woff2") format("woff2"), url("../fonts/MaterialIcons/MaterialIcons-Regular.woff") format("woff"), url("../fonts/MaterialIcons/MaterialIcons-Regular.ttf") format("truetype");
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("../../fonts/MaterialIcons/MaterialIcons-Regular.woff2") format("woff2"), url("../../fonts/MaterialIcons/MaterialIcons-Regular.woff") format("woff"), url("../../fonts/MaterialIcons/MaterialIcons-Regular.ttf") format("truetype");
 }
 
 /************************************
@@ -1772,7 +1780,7 @@ body {
   padding: 0;
   margin: 0;
   position: relative;
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   color: #424242;
   -webkit-font-smoothing: antialiased;
@@ -2636,8 +2644,6 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 }
 
 .checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-step__title {
-  font-family: Roboto Medium;
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 26px;
