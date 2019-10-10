@@ -1,0 +1,225 @@
+// JUST SIMPLE IMPORT SCSS-FILES
+@import "../variables";
+@import "../fonts";
+@import "../mixins";
+@import "../functions";
+@import "../primeflex";
+@import "../primeicons";
+@import "../utils";
+@import "../default";
+@import "../login";
+@import "../forms";
+@import "../helpers";
+
+// Custom styles
+.checklist-page {
+
+  font-size: $fontSize;
+
+  @include _560 {
+    font-size: 10px;
+  }
+
+  ol {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  .checklist-block {
+    margin: 80px auto;
+    max-width: 800px;
+    border: 1px solid $borderColor;
+    border-radius: $borderRadius;
+
+    &__img {
+      width: 100%;
+      max-height: 250px;
+
+      &>img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .content-item {
+      margin-bottom: 2.85em;
+    }
+
+    &__content {
+      padding: 40px;
+
+      @include _560 {
+        padding: 20px;
+      }
+
+      &-title h1 {
+        font-family: $fontHeading;
+        font-size: 36px;
+        line-height: 34px;
+        color: $textBlackColor;
+
+        @include _560 {
+          font-size: 24px;
+        }
+      }
+
+      &-description p {
+        font-size: 18px;
+        line-height: 140%;
+        color: $textDescriptionColor;
+
+        @include _560 {
+          font-size: 14px;
+        }
+      }
+
+      &-steps {
+        border-radius: $borderRadius;
+        counter-reset: list-1;
+
+        .results-block__title {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 28px;
+          color: $textBlackColor;
+        }
+
+        .checklist-block__content-step {
+          padding: 32px 0;
+          border-bottom: 1px solid $borderColor;
+          counter-reset: list;
+
+          @include _560 {
+            padding: 7px 10px;
+          }
+
+          .step-item {
+            margin-bottom: 14px;
+          }
+
+          .checklist-step {
+
+            &__title {
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 26px;
+              color: $textBlackColor;
+
+              @include _560 {
+                font-size: 16px;
+              }
+
+              &:after {
+                margin-left: 5px;
+                content: counters(list-1, ".") " ";
+                counter-increment: list-1;
+              }
+            }
+
+            &__description p {
+              margin-top: 14px;
+              font-size: 16px;
+              line-height: 140%;
+              color: $textSecondaryColor;
+
+              @include _560 {
+                font-size: 12px;
+              }
+            }
+
+            &__sublist {
+              padding: 7px 0 7px 20px;
+              margin: 0;
+              counter-reset: list-2;
+
+              &-item {
+                padding: 7px 0;
+                display: block;
+                font-size: 16px;
+                line-height: 140%;
+                color: $textDescriptionColor;
+
+                &:before {
+                  content: counter(list-1) "."counter(list-2) ". ";
+                  counter-increment: list-2;
+                }
+
+                @include _560 {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .footer-buttons {
+        margin-top: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+
+        @include _560 {
+          margin-top: 10px;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+        }
+
+        .btn-link {
+          font-size: 14px;
+          line-height: 140%;
+          text-align: center;
+          text-decoration: none;
+          color: $primaryColor;
+        }
+
+        button {
+          margin-left: 40px;
+          padding: 10px 80px;
+          height: auto;
+          font-size: 14px;
+          line-height: 140%;
+          text-align: center;
+          color: $textLightColor;
+          background-color: $primaryColor;
+          cursor: pointer;
+          outline: none;
+          border: 0 none;
+          overflow: hidden;
+          -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+            0px 0px 2px rgba(0, 0, 0, 0.14),
+            0px 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+            0px 0px 2px rgba(0, 0, 0, 0.14),
+            0px 1px 3px rgba(0, 0, 0, 0.2);
+          @include border-radius($borderRadius);
+          @include transition(all $transitionDuration ease-in-out);
+
+          .ui-button-text {
+            line-height: 0;
+          }
+
+          @include _560 {
+            margin-left: 20px;
+            padding: 5px 40px;
+          }
+        }
+
+      }
+    }
+
+    @include _767 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
