@@ -15,7 +15,7 @@
 .afterfix-page{
 
 	.afterfix-block{
-		margin-top: 80px;
+		margin: 80px auto 0;
 		max-width: 800px;
 
 		&__img{
@@ -25,8 +25,14 @@
 			border-radius: $borderRadius;
 
 			&>img{
+				display: block;
 				max-width: 100%;
+				height: auto;
 			}
+		}
+
+		.content-item {
+			margin-bottom: 20px;
 		}
 
 		&__content{
@@ -39,18 +45,52 @@
 				color: $textBlackColor;
 			}
 
-			&-description{
-				font-family: $fontContent;
+			&-description p{
 				font-size: 18px;
 				line-height: 140%;
-				background: $textDescriptionColor;
+				color: $textDescriptionColor;
 			}
 
 			&-steps{
-				padding: 14px 20px;
-				border: 1px solid $borderColor;
 				border-radius: $borderRadius;
+				-webkit-box-shadow: 0px 8px 15px rgba(119, 119, 119, 0.15);
+								box-shadow: 0px 8px 15px rgba(119, 119, 119, 0.15);
+								
+				.afterfix-block__content-step{
+					padding: 14px 20px;
+					border-bottom: 1px solid $borderColor;
+
+					.afterfix-step{
+						
+						&__title{
+							font-family: Roboto Medium;
+							font-style: normal;
+							font-weight: 500;
+							font-size: 20px;
+							line-height: 26px;
+							color: #252525;
+						}
+
+						&__description{
+							font-family: Roboto;
+							font-style: normal;
+							font-weight: normal;
+							font-size: 16px;
+							line-height: 140%;
+							color: #757575;
+						}
+
+						&__list{
+							padding-left: 20px;
+
+							li{
+								padding: 7px 0;
+							}
+						}
+					}
+				}
 			}
+
 		}
 	}
 }

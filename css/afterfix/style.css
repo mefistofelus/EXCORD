@@ -2540,7 +2540,7 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 }
 
 .afterfix-page .afterfix-block {
-  margin-top: 80px;
+  margin: 80px auto 0;
   max-width: 800px;
 }
 
@@ -2552,7 +2552,13 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 }
 
 .afterfix-page .afterfix-block__img > img {
+  display: block;
   max-width: 100%;
+  height: auto;
+}
+
+.afterfix-page .afterfix-block .content-item {
+  margin-bottom: 20px;
 }
 
 .afterfix-page .afterfix-block__content {
@@ -2566,15 +2572,45 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   color: #252525;
 }
 
-.afterfix-page .afterfix-block__content-description {
-  font-family: "Roboto", "Helvetica Neue", sans-serif;
+.afterfix-page .afterfix-block__content-description p {
   font-size: 18px;
   line-height: 140%;
-  background: #353535;
+  color: #353535;
 }
 
 .afterfix-page .afterfix-block__content-steps {
-  padding: 14px 20px;
-  border: 1px solid #EAEAEA;
   border-radius: 5px;
+  -webkit-box-shadow: 0px 8px 15px rgba(119, 119, 119, 0.15);
+  box-shadow: 0px 8px 15px rgba(119, 119, 119, 0.15);
+}
+
+.afterfix-page .afterfix-block__content-steps .afterfix-block__content-step {
+  padding: 14px 20px;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.afterfix-page .afterfix-block__content-steps .afterfix-block__content-step .afterfix-step__title {
+  font-family: Roboto Medium;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #252525;
+}
+
+.afterfix-page .afterfix-block__content-steps .afterfix-block__content-step .afterfix-step__description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  color: #757575;
+}
+
+.afterfix-page .afterfix-block__content-steps .afterfix-block__content-step .afterfix-step__list {
+  padding-left: 20px;
+}
+
+.afterfix-page .afterfix-block__content-steps .afterfix-block__content-step .afterfix-step__list li {
+  padding: 7px 0;
 }
