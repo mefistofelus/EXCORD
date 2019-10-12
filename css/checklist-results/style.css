@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Roboto-300 Light */
 @font-face {
   font-family: 'Roboto';
@@ -1780,7 +1781,7 @@ body {
   padding: 0;
   margin: 0;
   position: relative;
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   color: #424242;
   -webkit-font-smoothing: antialiased;
@@ -2638,6 +2639,10 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   counter-reset: list;
 }
 
+.checklist-page .checklist-block__content-steps .checklist-block__content-step:last-child {
+  border-bottom: none;
+}
+
 @media all and (max-width: 560px) {
   .checklist-page .checklist-block__content-steps .checklist-block__content-step {
     padding: 7px 10px;
@@ -2777,10 +2782,168 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   color: #757575;
 }
 
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table {
+  max-height: 229px;
+  overflow: scroll;
+  /*Подсветка четных строк в таблице*/
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table::-webkit-scrollbar-track {
+  background-color: #F0FAF9;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table::-webkit-scrollbar {
+  margin: 20px;
+  width: 3px;
+  height: 3px;
+  background-color: #F0FAF9;
+  border-radius: 2px;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table::-webkit-scrollbar-thumb {
+  background-color: #1976d2;
+  border-radius: 2px;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table {
+  width: 100%;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  padding: 0;
+  font-size: 14px;
+  border: 1px solid #D9F2F0;
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 3px;
+  color: #666666;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table th,
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table td {
+  padding: 16px 20px;
+  text-align: center;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table th {
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #252525;
+  vertical-align: middle;
+  border-bottom: 1px solid #D9F2F0;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table th:first-child {
+  padding-left: 55px;
+  padding-right: 55px;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table td {
+  font-size: 16px;
+  color: #757575;
+  vertical-align: middle;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table td:first-child {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: #000000;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table td span {
+  display: block;
+  position: relative;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table td span.plus::before {
+  content: '';
+  width: 16px;
+  height: 2px;
+  background-color: #757575;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table td span.plus::after {
+  content: '';
+  height: 16px;
+  width: 2px;
+  position: absolute;
+  background-color: #757575;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table td span.minus::before {
+  content: '';
+  width: 16px;
+  height: 2px;
+  background-color: #757575;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table th + th,
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table td + td,
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table th + td {
+  border-left: 1px solid #D9F2F0;
+  /*Стиль для левой границы между двумя ячейками*/
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table thead tr:first-child th:first-child,
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table tbody tr:first-child td:first-child {
+  border-radius: 5px 0 0 0;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table thead tr:first-child th:last-child,
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table tbody tr:first-child td:last-child {
+  border-radius: 0 5px 0 0;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table tbody tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .checklist-result__item .result-item__table table tbody tr:nth-child(even) td {
+  background-color: #F0FAF9;
+}
+
 .checklist-page .checklist-block__content-steps .checklist-block__content-step .result-item__inner {
   padding: 5px 10px;
   border-radius: 3px;
   background-color: #F0FAF9;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .download-link {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .download-link .icon {
+  margin-right: 12px;
+}
+
+.checklist-page .checklist-block__content-steps .checklist-block__content-step .download-link .btn-link {
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  text-decoration: none;
+  color: #1976d2;
 }
 
 .checklist-page .checklist-block__content .footer-buttons {
@@ -2803,14 +2966,6 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
     -ms-flex-pack: center;
     justify-content: center;
   }
-}
-
-.checklist-page .checklist-block__content .footer-buttons .btn-link {
-  font-size: 14px;
-  line-height: 140%;
-  text-align: center;
-  text-decoration: none;
-  color: #1976d2;
 }
 
 .checklist-page .checklist-block__content .footer-buttons button {
@@ -2850,3 +3005,4 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
     margin-bottom: 0;
   }
 }
+/*# sourceMappingURL=style.css.map */

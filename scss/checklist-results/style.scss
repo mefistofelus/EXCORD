@@ -13,104 +13,108 @@
 
 // Custom styles
 .checklist-page {
-  
+
   font-size: $fontSize;
-  
+
   @include _560 {
     font-size: 10px;
   }
-  
+
   ol {
     margin: 0;
     padding: 0;
     display: block;
   }
-  
+
   .checklist-block {
     margin: 80px auto;
     max-width: 800px;
     border: 1px solid $borderColor;
     border-radius: $borderRadius;
-    
+
     &__img {
       width: 100%;
       max-height: 250px;
-      
+
       &>img {
         display: block;
         max-width: 100%;
         height: auto;
       }
     }
-    
+
     .content-item {
       margin-bottom: 2.85em;
     }
-    
+
     &__content {
       padding: 40px;
-      
+
       @include _560 {
         padding: 20px;
       }
-      
+
       &-title h1 {
         font-family: $fontHeading;
         font-size: 36px;
         line-height: 34px;
         color: $textBlackColor;
-        
+
         @include _560 {
           font-size: 24px;
         }
       }
-      
+
       &-description p {
         font-size: 18px;
         line-height: 140%;
         color: $textDescriptionColor;
-        
+
         @include _560 {
           font-size: 14px;
         }
       }
-      
+
       &-steps {
         border-radius: $borderRadius;
         counter-reset: list-1;
-        
+
         .results-block__title {
           font-weight: 700;
           font-size: 24px;
           line-height: 28px;
           color: $textBlackColor;
         }
-        
+
         .checklist-block__content-step {
           padding: 32px 0;
           border-bottom: 1px solid $borderColor;
           counter-reset: list;
-          
+
+          &:last-child {
+            border-bottom: none;
+          }
+
           @include _560 {
             padding: 7px 10px;
           }
-          
+
           .step-item {
             margin-bottom: 14px;
           }
-          
+
           .checklist-step {
-            
+
             &__title {
               font-weight: 500;
               font-size: 20px;
               line-height: 26px;
               color: $textBlackColor;
-              
+
               @include _560 {
                 font-size: 16px;
               }
-              
+
               &:after {
                 margin-left: 5px;
                 content: counters(list-1, ".") " ";
@@ -118,34 +122,34 @@
               }
             }
 
-            &__img{
+            &__img {
               margin-top: 24px;
               margin-left: 15px;
               max-width: 250px;
               max-height: 100px;
-              
-              &>img{
+
+              &>img {
                 max-width: 100%;
                 border-radius: $borderRadius;
               }
             }
-            
+
             &__description p {
               margin-top: 14px;
               font-size: 16px;
               line-height: 140%;
               color: $textSecondaryColor;
-              
+
               @include _560 {
                 font-size: 12px;
               }
             }
-            
+
             &__sublist {
               padding-left: 20px;
               margin: 0;
               counter-reset: list-2;
-              
+
               &-item {
                 padding: 24px 0;
                 display: block;
@@ -153,23 +157,23 @@
                 line-height: 140%;
                 color: $textDescriptionColor;
                 border-bottom: 1px solid $borderColor;
-                
+
                 &:before {
                   content: counter(list-1) "."counter(list-2) " ";
                   counter-increment: list-2;
                 }
 
-                &:last-child{
+                &:last-child {
                   border: none;
                 }
-                
+
                 @include _560 {
                   font-size: 12px;
                 }
               }
             }
           }
-          
+
           .checklist-result__item {
             margin-top: 12px;
             margin-left: 15px;
@@ -179,13 +183,13 @@
             -webkit-box-align: center;
             -ms-flex-align: center;
             align-items: center;
-            
-            .result-item__icon{
+
+            .result-item__icon {
               margin-right: 10px;
               font-size: 16px;
             }
-            
-            .result-item__content{
+
+            .result-item__content {
               max-width: 100%;
               max-height: 22px;
               font-size: 16px;
@@ -193,8 +197,8 @@
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              
-              &>button{
+
+              &>button {
                 display: inline-block;
                 padding: 0;
                 margin: 0;
@@ -206,33 +210,206 @@
                 color: inherit;
                 text-align: center;
               }
-              
-              &>a{
+
+              &>a {
                 color: $textSecondaryColor;
                 -webkit-text-decoration-line: underline;
                 text-decoration-line: none;
               }
 
-              &>a.result-item__link{
+              &>a.result-item__link {
                 text-decoration: underline;
               }
             }
 
-            .result-item__text{
+            .result-item__text {
               font-size: 16px;
               line-height: 140%;
               color: $textSecondaryColor;
             }
+
+            .result-item__table {
+              max-height: 229px;
+              overflow: scroll;
+
+              &::-webkit-scrollbar-track {
+                background-color: #F0FAF9;
+              }
+
+              &::-webkit-scrollbar {
+                margin: 20px;
+                width: 3px;
+                height: 3px;
+                background-color: #F0FAF9;
+                border-radius: 2px;
+              }
+
+              &::-webkit-scrollbar-thumb {
+                background-color: $primaryColor;
+                border-radius: 2px;
+              }
+
+              table {
+                width: 100%;
+                margin-bottom: 16px;
+                margin-right: 16px;
+                padding: 0;
+                font-size: 14px;
+                border: 1px solid #D9F2F0;
+                border-spacing: 0;
+                border-collapse: separate;
+                border-radius: 3px;
+                color: #666666;
+              }
+
+              table th,
+              table td {
+                padding: 16px 20px;
+                text-align: center;
+              }
+
+              table th {
+                font-family: $fontHeading;
+                font-size: 14px;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                white-space: nowrap;
+                color: $textBlackColor;
+                vertical-align: middle;
+                border-bottom: 1px solid #D9F2F0;
+
+                &:first-child {
+                  padding-left: 55px;
+                  padding-right: 55px;
+                }
+              }
+
+              table td {
+                font-size: 16px;
+                color: $textSecondaryColor;
+                vertical-align: middle;
+
+                &:first-child {
+                  padding-top: 12px;
+                  padding-bottom: 12px;
+                  text-align: left;
+                  color: $accentTextColor;
+                }
+
+                span {
+                  display: block;
+                  position: relative;
+
+                  &.plus::before {
+                    content: '';
+                    width: 16px;
+                    height: 2px;
+                    background-color: #757575;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                  }
+
+                  &.plus::after {
+                    content: '';
+                    height: 16px;
+                    width: 2px;
+                    position: absolute;
+                    background-color: #757575;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                  }
+
+                  &.minus::before {
+                    content: '';
+                    width: 16px;
+                    height: 2px;
+                    background-color: #757575;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                  }
+                }
+              }
+
+              table th+th,
+              table td+td,
+              table th+td {
+                border-left: 1px solid #D9F2F0;
+                /*Стиль для левой границы между двумя ячейками*/
+              }
+
+              table thead tr:first-child th:first-child,
+              /*Первая строка первая ячейка в заголовке таблицы*/
+              table tbody tr:first-child td:first-child
+
+              /*Первая строка первая ячейка в теле таблицы*/
+                {
+                border-radius: 5px 0 0 0;
+              }
+
+              table thead tr:first-child th:last-child,
+              /*Первая строка последняя ячейка в заголовке таблицы*/
+              table tbody tr:first-child td:last-child
+
+              /*Первая строка последняя ячейка в теле таблицы*/
+                {
+                border-radius: 0 5px 0 0;
+              }
+
+              table tbody tr:last-child td:first-child
+
+              /*Последняя строка первая ячейка в теле таблицы*/
+                {
+                border-radius: 0 0 0 5px;
+              }
+
+              table tbody tr:last-child td:last-child
+
+              /*Последняя строка последняя ячейка в теле таблицы*/
+                {
+                border-radius: 0 0 5px 0;
+              }
+
+              /*Подсветка четных строк в таблице*/
+              table tbody tr:nth-child(even) td {
+                background-color: #F0FAF9;
+              }
+
+            }
           }
-          
-          .result-item__inner{
+
+          .result-item__inner {
             padding: 5px 10px;
             border-radius: 3px;
             background-color: #F0FAF9;
           }
+
+          .download-link {
+            margin-top: 24px;
+            text-align: center;
+
+            .icon {
+              margin-right: 12px;
+            }
+
+            .btn-link {
+              font-size: 14px;
+              line-height: 140%;
+              text-align: center;
+              text-decoration: none;
+              color: $primaryColor;
+            }
+          }
         }
       }
-      
+
       .footer-buttons {
         margin-top: 20px;
         display: -webkit-box;
@@ -244,22 +421,14 @@
         -webkit-box-pack: end;
         -ms-flex-pack: end;
         justify-content: flex-end;
-        
+
         @include _560 {
           margin-top: 10px;
           -webkit-box-pack: center;
           -ms-flex-pack: center;
           justify-content: center;
         }
-        
-        .btn-link {
-          font-size: 14px;
-          line-height: 140%;
-          text-align: center;
-          text-decoration: none;
-          color: $primaryColor;
-        }
-        
+
         button {
           margin-left: 40px;
           padding: 10px 80px;
@@ -274,27 +443,27 @@
           border: 0 none;
           overflow: hidden;
           -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
-          0px 0px 2px rgba(0, 0, 0, 0.14),
-          0px 1px 3px rgba(0, 0, 0, 0.2);
+            0px 0px 2px rgba(0, 0, 0, 0.14),
+            0px 1px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
-          0px 0px 2px rgba(0, 0, 0, 0.14),
-          0px 1px 3px rgba(0, 0, 0, 0.2);
+            0px 0px 2px rgba(0, 0, 0, 0.14),
+            0px 1px 3px rgba(0, 0, 0, 0.2);
           @include border-radius($borderRadius);
           @include transition(all $transitionDuration ease-in-out);
-          
+
           .ui-button-text {
             line-height: 0;
           }
-          
+
           @include _560 {
             margin-left: 20px;
             padding: 5px 40px;
           }
         }
-        
+
       }
     }
-    
+
     @include _767 {
       margin-top: 0;
       margin-bottom: 0;
