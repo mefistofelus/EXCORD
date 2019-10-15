@@ -1583,3 +1583,183 @@ p {
 li {
   list-style-type: none;
 }
+
+.article-page .meta-box {
+  margin: 80px auto 120px auto;
+  padding: 18px 40px;
+  max-width: 1170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #F6F6F7;
+  border-radius: 3px;
+}
+
+@media all and (max-width: 767px) {
+  .article-page .meta-box {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+}
+
+.article-page .meta-box .meta-block {
+  margin-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media all and (max-width: 767px) {
+  .article-page .meta-box .meta-block {
+    margin: 0 !important;
+  }
+}
+
+.article-page .meta-box .meta-block > i {
+  margin-right: 8px;
+  color: #BDBDBD;
+}
+
+.article-page .meta-box .meta-block > i.active {
+  color: #FCC842;
+}
+
+.article-page .meta-box .meta-block .counter {
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 15px;
+  white-space: nowrap;
+  color: #353535;
+}
+
+.article-page .meta-box .meta-block.comments {
+  margin-right: 51px;
+}
+
+.article-page .meta-box .meta-block.info {
+  margin-left: auto;
+  text-align: right;
+  color: #757575;
+}
+
+@media all and (max-width: 767px) {
+  .article-page .meta-box .meta-block.info {
+    margin: 0;
+    padding-top: 9px;
+    text-align: center;
+  }
+}
+
+.article-page .comments-section {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.article-page .comments-section__title {
+  margin-bottom: 80px;
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: #000000;
+}
+
+.article-page .comments-section .comment-item {
+  margin-bottom: 20px;
+}
+
+.article-page .comments-section .comment-item__header {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.article-page .comments-section .comment-item__header .comment-item__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.article-page .comments-section .comment-item__header .comment-item__user > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.article-page .comments-section .comment-item__header .comment-item__user-name {
+  padding-left: 12px;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 18px;
+  line-height: 120%;
+  -webkit-font-feature-settings: 'kern'off;
+  font-feature-settings: 'kern'off;
+  color: #252525;
+}
+
+.article-page .comments-section .comment-item__header .comment-item__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.article-page .comments-section .comment-item__header .comment-item__info .link-reply {
+  margin-right: 20px;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 14px;
+  line-height: 15px;
+  color: #183038;
+  text-decoration: none;
+}
+
+.article-page .comments-section .comment-item__header .comment-item__info .link-reply:hover {
+  text-decoration: underline;
+  color: #039588;
+}
+
+.article-page .comments-section .comment-item__header .comment-item__info .pub-date {
+  padding: 8px 20px;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 12px;
+  line-height: 11px;
+  text-transform: lowercase;
+  color: #353535;
+  background: #F6F6F7;
+  border-radius: 3px;
+}
+
+.article-page .comments-section .comment-item__content {
+  font-size: 16px;
+  line-height: 140%;
+  color: #353535;
+}
+
+.article-page .comments-section .comment-item.inner {
+  margin-left: 77px;
+  padding-left: 20px;
+  border-left: 5px solid #F6F6F7;
+}
+/*# sourceMappingURL=style.css.map */
