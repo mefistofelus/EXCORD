@@ -47,6 +47,7 @@
 			&>i {
 				margin-right: 8px;
 				color: #BDBDBD;
+				cursor: pointer;
 
 				&.active {
 					color: #FCC842;
@@ -67,6 +68,12 @@
 				margin-right: 51px;
 			}
 
+			&.rating {
+				i:hover {
+					color: #FCC842;
+				}
+			}
+
 			&.info {
 				margin-left: auto;
 				text-align: right;
@@ -84,7 +91,7 @@
 
 	.comments-section {
 		max-width: 1170px;
-		margin: 0 auto;
+		margin: 0 auto 120px;
 
 		&__title {
 			margin-bottom: 80px;
@@ -94,94 +101,209 @@
 			color: $accentTextColor;
 		}
 
-		.comment-item {
+		.comments__block {
+			margin-bottom: 80px;
 
-			margin-bottom: 20px;
+			.comment-item {
 
-			&__header {
 				margin-bottom: 20px;
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-pack: justify;
-				-ms-flex-pack: justify;
-				justify-content: space-between;
-				-webkit-box-align: center;
-				-ms-flex-align: center;
-				align-items: center;
 
-				.comment-item__user {
+				&__header {
+					margin-bottom: 20px;
 					display: -webkit-box;
 					display: -ms-flexbox;
 					display: flex;
+					-webkit-box-pack: justify;
+					-ms-flex-pack: justify;
+					justify-content: space-between;
 					-webkit-box-align: center;
 					-ms-flex-align: center;
 					align-items: center;
 
-					&>img {
-						width: 40px;
-						height: 40px;
-						border-radius: 50%;
-						background-size: cover;
-					}
+					.comment-item__user {
+						display: -webkit-box;
+						display: -ms-flexbox;
+						display: flex;
+						-webkit-box-align: center;
+						-ms-flex-align: center;
+						align-items: center;
 
-					&-name {
-						padding-left: 12px;
+						&>img {
+							width: 40px;
+							height: 40px;
+							border-radius: 50%;
+							background-size: cover;
+						}
 
-						font-family: $fontHeading;
-						font-size: 18px;
-						line-height: 120%;
-						-webkit-font-feature-settings: 'kern'off;
-						font-feature-settings: 'kern'off;
-						color: $textBlackColor;
-					}
-				}
+						&-name {
+							padding-left: 12px;
 
-				.comment-item__info {
-					display: -webkit-box;
-					display: -ms-flexbox;
-					display: flex;
-					-webkit-box-align: center;
-					-ms-flex-align: center;
-					align-items: center;
-
-					.link-reply {
-						margin-right: 20px;
-						font-family: $fontHeading;
-						font-size: 14px;
-						line-height: 15px;
-						color: #183038;
-						text-decoration: none;
-
-						&:hover {
-							text-decoration: underline;
-							color: #039588;
+							font-family: $fontHeading;
+							font-size: 18px;
+							line-height: 120%;
+							-webkit-font-feature-settings: 'kern'off;
+							font-feature-settings: 'kern'off;
+							color: $textBlackColor;
 						}
 					}
 
-					.pub-date {
-						padding: 8px 20px;
-						font-family: $fontHeading;
-						font-size: 12px;
-						line-height: 11px;
-						text-transform: lowercase;
-						color: $textDescriptionColor;
-						background: #F6F6F7;
-						border-radius: 3px;
+					.comment-item__info {
+						display: -webkit-box;
+						display: -ms-flexbox;
+						display: flex;
+						-webkit-box-align: center;
+						-ms-flex-align: center;
+						align-items: center;
+
+						.link-reply {
+							margin-right: 20px;
+							font-family: $fontHeading;
+							font-size: 14px;
+							line-height: 15px;
+							color: #183038;
+							text-decoration: none;
+
+							&:hover {
+								text-decoration: underline;
+								color: #039588;
+							}
+						}
+
+						.pub-date {
+							padding: 8px 20px;
+							font-family: $fontHeading;
+							font-size: 12px;
+							line-height: 11px;
+							text-transform: lowercase;
+							color: $textDescriptionColor;
+							background: #F6F6F7;
+							border-radius: 3px;
+						}
+					}
+				}
+
+				&__content {
+					font-size: 16px;
+					line-height: 140%;
+					color: $textDescriptionColor;
+				}
+
+				@for $i from 1 through 5 {
+
+					//глубина вложенных комментариев
+					&.nested-comment-#{$i} {
+						margin-left: 77px * $i;
+						padding-left: 20px;
+						border-left: 5px solid #F6F6F7;
 					}
 				}
 			}
+		}
 
-			&__content {
-				font-size: 16px;
-				line-height: 140%;
-				color: $textDescriptionColor;
+		.add-comment__block {
+
+			.add-comment__title {
+				margin-bottom: 40px;
+				font-family: $fontHeading;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 28px;
+				line-height: 31px;
+				color: $accentTextColor;
 			}
 
-			&.inner {
-				margin-left: 77px;
-				padding-left: 20px;
-				border-left: 5px solid #F6F6F7;
+			.add-comment__form {
+				padding: 20px 40px;
+				background: #F6F6F7;
+				border-radius: $borderRadius;
+
+				.form-controls {
+					margin-bottom: 20px;
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-align: center;
+					-ms-flex-align: center;
+					align-items: center;
+
+
+					&>i {
+						color: #BDBDBD;
+						font-size: 2.5em;
+						cursor: pointer;
+
+						&+i {
+							margin-left: 40px;
+						}
+					}
+				}
+
+				.add-comment__text {
+					padding: 20px;
+					max-width: 1090px;
+					width: 100%;
+					height: 84px;
+					background: #FFFFFF;
+					border-radius: $borderRadius;
+					border: 0 none;
+					outline: none;
+					resize: none;
+
+					font-family: $fontContent;
+					font-size: 16px;
+					line-height: 18px;
+					color: $textSecondaryColor;
+					overflow: auto;
+
+					&::-webkit-input-placeholder {
+						font-family: $fontContent;
+						font-size: 16px;
+						line-height: 140%;
+						color: $textSecondaryColor;
+					}
+
+					&:-ms-input-placeholder {
+						font-family: $fontContent;
+						font-size: 16px;
+						line-height: 140%;
+						color: $textSecondaryColor;
+					}
+
+					&::-ms-input-placeholder {
+						font-family: $fontContent;
+						font-size: 16px;
+						line-height: 140%;
+						color: $textSecondaryColor;
+					}
+
+					&::placeholder {
+						font-family: $fontContent;
+						font-size: 16px;
+						line-height: 140%;
+						color: $textSecondaryColor;
+					}
+				}
+
+				.add-comment__submit-btn {
+					margin-top: 20px;
+					padding: 10px 80px;
+					font-family: $fontContent;
+					font-size: 14px;
+					line-height: 140%;
+					text-align: center;
+					color: $primaryTextColor;
+					background: #039588;
+					-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+						0px 0px 2px rgba(0, 0, 0, 0.14),
+						0px 1px 3px rgba(0, 0, 0, 0.2);
+					box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+						0px 0px 2px rgba(0, 0, 0, 0.14),
+						0px 1px 3px rgba(0, 0, 0, 0.2);
+					border-radius: $borderRadius;
+					border: none;
+					cursor: pointer;
+					outline: none;
+				}
 			}
 		}
 	}
