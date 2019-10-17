@@ -1668,11 +1668,16 @@ li {
   color: #757575;
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 979px) {
   .article-page .meta-box .meta-block.info {
     margin: 0;
-    padding-top: 9px;
     text-align: center;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .article-page .meta-box .meta-block.info {
+    padding-top: 9px;
   }
 }
 
@@ -1689,8 +1694,21 @@ li {
   color: #000000;
 }
 
+@media all and (max-width: 560px) {
+  .article-page .comments-section__title {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+}
+
 .article-page .comments-section .comments__block {
   margin-bottom: 80px;
+}
+
+@media all and (max-width: 560px) {
+  .article-page .comments-section .comments__block {
+    margin-bottom: 40px;
+  }
 }
 
 .article-page .comments-section .comments__block .comment-item {
@@ -1745,6 +1763,15 @@ li {
   align-items: center;
 }
 
+@media all and (max-width: 560px) {
+  .article-page .comments-section .comments__block .comment-item__header .comment-item__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
 .article-page .comments-section .comments__block .comment-item__header .comment-item__info .link-reply {
   margin-right: 20px;
   font-family: "Gotham Pro", sans-serif;
@@ -1752,6 +1779,12 @@ li {
   line-height: 15px;
   color: #183038;
   text-decoration: none;
+}
+
+@media all and (max-width: 560px) {
+  .article-page .comments-section .comments__block .comment-item__header .comment-item__info .link-reply {
+    padding-top: 5px;
+  }
 }
 
 .article-page .comments-section .comments__block .comment-item__header .comment-item__info .link-reply:hover {
@@ -1782,10 +1815,42 @@ li {
   border-left: 5px solid #F6F6F7;
 }
 
+@media all and (max-width: 767px) {
+  .article-page .comments-section .comments__block .comment-item.nested-comment-1 {
+    margin-left: 25px;
+    padding-left: 10px;
+    border-left: 3px solid #F6F6F7;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .article-page .comments-section .comments__block .comment-item.nested-comment-1 {
+    margin-left: 15px;
+    padding-left: 10px;
+    border-left: 3px solid #F6F6F7;
+  }
+}
+
 .article-page .comments-section .comments__block .comment-item.nested-comment-2 {
   margin-left: 154px;
   padding-left: 20px;
   border-left: 5px solid #F6F6F7;
+}
+
+@media all and (max-width: 767px) {
+  .article-page .comments-section .comments__block .comment-item.nested-comment-2 {
+    margin-left: 50px;
+    padding-left: 10px;
+    border-left: 3px solid #F6F6F7;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .article-page .comments-section .comments__block .comment-item.nested-comment-2 {
+    margin-left: 30px;
+    padding-left: 10px;
+    border-left: 3px solid #F6F6F7;
+  }
 }
 
 .article-page .comments-section .comments__block .comment-item.nested-comment-3 {
@@ -1794,16 +1859,64 @@ li {
   border-left: 5px solid #F6F6F7;
 }
 
+@media all and (max-width: 767px) {
+  .article-page .comments-section .comments__block .comment-item.nested-comment-3 {
+    margin-left: 75px;
+    padding-left: 10px;
+    border-left: 3px solid #F6F6F7;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .article-page .comments-section .comments__block .comment-item.nested-comment-3 {
+    margin-left: 45px;
+    padding-left: 10px;
+    border-left: 3px solid #F6F6F7;
+  }
+}
+
 .article-page .comments-section .comments__block .comment-item.nested-comment-4 {
   margin-left: 308px;
   padding-left: 20px;
   border-left: 5px solid #F6F6F7;
 }
 
+@media all and (max-width: 767px) {
+  .article-page .comments-section .comments__block .comment-item.nested-comment-4 {
+    margin-left: 100px;
+    padding-left: 10px;
+    border-left: 3px solid #F6F6F7;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .article-page .comments-section .comments__block .comment-item.nested-comment-4 {
+    margin-left: 60px;
+    padding-left: 10px;
+    border-left: 3px solid #F6F6F7;
+  }
+}
+
 .article-page .comments-section .comments__block .comment-item.nested-comment-5 {
   margin-left: 385px;
   padding-left: 20px;
   border-left: 5px solid #F6F6F7;
+}
+
+@media all and (max-width: 767px) {
+  .article-page .comments-section .comments__block .comment-item.nested-comment-5 {
+    margin-left: 125px;
+    padding-left: 10px;
+    border-left: 3px solid #F6F6F7;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .article-page .comments-section .comments__block .comment-item.nested-comment-5 {
+    margin-left: 75px;
+    padding-left: 10px;
+    border-left: 3px solid #F6F6F7;
+  }
 }
 
 .article-page .comments-section .add-comment__block .add-comment__title {
@@ -1814,6 +1927,13 @@ li {
   font-size: 28px;
   line-height: 31px;
   color: #000000;
+}
+
+@media all and (max-width: 560px) {
+  .article-page .comments-section .add-comment__block .add-comment__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
 }
 
 .article-page .comments-section .add-comment__block .add-comment__form {
@@ -1832,14 +1952,35 @@ li {
   align-items: center;
 }
 
+@media all and (max-width: 560px) {
+  .article-page .comments-section .add-comment__block .add-comment__form .form-controls {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+
 .article-page .comments-section .add-comment__block .add-comment__form .form-controls > i {
   color: #BDBDBD;
   font-size: 2.5em;
   cursor: pointer;
 }
 
+@media all and (max-width: 560px) {
+  .article-page .comments-section .add-comment__block .add-comment__form .form-controls > i {
+    font-size: 1.8em;
+  }
+}
+
 .article-page .comments-section .add-comment__block .add-comment__form .form-controls > i + i {
   margin-left: 40px;
+}
+
+@media all and (max-width: 560px) {
+  .article-page .comments-section .add-comment__block .add-comment__form .form-controls > i + i {
+    margin-left: 20px;
+  }
 }
 
 .article-page .comments-section .add-comment__block .add-comment__form .add-comment__text {
@@ -1889,7 +2030,7 @@ li {
 
 .article-page .comments-section .add-comment__block .add-comment__form .add-comment__submit-btn {
   margin-top: 20px;
-  padding: 10px 80px;
+  padding: 10px 40px;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-size: 14px;
   line-height: 140%;
@@ -1902,5 +2043,12 @@ li {
   border: none;
   cursor: pointer;
   outline: none;
+}
+
+@media all and (max-width: 560px) {
+  .article-page .comments-section .add-comment__block .add-comment__form .add-comment__submit-btn {
+    margin-top: 10px;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
