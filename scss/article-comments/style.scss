@@ -49,6 +49,10 @@
 				color: #BDBDBD;
 				cursor: pointer;
 
+				&:hover {
+					color: #039588;
+				}
+
 				&.active {
 					color: #FCC842;
 				}

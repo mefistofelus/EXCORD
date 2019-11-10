@@ -1549,7 +1549,7 @@ body {
   padding: 0;
   margin: 0;
   position: relative;
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   color: #424242;
   -webkit-font-smoothing: antialiased;
@@ -1638,6 +1638,10 @@ li {
   margin-right: 8px;
   color: #BDBDBD;
   cursor: pointer;
+}
+
+.article-page .meta-box .meta-block > i:hover {
+  color: #039588;
 }
 
 .article-page .meta-box .meta-block > i.active {
