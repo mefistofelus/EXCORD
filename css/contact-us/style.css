@@ -31712,6 +31712,7 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   -ms-flex-preferred-size: 1170px;
   flex-basis: 1170px;
   margin: 0 auto;
+  padding-bottom: 36px;
   position: relative;
 }
 
@@ -31839,7 +31840,7 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 }
 
 .contact-page .container .contact-form form button.ui-button {
-  margin: 36px 0;
+  margin-top: 36px;
   padding: 9px 95px;
   height: auto;
   background-color: #1E554E;
