@@ -14,22 +14,25 @@
 
 // Custom styles
 .contact-page {
-  padding-top: 10%;
-  // height: 100vh;
-  // display: -webkit-box;
-  // display: -ms-flexbox;
-  // display: flex;
-  // -webkit-box-align: center;
-  // -ms-flex-align: center;
-  // align-items: center;
+  //padding-top: 10%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 
   .container {
     max-width: 1170px;
+    -ms-flex-preferred-size: 1170px;
+    flex-basis: 1170px;
     margin: 0 auto;
     position: relative;
 
     @include _1170 {
       padding: 0 15px;
+      overflow: hidden;
     }
 
     .bg-img {
@@ -76,7 +79,6 @@
     }
 
     .contacts__block {
-
 
       .contact__item {
         display: -webkit-box;
@@ -148,7 +150,7 @@
         }
 
         button.ui-button {
-          margin-top: 36px;
+          margin: 36px 0;
           padding: 9px 95px;
           height: auto;
           background-color: #1E554E;
