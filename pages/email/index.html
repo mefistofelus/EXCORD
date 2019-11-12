@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="icon" type="image/png" href="../../img/favicon.png">
+
+    <title>EXCORD</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/email/style.min.css">
+
+  </head>
+
+  <body>
+
+    <div class="email-page">
+      <div class="email__block">
+        <div class="header__icon">
+          <i class="material-icons">
+            email
+          </i>
+        </div>
+        <div class="inner__content">
+          <p class="page__title">
+            Пожалуйста, подтвердите свой почтовый ящик
+          </p>
+          <p class="page__subtitle">
+            Мы выслали вам письмо на электронный адрес, который вы указали при регистрации. В письме содержится код,
+            который необходимо ввести в поле ниже.
+          </p>
+          <p class="page__description">
+            Мы делаем это с целью защитить ваш аккаунт от злоумышленников
+          </p>
+          <div class="number__access">
+            <form action="#" class="access__form">
+              <input class="digit" type="tel" name="digit-one" id="first__digit" maxlength="1" require>
+              <input class="digit" type="tel" name="digit-two" id="second__digit" maxlength="1" require>
+              <input class="digit" type="tel" name="digit-three" id="third__digit" maxlength="1" require>
+              <input class="digit" type="tel" name="digit-four" id="fourth__digit" maxlength="1" require>
+
+              <!-- Кнопка "Подтвердить" -->
+              <div class="btn__send">
+                <button class="ui-button-info ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                  label="Подтвердить" pbutton="" type="submit">
+                  <span class="ui-button-text ui-clickable">Подтвердить</span>
+                  <!-- Этот спан со своими классами должен добавляться динамически в момент клика по кнопке. Также динамически должны вычислятся координаты клика по кнопке и подставлятся в значения top и left -->
+                  <span class="ink ripple-animate"
+                    style="height: 275px; width: 275px; top: -121.469px; left: 50px; pointer-events: none;"></span>
+                  <!-- Этот спан  -->
+                </button>
+                <!-- <button type="submit" class="ripple-animate" style="width: 50%">Подтвердить</button> -->
+              </div>
+
+              <hr class="divider">
+
+              <div class="footer">
+                <p class="footer__content">
+                  Ничего не пришло? <a href="#" class="footer__link">Отправить</a> код подтверждения повторно
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.email-page -->
+
+  </body>
+
+</html>

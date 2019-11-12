@@ -1,0 +1,142 @@
+// JUST SIMPLE IMPORT SCSS-FILES
+@import "../variables";
+@import "../fonts";
+@import "../mixins";
+@import "../functions";
+@import "../primeflex";
+@import "../primeicons";
+@import "../icons";
+@import "../utils";
+@import "../default";
+@import "../login";
+@import "../forms";
+@import "../helpers";
+
+// Custom styles
+.email-page {
+  margin: 0 auto;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 1170px;
+  -ms-flex-preferred-size: 1170px;
+  flex-basis: 1170px;
+
+  .email__block {
+    padding: 87px 40px 80px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 8px 15px rgba(119, 119, 119, 0.15);
+    box-shadow: 0px 8px 15px rgba(119, 119, 119, 0.15);
+    border-radius: $borderRadius;
+
+    .header__icon {
+      margin: 0 auto 48px;
+      text-align: center;
+      color: #039588;
+
+      &>i {
+        font-size: 84px;
+      }
+    }
+
+    .inner__content {
+      font-family: $fontHeading;
+      text-align: center;
+      color: #textBlackColor;
+
+      .page__title {
+        padding-bottom: 20px;
+        font-size: 36px;
+      }
+
+      .page__subtitle {
+        padding-bottom: 20px;
+        font-family: $fontContent;
+        font-weight: 300;
+        font-size: 20px;
+        color: $textDescriptionColor;
+      }
+
+      .page__description {
+        font-family: $fontContent;
+        font-size: 16px;
+        color: $textSecondaryColor;
+      }
+
+      .number__access {
+        margin-top: 80px;
+
+        input {
+          max-width: 70px;
+          -ms-flex-preferred-size: 70px;
+          flex-basis: 70px;
+          border: none;
+
+          &.digit {
+            font-family: $fontHeading;
+            font-size: 36px;
+            text-align: center;
+            color: $textDescriptionColor;
+            border-bottom: 3px solid #BDBDBD;
+            border-radius: 2px;
+            outline: none;
+          }
+        }
+
+        .btn__send {
+          padding: 40px 0;
+          margin-bottom: 40px;
+
+          button.ui-button {
+            padding: 20px 80px;
+            font-family: $fontContent;
+            font-size: 14px;
+            line-height: 0;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: #1E554E;
+            -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+              0px 0px 2px rgba(0, 0, 0, 0.14),
+              0px 1px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+              0px 0px 2px rgba(0, 0, 0, 0.14),
+              0px 1px 3px rgba(0, 0, 0, 0.2);
+            border-radius: $borderRadius;
+            cursor: pointer;
+
+            .ui-button-text {
+              line-height: 0;
+            }
+          }
+        }
+
+        .divider {
+          border: 1px solid #EAEAEA;
+        }
+      }
+
+      .footer {
+        padding: 40px 0 80px;
+
+        &__content {
+          font-family: $fontContent;
+          font-size: 16px;
+          color: $textSecondaryColor;
+
+          .footer__link {
+            text-decoration: underline;
+            color: #0000FF;
+          }
+        }
+
+      }
+    }
+  }
+}
