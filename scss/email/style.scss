@@ -15,7 +15,7 @@
 // Custom styles
 .email-page {
   margin: 0 auto;
-  height: 100vh;
+  height: 780px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,6 +90,10 @@
           }
         }
 
+        input.digit+input.digit {
+          margin-left: 30px;
+        }
+
         .btn__send {
           padding: 40px 0;
           margin-bottom: 40px;
@@ -118,12 +122,13 @@
         }
 
         .divider {
+          display: block;
           border: 1px solid #EAEAEA;
         }
       }
 
       .footer {
-        padding: 40px 0 80px;
+        padding: 40px 0 0;
 
         &__content {
           font-family: $fontContent;

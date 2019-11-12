@@ -31699,7 +31699,7 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 
 .email-page {
   margin: 0 auto;
-  height: 100vh;
+  height: 780px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31778,6 +31778,10 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   outline: none;
 }
 
+.email-page .email__block .inner__content .number__access input.digit + input.digit {
+  margin-left: 30px;
+}
+
 .email-page .email__block .inner__content .number__access .btn__send {
   padding: 40px 0;
   margin-bottom: 40px;
@@ -31802,11 +31806,12 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 }
 
 .email-page .email__block .inner__content .number__access .divider {
+  display: block;
   border: 1px solid #EAEAEA;
 }
 
 .email-page .email__block .inner__content .footer {
-  padding: 40px 0 80px;
+  padding: 40px 0 0;
 }
 
 .email-page .email__block .inner__content .footer__content {
