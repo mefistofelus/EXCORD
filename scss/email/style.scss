@@ -15,7 +15,8 @@
 // Custom styles
 .email-page {
   margin: 0 auto;
-  height: 780px;
+  height: 100vh;
+  min-height: 780px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,10 +37,18 @@
     box-shadow: 0px 8px 15px rgba(119, 119, 119, 0.15);
     border-radius: $borderRadius;
 
+    @include _767 {
+      padding: 45px 20px 40px;
+    }
+
     .header__icon {
       margin: 0 auto 48px;
       text-align: center;
       color: #039588;
+
+      @include _767 {
+        margin-bottom: 24px;
+      }
 
       &>i {
         font-size: 84px;
@@ -54,6 +63,10 @@
       .page__title {
         padding-bottom: 20px;
         font-size: 36px;
+
+        @include _560 {
+          font-size: 30px;
+        }
       }
 
       .page__subtitle {
@@ -62,22 +75,46 @@
         font-weight: 300;
         font-size: 20px;
         color: $textDescriptionColor;
+
+        @include _560 {
+          font-size: 18px;
+        }
       }
 
       .page__description {
         font-family: $fontContent;
         font-size: 16px;
         color: $textSecondaryColor;
+
+        @include _560 {
+          font-size: 12px;
+        }
       }
 
       .number__access {
         margin-top: 80px;
+
+        @include _767 {
+          margin-top: 40px;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          margin: 0;
+        }
 
         input {
           max-width: 70px;
           -ms-flex-preferred-size: 70px;
           flex-basis: 70px;
           border: none;
+
+          @include _560 {
+            max-width: 40px;
+          }
 
           &.digit {
             font-family: $fontHeading;
@@ -87,19 +124,32 @@
             border-bottom: 3px solid #BDBDBD;
             border-radius: 2px;
             outline: none;
+
+            @include _560 {
+              font-size: 28px;
+            }
           }
         }
 
         input.digit+input.digit {
           margin-left: 30px;
+
+          @include _560 {
+            margin-left: 20px;
+          }
         }
 
         .btn__send {
           padding: 40px 0;
           margin-bottom: 40px;
 
+          @include _560 {
+            padding: 20px 0;
+            margin-bottom: 20px;
+          }
+
           button.ui-button {
-            padding: 20px 80px;
+            padding: 20px 40px;
             font-family: $fontContent;
             font-size: 14px;
             line-height: 0;
@@ -130,10 +180,18 @@
       .footer {
         padding: 40px 0 0;
 
+        @include _560 {
+          padding: 20px 0 0;
+        }
+
         &__content {
           font-family: $fontContent;
           font-size: 16px;
           color: $textSecondaryColor;
+
+          @include _560 {
+            font-size: 12px;
+          }
 
           .footer__link {
             text-decoration: underline;

@@ -30930,7 +30930,7 @@ body {
   padding: 0;
   margin: 0;
   position: relative;
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   color: #424242;
   -webkit-font-smoothing: antialiased;
@@ -31699,7 +31699,8 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 
 .email-page {
   margin: 0 auto;
-  height: 780px;
+  height: 100vh;
+  min-height: 780px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31722,10 +31723,22 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   border-radius: 5px;
 }
 
+@media all and (max-width: 767px) {
+  .email-page .email__block {
+    padding: 45px 20px 40px;
+  }
+}
+
 .email-page .email__block .header__icon {
   margin: 0 auto 48px;
   text-align: center;
   color: #039588;
+}
+
+@media all and (max-width: 767px) {
+  .email-page .email__block .header__icon {
+    margin-bottom: 24px;
+  }
 }
 
 .email-page .email__block .header__icon > i {
@@ -31743,6 +31756,12 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   font-size: 36px;
 }
 
+@media all and (max-width: 560px) {
+  .email-page .email__block .inner__content .page__title {
+    font-size: 30px;
+  }
+}
+
 .email-page .email__block .inner__content .page__subtitle {
   padding-bottom: 20px;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
@@ -31751,14 +31770,40 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   color: #353535;
 }
 
+@media all and (max-width: 560px) {
+  .email-page .email__block .inner__content .page__subtitle {
+    font-size: 18px;
+  }
+}
+
 .email-page .email__block .inner__content .page__description {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-size: 16px;
   color: #757575;
 }
 
+@media all and (max-width: 560px) {
+  .email-page .email__block .inner__content .page__description {
+    font-size: 12px;
+  }
+}
+
 .email-page .email__block .inner__content .number__access {
   margin-top: 80px;
+}
+
+@media all and (max-width: 767px) {
+  .email-page .email__block .inner__content .number__access {
+    margin-top: 40px;
+  }
+}
+
+.email-page .email__block .inner__content .number__access input[type=number]::-webkit-inner-spin-button,
+.email-page .email__block .inner__content .number__access input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .email-page .email__block .inner__content .number__access input {
@@ -31766,6 +31811,12 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   -ms-flex-preferred-size: 70px;
   flex-basis: 70px;
   border: none;
+}
+
+@media all and (max-width: 560px) {
+  .email-page .email__block .inner__content .number__access input {
+    max-width: 40px;
+  }
 }
 
 .email-page .email__block .inner__content .number__access input.digit {
@@ -31778,8 +31829,20 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   outline: none;
 }
 
+@media all and (max-width: 560px) {
+  .email-page .email__block .inner__content .number__access input.digit {
+    font-size: 28px;
+  }
+}
+
 .email-page .email__block .inner__content .number__access input.digit + input.digit {
   margin-left: 30px;
+}
+
+@media all and (max-width: 560px) {
+  .email-page .email__block .inner__content .number__access input.digit + input.digit {
+    margin-left: 20px;
+  }
 }
 
 .email-page .email__block .inner__content .number__access .btn__send {
@@ -31787,8 +31850,15 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   margin-bottom: 40px;
 }
 
+@media all and (max-width: 560px) {
+  .email-page .email__block .inner__content .number__access .btn__send {
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
+}
+
 .email-page .email__block .inner__content .number__access .btn__send button.ui-button {
-  padding: 20px 80px;
+  padding: 20px 40px;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-size: 14px;
   line-height: 0;
@@ -31814,10 +31884,22 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   padding: 40px 0 0;
 }
 
+@media all and (max-width: 560px) {
+  .email-page .email__block .inner__content .footer {
+    padding: 20px 0 0;
+  }
+}
+
 .email-page .email__block .inner__content .footer__content {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-size: 16px;
   color: #757575;
+}
+
+@media all and (max-width: 560px) {
+  .email-page .email__block .inner__content .footer__content {
+    font-size: 12px;
+  }
 }
 
 .email-page .email__block .inner__content .footer__content .footer__link {
