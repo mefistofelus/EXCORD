@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="icon" type="image/png" href="../../img/favicon.png">
+
+    <title>EXCORD</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/user-question/style.min.css">
+
+  </head>
+
+  <body>
+
+    <div class="question-block">
+      <div class="p-grid">
+        <div class="p-col-12 p-md-6">
+          <div class="question-block__inner">
+            <h3 class="question-block__title">
+              Если у вас остались вопросы
+              или пожелания
+            </h3>
+            <p class="question-block__descr">
+              Просим вас помочь улучшить продукт. Если у вас появились пожелания или вопросы - пишите на нашу почту и мы
+              обязательно найдём выход
+              из сложившейся ситуации
+            </p>
+          </div>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+          <!-- contact-form -->
+          <div class="contact-form">
+            <form action="#">
+              <!-- name -->
+              <span class="md-inputfield"><input pinputtext="" type="text"
+                  class="ui-inputtext ui-corner-all ui-state-default ui-widget" required>
+                <label>Your name</label>
+              </span>
+              <!-- email -->
+              <span class="md-inputfield">
+                <input pinputtext="" type="text"
+                  class="email-input ui-inputtext ui-corner-all ui-state-default ui-widget" required>
+                <label>Your email</label>
+              </span>
+              <!-- phone -->
+              <span class="md-inputfield">
+                <input pinputtext="" type="text"
+                  class="email-input ui-inputtext ui-corner-all ui-state-default ui-widget" required>
+                <label>Your phone</label>
+              </span>
+              <!-- text -->
+              <span class="md-inputfield">
+                <input pinputtext="" type="text"
+                  class="comment-input ui-inputtext ui-corner-all ui-state-default ui-widget" required>
+                <label>You comments</label>
+              </span>
+
+              <!-- Кнопка "Send" -->
+              <button class="ui-button-info ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                label="Send" pbutton="" type="submit">
+                <span class="ui-button-text ui-clickable">Send</span>
+                <!-- Этот спан со своими классами должен добавляться динамически в момент клика по кнопке. Также динамически должны вычислятся координаты клика по кнопке и подставлятся в значения top и left -->
+                <span class="ink ripple-animate"
+                  style="height: 275px; width: 275px; top: -121.469px; left: 50px; pointer-events: none;"></span>
+                <!-- Этот спан  -->
+              </button>
+              <!-- <button type="submit" class="ripple-animate" style="width: 50%">Отправить</button> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.question-block -->
+
+  </body>
+
+</html>
