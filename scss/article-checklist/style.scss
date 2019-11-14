@@ -1,0 +1,96 @@
+// JUST SIMPLE IMPORT SCSS-FILES
+@import "../variables";
+@import "../fonts";
+@import "../mixins";
+@import "../functions";
+@import "../primeflex";
+@import "../primeicons";
+@import "../icons";
+@import "../utils";
+@import "../default";
+@import "../login";
+@import "../forms";
+@import "../helpers";
+
+// Custom styles
+.checklist-block {
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 1170px;
+  background: $bodyBgColor;
+  -webkit-box-shadow: 0px 8px 15px rgba(119, 119, 119, 0.15);
+  box-shadow: 0px 8px 15px rgba(119, 119, 119, 0.15);
+  border-radius: $borderRadius;
+  position: relative;
+
+  .checklist__btn {
+    padding: 0 0 0 10px;
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    span {
+      width: 6px;
+      height: 6px;
+      display: block;
+      background-color: #039588;
+      border-radius: 50%;
+
+      &+span {
+        margin-top: 4px;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .checklist-popup {
+    padding: 12px;
+    position: absolute;
+    top: 46px;
+    right: 12px;
+    background: $bodyBgColor;
+    border: 1px solid $borderColor;
+    border-radius: 5px 0px 5px 5px;
+    display: none;
+
+    //в момент клика по кнопке (".checklist__btn"), этот клас (".open") необходимо динамически добавлять к попапу (".checklist-popup")
+    &.open {
+      display: block;
+    }
+
+    .popup__list {
+      margin: 0;
+      padding: 0;
+
+      .popup__list-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #039588;
+
+        &+.popup__list-item {
+          margin-top: 8px;
+        }
+
+        &>a {
+          padding-left: 12px;
+          font-family: $fontContent;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 140%;
+          text-decoration: none;
+          color: #039588;
+        }
+      }
+    }
+  }
+}
