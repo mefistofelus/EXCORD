@@ -23,8 +23,41 @@
   border-radius: $borderRadius;
   position: relative;
 
+  .checklist__checkbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    &+.checklist__checkbox {
+      margin-top: 20px;
+    }
+
+    .checkbox__input {
+      margin-right: 12px;
+    }
+
+    .checkbox__text {
+      font-family: $fontContent;
+      font-size: 18px;
+      line-height: 150%;
+      color: $textDescriptionColor;
+    }
+  }
+
+  button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+  }
+
   .checklist__btn {
-    padding: 0 0 0 10px;
+    padding: 0 0 0 10px; //паддинг 10px для удобства взаимодействия, без него кнопка слишком узкая
     background: none;
     border: none;
     outline: none;
@@ -90,6 +123,44 @@
           text-decoration: none;
           color: #039588;
         }
+      }
+    }
+  }
+
+  .checklist__save-btn {
+    text-align: right;
+
+    @include _560 {
+      text-align: center;
+    }
+
+    button.ui-button {
+      margin-top: 24px;
+      margin-left: auto;
+      padding: 10px 50px;
+      width: 100%;
+      height: auto;
+      max-width: 328px;
+      background-color: #039588;
+      -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+        0px 0px 2px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+        0px 0px 2px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.2);
+      border-radius: $borderRadius;
+
+      &.ui-state-default.ui-button-info:hover,
+      &.ui-state-default.ui-button-info:focus {
+        background-color: #1E554E;
+      }
+
+      .ui-button-text {
+        font-family: $fontContent;
+        font-size: 14px;
+        line-height: 140%;
+        text-align: center;
+        color: $primaryTextColor;
       }
     }
   }

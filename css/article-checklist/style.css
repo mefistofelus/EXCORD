@@ -30930,7 +30930,7 @@ body {
   padding: 0;
   margin: 0;
   position: relative;
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   color: #424242;
   -webkit-font-smoothing: antialiased;
@@ -31609,71 +31609,6 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   width: calc(100% - 2em);
 }
 
-body .ui-chkbox {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1.429em;
-  width: 1.429em;
-  height: 1.429em;
-  cursor: default;
-  margin: 0 .5em 0 0;
-}
-
-body .ui-chkbox .ui-chkbox-box {
-  border: 2px solid #A5C7C4;
-  width: 1.429em;
-  height: 1.429em;
-  position: relative;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-}
-
-body .ui-chkbox .ui-chkbox-box:before {
-  position: absolute;
-  left: 6px;
-  top: 6px;
-  content: "";
-  background-color: #2196F3;
-  height: 4px;
-  width: 4px;
-  border-radius: 100%;
-  z-index: 1;
-  opacity: 0;
-  margin: 0;
-}
-
-body .ui-chkbox .ui-chkbox-box .ui-chkbox-icon {
-  font-size: 18;
-  margin-left: -1px;
-  margin-top: -1px;
-}
-
-body .ui-chkbox .ui-chkbox-box.ui-state-active {
-  border-color: #1976d2;
-  background-color: #1976d2;
-}
-
-body .ui-chkbox .ui-chkbox-box.ui-state-active .ui-chkbox-icon {
-  color: #FFFFFF;
-}
-
-body .ui-chkbox .ui-chkbox-box.ui-state-active:before {
-  -webkit-animation: rippleOn 400ms forwards ease-out;
-  animation: rippleOn 400ms forwards ease-out;
-}
-
-body .ui-chkbox .ui-chkbox-box.ui-state-focus {
-  border-color: #1976d2;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-  -webkit-transition: box-shadow 0.3s, background-color 0.3s;
-  -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
-  transition: background-color 0.3s, -webkit-box-shadow 0.3s;
-  transition: box-shadow 0.3s, background-color 0.3s;
-  transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
-}
-
 .text-center {
   text-align: center;
 }
@@ -31773,6 +31708,39 @@ body .ui-chkbox .ui-chkbox-box.ui-state-focus {
   position: relative;
 }
 
+.checklist-block .checklist__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.checklist-block .checklist__checkbox + .checklist__checkbox {
+  margin-top: 20px;
+}
+
+.checklist-block .checklist__checkbox .checkbox__input {
+  margin-right: 12px;
+}
+
+.checklist-block .checklist__checkbox .checkbox__text {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  line-height: 150%;
+  color: #353535;
+}
+
+.checklist-block button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
 .checklist-block .checklist__btn {
   padding: 0 0 0 10px;
   background: none;
@@ -31841,5 +31809,40 @@ body .ui-chkbox .ui-chkbox-box.ui-state-focus {
   line-height: 140%;
   text-decoration: none;
   color: #039588;
+}
+
+.checklist-block .checklist__save-btn {
+  text-align: right;
+}
+
+@media all and (max-width: 560px) {
+  .checklist-block .checklist__save-btn {
+    text-align: center;
+  }
+}
+
+.checklist-block .checklist__save-btn button.ui-button {
+  margin-top: 24px;
+  margin-left: auto;
+  padding: 10px 50px;
+  width: 100%;
+  height: auto;
+  max-width: 328px;
+  background-color: #039588;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.checklist-block .checklist__save-btn button.ui-button.ui-state-default.ui-button-info:hover, .checklist-block .checklist__save-btn button.ui-button.ui-state-default.ui-button-info:focus {
+  background-color: #1E554E;
+}
+
+.checklist-block .checklist__save-btn button.ui-button .ui-button-text {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=style.css.map */
