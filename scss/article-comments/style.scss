@@ -107,11 +107,15 @@
 				.social__icons {
 					margin-top: 16px;
 
-					img {
-						max-width: 100%;
+					.icon {
+						display: inline-block;
 
-						&+img {
+						&+.icon {
 							margin-left: 24px;
+						}
+
+						img {
+							max-width: 100%;
 						}
 					}
 				}

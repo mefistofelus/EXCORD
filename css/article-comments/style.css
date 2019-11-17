@@ -1699,12 +1699,16 @@ li {
   margin-top: 16px;
 }
 
-.article-page .meta-box .meta-block.social-share .social__icons img {
-  max-width: 100%;
+.article-page .meta-box .meta-block.social-share .social__icons .icon {
+  display: inline-block;
 }
 
-.article-page .meta-box .meta-block.social-share .social__icons img + img {
+.article-page .meta-box .meta-block.social-share .social__icons .icon + .icon {
   margin-left: 24px;
+}
+
+.article-page .meta-box .meta-block.social-share .social__icons .icon img {
+  max-width: 100%;
 }
 
 .article-page .meta-box .meta-block__info {
