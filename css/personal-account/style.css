@@ -30928,7 +30928,7 @@ body {
   padding: 0;
   margin: 0;
   position: relative;
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   color: #424242;
   -webkit-font-smoothing: antialiased;
@@ -31614,6 +31614,14 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   background-color: #fff;
 }
 
+@media all and (max-width: 1170px) {
+  .personal-account-page {
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .personal-account-page section {
   padding-bottom: 32px;
 }
@@ -31812,11 +31820,11 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   vertical-align: middle;
 }
 
-.personal-account-page .section__bordered {
+.personal-account-page .section__bordered .user-about {
   font-family: "Gotham Pro", sans-serif;
 }
 
-.personal-account-page .section__bordered .section__title {
+.personal-account-page .section__bordered .user-about .section__title {
   margin-bottom: 16px;
   font-weight: bold;
   font-size: 24px;
@@ -31824,7 +31832,7 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   color: #252525;
 }
 
-.personal-account-page .section__bordered .section__content {
+.personal-account-page .section__bordered .user-about .section__content {
   padding: 12px;
   font-weight: normal;
   font-size: 18px;
@@ -31950,7 +31958,8 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   color: #FFFFFF;
 }
 
-.personal-account-page .checklist-cards {
+.personal-account-page .checklist__cards {
+  margin-top: 56px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31959,13 +31968,94 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   align-items: center;
 }
 
-.personal-account-page .checklist-cards .checklist-card {
+.personal-account-page .checklist__cards .checklist-card {
+  padding-left: 12px;
+  padding-right: 8px;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 14px;
+  color: #FFFFFF;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.personal-account-page .checklist__cards .checklist-card + .checklist-card {
+  margin-left: 30px;
+}
+
+.personal-account-page .checklist__cards .checklist-card.checklists-passed {
   background: -webkit-gradient(linear, left top, right top, from(#43C6AC), to(#8EDEAD));
   background: linear-gradient(90deg, #43C6AC 0%, #8EDEAD 100%);
+}
+
+.personal-account-page .checklist__cards .checklist-card.checklists-passed:hover .checklist-card__link {
+  display: block;
+  color: #43C6AC;
+}
+
+.personal-account-page .checklist__cards .checklist-card.checklists-created {
+  background: -webkit-gradient(linear, left top, right top, from(#F4A967), to(#FFD147));
+  background: linear-gradient(90deg, #F4A967 0%, #FFD147 100%);
+}
+
+.personal-account-page .checklist__cards .checklist-card.checklists-created:hover .checklist-card__link {
+  display: block;
+  color: #F4A967;
+}
+
+.personal-account-page .checklist__cards .checklist-card.checklists-saved {
+  background: -webkit-gradient(linear, left top, right top, from(#7474BF), to(#348AC7));
+  background: linear-gradient(90deg, #7474BF 0%, #348AC7 100%);
+}
+
+.personal-account-page .checklist__cards .checklist-card.checklists-saved:hover .checklist-card__link {
+  display: block;
+  color: #7474BF;
+}
+
+.personal-account-page .checklist__cards .checklist-card .checklist-card__inner {
+  margin-top: 11px;
+}
+
+.personal-account-page .checklist__cards .checklist-card .checklist-card__inner .checklist-card__title {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.personal-account-page .checklist__cards .checklist-card .checklist-card__inner .checklist-card__percentage {
+  padding: 4px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.16);
   border-radius: 5px;
 }
 
-.personal-account-page .checklist-cards .checklist-card + .checklist-card {
-  margin-left: 30px;
+.personal-account-page .checklist__cards .checklist-card .checklist-card__inner .checklist-card__counter {
+  margin-top: 4px;
+  margin-bottom: 57px;
+  display: block;
+  max-width: 50%;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 15px;
+}
+
+.personal-account-page .checklist__cards .checklist-card .checklist-card__chart {
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.personal-account-page .checklist__cards .checklist-card .checklist-card__link {
+  padding: 5px 8px 3px;
+  display: none;
+  position: absolute;
+  bottom: 7px;
+  right: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=style.css.map */

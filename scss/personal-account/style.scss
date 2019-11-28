@@ -18,6 +18,12 @@
   max-width: 1170px;
   background-color: #fff;
 
+  @include _1170 {
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   section {
     padding-bottom: 32px;
   }
@@ -241,7 +247,7 @@
     }
   }
 
-  .section__bordered {
+  .section__bordered .user-about {
     font-family: $fontHeading;
 
 
@@ -389,7 +395,8 @@
     }
   }
 
-  .checklist-cards {
+  .checklist__cards {
+    margin-top: 56px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -398,12 +405,94 @@
     align-items: center;
 
     .checklist-card {
-      background: -webkit-gradient(linear, left top, right top, from(#43C6AC), to(#8EDEAD));
-      background: linear-gradient(90deg, #43C6AC 0%, #8EDEAD 100%);
+      padding-left: 12px;
+      padding-right: 8px;
+      font-family: $fontHeading;
+      font-size: 14px;
+      color: $primaryTextColor;
       border-radius: $borderRadius;
+      position: relative;
+      overflow: hidden;
 
       &+.checklist-card {
         margin-left: 30px;
+      }
+
+      &.checklists-passed {
+        background: -webkit-gradient(linear, left top, right top, from(#43C6AC), to(#8EDEAD));
+        background: linear-gradient(90deg, #43C6AC 0%, #8EDEAD 100%);
+
+        &:hover .checklist-card__link {
+          display: block;
+          color: #43C6AC;
+        }
+      }
+
+      &.checklists-created {
+        background: -webkit-gradient(linear, left top, right top, from(#F4A967), to(#FFD147));
+        background: linear-gradient(90deg, #F4A967 0%, #FFD147 100%);
+
+        &:hover .checklist-card__link {
+          display: block;
+          color: #F4A967;
+        }
+      }
+
+      &.checklists-saved {
+        background: -webkit-gradient(linear, left top, right top, from(#7474BF), to(#348AC7));
+        background: linear-gradient(90deg, #7474BF 0%, #348AC7 100%);
+
+        &:hover .checklist-card__link {
+          display: block;
+          color: #7474BF;
+        }
+      }
+
+      .checklist-card__inner {
+        margin-top: 11px;
+
+        .checklist-card__title {
+          margin-right: 8px;
+          font-size: 14px;
+        }
+
+        .checklist-card__percentage {
+          padding: 4px;
+          font-weight: bold;
+          background-color: rgba($color: #000000, $alpha: .16);
+          border-radius: $borderRadius;
+        }
+
+        .checklist-card__counter {
+          margin-top: 4px;
+          margin-bottom: 57px;
+          display: block;
+          max-width: 50%;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 15px;
+        }
+
+      }
+
+      .checklist-card__chart {
+        max-width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      .checklist-card__link {
+        padding: 5px 8px 3px;
+        display: none;
+        position: absolute;
+        bottom: 7px;
+        right: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        background-color: #fff;
+        border-radius: $borderRadius;
       }
     }
   }

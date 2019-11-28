@@ -21,18 +21,17 @@
 
       <section class="user">
         <div class="p-grid">
-          <div class="p-col-2">
+          <div class="p-lg-2 p-sm-12">
 
             <div class="user__img">
               <img src="../../img/personal-account/user-avatar.jpg" alt="user-avatar">
-              <input type="file" name="" id="" style="opacity: 0;">
               <i class="material-icons add-photo">
                 add_a_photo
               </i>
             </div>
           </div>
 
-          <div class="p-col-10">
+          <div class="p-lg-10 p-sm-12">
             <div class="p-grid p-dir-col p-justify-between user__info">
               <div class="username__edit">
                 <h1 class="user__name">игорь васильев</h1>
@@ -46,7 +45,7 @@
               <div class="user__checklists checklists-items">
 
                 <div class="checklists-info__item checklists-info__passed">
-                  <span class="checklists-info__item-count">1 234</span>
+                  <span class="checklists-info__item-count">1234</span>
                   <span class="checklists-info__item-descr">чек-листов пройдено</span>
                 </div>
 
@@ -126,10 +125,60 @@
       <!-- /.user__accounts -->
 
       <section class="checklist__cards">
-        <div class="checklist-card"></div>
-        <div class="checklist-card"></div>
-        <div class="checklist-card"></div>
+
+        <div class="checklist-card checklists-passed">
+          <div class="checklist-card__inner">
+            <span class="checklist-card__title">
+              Пройденных чек-листов на этой неделе
+            </span>
+            <span class="checklist-card__percentage">
+              +30%
+            </span>
+            <span class="checklist-card__counter">
+              150
+            </span>
+          </div>
+          <img src="../../img/personal-account/chart.svg" alt="chart" class="checklist-card__chart">
+          <a href="#" class="checklist-card__link">Подробнее</a>
+        </div>
+        <!-- /.checklist-card -->
+
+        <div class="checklist-card checklists-created">
+          <div class="checklist-card__inner">
+            <span class="checklist-card__title">
+              Созданных чек-листов на этой неделе
+            </span>
+            <span class="checklist-card__percentage">
+              +30%
+            </span>
+            <span class="checklist-card__counter">
+              11
+            </span>
+          </div>
+          <img src="../../img/personal-account/chart.svg" alt="chart" class="checklist-card__chart">
+          <a href="#" class="checklist-card__link">Подробнее</a>
+        </div>
+        <!-- /.checklist-card -->
+
+        <div class="checklist-card checklists-saved">
+          <div class="checklist-card__inner">
+            <span class="checklist-card__title">
+              Сохраненных чек-листов на этой неделе
+            </span>
+            <span class="checklist-card__percentage">
+              +30%
+            </span>
+            <span class="checklist-card__counter">
+              28
+            </span>
+          </div>
+          <img src="../../img/personal-account/chart.svg" alt="chart" class="checklist-card__chart">
+          <a href="#" class="checklist-card__link">Подробнее</a>
+        </div>
+        <!-- /.checklist-card -->
+
       </section>
+      <!-- /.checklist__cards -->
 
     </div>
     <!-- /.personal-account-page -->
