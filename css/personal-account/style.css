@@ -30928,7 +30928,7 @@ body {
   padding: 0;
   margin: 0;
   position: relative;
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   color: #424242;
   -webkit-font-smoothing: antialiased;
@@ -31883,11 +31883,22 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 
 .personal-account-page .user__accounts .accounts__buttons button .btn-icon {
   padding: 12px 21px;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.personal-account-page .user__accounts .accounts__buttons button .btn-icon::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .personal-account-page .user__accounts .accounts__buttons button .btn-descr {
-  padding: 10px 30px 20px;
+  padding: 10px 30px 10px 20px;
   font-family: Roboto;
   font-weight: normal;
   font-size: 14px;
@@ -31920,6 +31931,11 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   background-color: #E6E6E6;
 }
 
+.personal-account-page .user__accounts .accounts__buttons .connected .btn-icon {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .personal-account-page .user__accounts .accounts__buttons .connected .btn-descr {
   font-weight: bold;
 }
@@ -31927,7 +31943,29 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 .personal-account-page .user__accounts .accounts__buttons .btn-disconnect {
   display: block;
   margin-top: 4px;
+  font-size: 12px;
+  line-height: 140%;
+  font-weight: normal;
   text-decoration: none;
   color: #FFFFFF;
+}
+
+.personal-account-page .checklist-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.personal-account-page .checklist-cards .checklist-card {
+  background: -webkit-gradient(linear, left top, right top, from(#43C6AC), to(#8EDEAD));
+  background: linear-gradient(90deg, #43C6AC 0%, #8EDEAD 100%);
+  border-radius: 5px;
+}
+
+.personal-account-page .checklist-cards .checklist-card + .checklist-card {
+  margin-left: 30px;
 }
 /*# sourceMappingURL=style.css.map */
