@@ -1,0 +1,18 @@
+// JUST SIMPLE IMPORT SCSS-FILES
+@import "../variables";
+@import "../fonts";
+@import "../mixins";
+@import "../primeflex";
+@import "../default";
+@import "../forms";
+
+// Custom styles
+.edit-account-page {
+
+  .page-title {
+    font-family: $fontHeading;
+    font-weight: bold;
+    font-size: 36px;
+    color: $textBlackColor;
+  }
+}
