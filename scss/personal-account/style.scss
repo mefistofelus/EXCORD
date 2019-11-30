@@ -26,6 +26,10 @@
 
   section {
     padding-bottom: 32px;
+
+    @include _600 {
+      padding-bottom: 20px;
+    }
   }
 
   .section__bordered {
@@ -40,6 +44,11 @@
       border-radius: 50%;
       position: relative;
       overflow: hidden;
+
+      @include _767 {
+        margin: auto;
+        margin-bottom: 10px;
+      }
 
       &::after {
         content: '';
@@ -74,38 +83,113 @@
       height: 170px;
       position: relative;
 
-      .username__edit {
+      @include _767 {
+        display: inline;
+      }
+
+      .user__info--header {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
 
-        .user__name {
-          margin-right: 24px;
-          display: inline-block;
-          font-family: $fontHeading;
-          font-size: 36px;
-          line-height: 34px;
-          text-transform: capitalize;
-          color: $textBlackColor;
+        @include _600 {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          text-align: center;
         }
 
-        &>i {
-          font-size: 24px;
-          color: #1976D2;
-          cursor: pointer;
+        .username__edit {
+          margin-bottom: 16px;
+
+          .user__name {
+            margin-right: 24px;
+            display: inline-block;
+            font-family: $fontHeading;
+            font-size: 36px;
+            text-transform: capitalize;
+            color: $textBlackColor;
+
+            @include _767 {
+              margin-right: 12px;
+              font-size: 28px;
+            }
+
+            @include _600 {
+              font-size: 18px;
+            }
+          }
+
+          &>i {
+            font-size: 24px;
+            color: #1976D2;
+            cursor: pointer;
+
+            @include _600 {
+              font-size: 18px;
+            }
+          }
+        }
+
+        .cta-button {
+          margin-left: auto;
+
+          @include _600 {
+            margin: auto;
+            margin-bottom: 16px;
+          }
+
+          button {
+            padding: 10px 40px 11px;
+            height: 40px;
+            font-family: $fontContent;
+            font-weight: normal;
+            font-size: 14px;
+            text-align: center;
+            white-space: nowrap;
+            color: #ffffff;
+            background: #039588;
+            outline: none;
+            border: none;
+            -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+              0px 0px 2px rgba(0, 0, 0, 0.14),
+              0px 1px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+              0px 0px 2px rgba(0, 0, 0, 0.14),
+              0px 1px 3px rgba(0, 0, 0, 0.2);
+            border-radius: $borderRadius;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #00796b;
+            }
+
+
+            &>i {
+              margin-right: 12px;
+              font-size: 24px;
+              vertical-align: middle;
+            }
+          }
         }
       }
 
       .user__nickname {
+        margin-bottom: 16px;
         font-family: $fontHeading;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
-        line-height: 23px;
         color: $textDescriptionColor;
+
+        @include _767 {
+          font-size: 20px;
+        }
+
+        @include _600 {
+          font-size: 16px;
+        }
       }
 
       .user__checklists {
@@ -119,8 +203,20 @@
         -ms-flex-pack: start;
         justify-content: flex-start;
 
+        @include _767 {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+        }
+
         .checklists-info__item {
-          max-width: 325px;
+          //max-width: 325px;
+          -ms-flex-preferred-size: 325px;
+          flex-basis: 325px;
           padding: 4px;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -134,8 +230,19 @@
           border-radius: 27px;
           cursor: pointer;
 
+
           &+.checklists-info__item {
             margin-left: 12px;
+
+            @include _767 {
+              margin-left: 6px;
+            }
+          }
+
+          @include _767 {
+            margin: 6px;
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
           }
 
           &-count {
@@ -149,10 +256,18 @@
             border-radius: 23px;
             -webkit-box-shadow: 0px 8px 15px rgba(119, 119, 119, 0.15);
             box-shadow: 0px 8px 15px rgba(119, 119, 119, 0.15);
+
+            @include _767 {
+              font-size: 18px;
+            }
+
+            @include _600 {
+              font-size: 14px;
+            }
           }
 
           &-descr {
-            padding: 20px 20px 16px;
+            padding: 0 16px;
             font-family: $fontHeading;
             font-style: normal;
             font-weight: normal;
@@ -205,49 +320,10 @@
 
         }
       }
-
-      .cta-button {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        button {
-          padding: 10px 40px 11px;
-          height: 40px;
-          font-family: $fontContent;
-          font-weight: normal;
-          font-size: 14px;
-          text-align: center;
-          color: #ffffff;
-          background: #039588;
-          outline: none;
-          border: none;
-          -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
-            0px 0px 2px rgba(0, 0, 0, 0.14),
-            0px 1px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
-            0px 0px 2px rgba(0, 0, 0, 0.14),
-            0px 1px 3px rgba(0, 0, 0, 0.2);
-          border-radius: $borderRadius;
-          cursor: pointer;
-
-          &:hover {
-            background-color: #00796b;
-          }
-
-
-          &>i {
-            margin-right: 12px;
-            font-size: 24px;
-            vertical-align: middle;
-          }
-        }
-      }
     }
   }
 
-  .section__bordered .user-about {
+  .section__bordered {
     font-family: $fontHeading;
 
 
@@ -255,18 +331,24 @@
       margin-bottom: 16px;
       font-weight: bold;
       font-size: 24px;
-      line-height: 23px;
       color: $textBlackColor;
+
+      @include _600 {
+        font-size: 20px;
+      }
     }
 
     .section__content {
       padding: 12px;
       font-weight: normal;
       font-size: 18px;
-      line-height: 140%;
       color: $textDescriptionColor;
       border: 1px solid #EAEAEA;
       border-radius: $borderRadius;
+
+      @include _600 {
+        font-size: 16px;
+      }
     }
   }
 
@@ -274,13 +356,24 @@
     margin-top: 56px;
     font-family: $fontHeading;
 
+    @include _767 {
+      margin-top: 32px;
+    }
+
+    @include _600 {
+      margin-top: 16px;
+    }
+
     .section__content {
       padding: 0;
       font-weight: normal;
       font-size: 18px;
-      line-height: 140%;
       color: $textSecondaryColor;
       border: none;
+
+      @include _600 {
+        font-size: 16px;
+      }
     }
 
     .accounts__buttons {
@@ -288,9 +381,18 @@
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+
+      @include _767 {
+        margin-top: 25px;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
 
 
       button {
@@ -317,10 +419,20 @@
 
         &+button {
           margin-left: 20px;
+
+          @include _767 {
+            margin: 6px;
+          }
+        }
+
+        @include _767 {
+          margin: 6px;
+          width: 100%;
         }
 
         .btn-icon {
           padding: 12px 21px;
+          width: 58px;
           position: relative;
 
           &::after {
@@ -342,6 +454,7 @@
           font-size: 14px;
           line-height: 140%;
           text-align: left;
+          white-space: nowrap;
         }
 
         &.btn-facebook {
@@ -404,6 +517,17 @@
     -ms-flex-align: center;
     align-items: center;
 
+    @include _767 {
+      margin-top: 26px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
     .checklist-card {
       padding-left: 12px;
       padding-right: 8px;
@@ -416,6 +540,15 @@
 
       &+.checklist-card {
         margin-left: 30px;
+
+        @include _767 {
+          margin-left: 7px;
+        }
+      }
+
+      @include _767 {
+        margin: 7px;
+        width: 100%;
       }
 
       &.checklists-passed {
@@ -451,16 +584,28 @@
       .checklist-card__inner {
         margin-top: 11px;
 
-        .checklist-card__title {
-          margin-right: 8px;
-          font-size: 14px;
-        }
+        .checklist-card__header {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
 
-        .checklist-card__percentage {
-          padding: 4px;
-          font-weight: bold;
-          background-color: rgba($color: #000000, $alpha: .16);
-          border-radius: $borderRadius;
+          .checklist-card__title {
+            margin-right: 8px;
+            font-size: 14px;
+          }
+
+          .checklist-card__percentage {
+            padding: 4px;
+            font-weight: bold;
+            background-color: rgba($color: #000000, $alpha: .16);
+            border-radius: $borderRadius;
+          }
         }
 
         .checklist-card__counter {

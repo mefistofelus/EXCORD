@@ -30928,7 +30928,7 @@ body {
   padding: 0;
   margin: 0;
   position: relative;
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   color: #424242;
   -webkit-font-smoothing: antialiased;
@@ -31626,6 +31626,12 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   padding-bottom: 32px;
 }
 
+@media all and (max-width: 600px) {
+  .personal-account-page section {
+    padding-bottom: 20px;
+  }
+}
+
 .personal-account-page .section__bordered {
   border-bottom: 1px solid #F2F2F2;
 }
@@ -31636,6 +31642,13 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   border-radius: 50%;
   position: relative;
   overflow: hidden;
+}
+
+@media all and (max-width: 767px) {
+  .personal-account-page .user .user__img {
+    margin: auto;
+    margin-bottom: 10px;
+  }
 }
 
 .personal-account-page .user .user__img::after {
@@ -31671,38 +31684,124 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   position: relative;
 }
 
-.personal-account-page .user .user__info .username__edit {
+@media all and (max-width: 767px) {
+  .personal-account-page .user .user__info {
+    display: inline;
+  }
+}
+
+.personal-account-page .user .user__info .user__info--header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
-.personal-account-page .user .user__info .username__edit .user__name {
+@media all and (max-width: 600px) {
+  .personal-account-page .user .user__info .user__info--header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.personal-account-page .user .user__info .user__info--header .username__edit {
+  margin-bottom: 16px;
+}
+
+.personal-account-page .user .user__info .user__info--header .username__edit .user__name {
   margin-right: 24px;
   display: inline-block;
   font-family: "Gotham Pro", sans-serif;
   font-size: 36px;
-  line-height: 34px;
   text-transform: capitalize;
   color: #252525;
 }
 
-.personal-account-page .user .user__info .username__edit > i {
+@media all and (max-width: 767px) {
+  .personal-account-page .user .user__info .user__info--header .username__edit .user__name {
+    margin-right: 12px;
+    font-size: 28px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .personal-account-page .user .user__info .user__info--header .username__edit .user__name {
+    font-size: 18px;
+  }
+}
+
+.personal-account-page .user .user__info .user__info--header .username__edit > i {
   font-size: 24px;
   color: #1976D2;
   cursor: pointer;
 }
 
+@media all and (max-width: 600px) {
+  .personal-account-page .user .user__info .user__info--header .username__edit > i {
+    font-size: 18px;
+  }
+}
+
+.personal-account-page .user .user__info .user__info--header .cta-button {
+  margin-left: auto;
+}
+
+@media all and (max-width: 600px) {
+  .personal-account-page .user .user__info .user__info--header .cta-button {
+    margin: auto;
+    margin-bottom: 16px;
+  }
+}
+
+.personal-account-page .user .user__info .user__info--header .cta-button button {
+  padding: 10px 40px 11px;
+  height: 40px;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+  color: #ffffff;
+  background: #039588;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.personal-account-page .user .user__info .user__info--header .cta-button button:hover {
+  background-color: #00796b;
+}
+
+.personal-account-page .user .user__info .user__info--header .cta-button button > i {
+  margin-right: 12px;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
 .personal-account-page .user .user__info .user__nickname {
+  margin-bottom: 16px;
   font-family: "Gotham Pro", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
-  line-height: 23px;
   color: #353535;
+}
+
+@media all and (max-width: 767px) {
+  .personal-account-page .user .user__info .user__nickname {
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .personal-account-page .user .user__info .user__nickname {
+    font-size: 16px;
+  }
 }
 
 .personal-account-page .user .user__info .user__checklists {
@@ -31717,8 +31816,21 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   justify-content: flex-start;
 }
 
+@media all and (max-width: 767px) {
+  .personal-account-page .user .user__info .user__checklists {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
 .personal-account-page .user .user__info .user__checklists .checklists-info__item {
-  max-width: 325px;
+  -ms-flex-preferred-size: 325px;
+  flex-basis: 325px;
   padding: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -31737,6 +31849,20 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   margin-left: 12px;
 }
 
+@media all and (max-width: 767px) {
+  .personal-account-page .user .user__info .user__checklists .checklists-info__item + .checklists-info__item {
+    margin-left: 6px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .personal-account-page .user .user__info .user__checklists .checklists-info__item {
+    margin: 6px;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+}
+
 .personal-account-page .user .user__info .user__checklists .checklists-info__item-count, .personal-account-page .user .user__info .user__checklists .checklists-info__passed .checklists-info__item-count, .personal-account-page .user .user__info .user__checklists .checklists-info__created .checklists-info__item-count, .personal-account-page .user .user__info .user__checklists .checklists-info__saved .checklists-info__item-count {
   padding: 13px 16px 11px;
   font-family: "Gotham Pro", sans-serif;
@@ -31750,8 +31876,20 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   box-shadow: 0px 8px 15px rgba(119, 119, 119, 0.15);
 }
 
+@media all and (max-width: 767px) {
+  .personal-account-page .user .user__info .user__checklists .checklists-info__item-count, .personal-account-page .user .user__info .user__checklists .checklists-info__passed .checklists-info__item-count, .personal-account-page .user .user__info .user__checklists .checklists-info__created .checklists-info__item-count, .personal-account-page .user .user__info .user__checklists .checklists-info__saved .checklists-info__item-count {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .personal-account-page .user .user__info .user__checklists .checklists-info__item-count, .personal-account-page .user .user__info .user__checklists .checklists-info__passed .checklists-info__item-count, .personal-account-page .user .user__info .user__checklists .checklists-info__created .checklists-info__item-count, .personal-account-page .user .user__info .user__checklists .checklists-info__saved .checklists-info__item-count {
+    font-size: 14px;
+  }
+}
+
 .personal-account-page .user .user__info .user__checklists .checklists-info__item-descr, .personal-account-page .user .user__info .user__checklists .checklists-info__passed .checklists-info__item-descr, .personal-account-page .user .user__info .user__checklists .checklists-info__created .checklists-info__item-descr, .personal-account-page .user .user__info .user__checklists .checklists-info__saved .checklists-info__item-descr {
-  padding: 20px 20px 16px;
+  padding: 0 16px;
   font-family: "Gotham Pro", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -31786,60 +31924,36 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   color: #886CFF;
 }
 
-.personal-account-page .user .user__info .cta-button {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.personal-account-page .user .user__info .cta-button button {
-  padding: 10px 40px 11px;
-  height: 40px;
-  font-family: "Roboto", "Helvetica Neue", sans-serif;
-  font-weight: normal;
-  font-size: 14px;
-  text-align: center;
-  color: #ffffff;
-  background: #039588;
-  outline: none;
-  border: none;
-  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.personal-account-page .user .user__info .cta-button button:hover {
-  background-color: #00796b;
-}
-
-.personal-account-page .user .user__info .cta-button button > i {
-  margin-right: 12px;
-  font-size: 24px;
-  vertical-align: middle;
-}
-
-.personal-account-page .section__bordered .user-about {
+.personal-account-page .section__bordered {
   font-family: "Gotham Pro", sans-serif;
 }
 
-.personal-account-page .section__bordered .user-about .section__title {
+.personal-account-page .section__bordered .section__title {
   margin-bottom: 16px;
   font-weight: bold;
   font-size: 24px;
-  line-height: 23px;
   color: #252525;
 }
 
-.personal-account-page .section__bordered .user-about .section__content {
+@media all and (max-width: 600px) {
+  .personal-account-page .section__bordered .section__title {
+    font-size: 20px;
+  }
+}
+
+.personal-account-page .section__bordered .section__content {
   padding: 12px;
   font-weight: normal;
   font-size: 18px;
-  line-height: 140%;
   color: #353535;
   border: 1px solid #EAEAEA;
   border-radius: 5px;
+}
+
+@media all and (max-width: 600px) {
+  .personal-account-page .section__bordered .section__content {
+    font-size: 16px;
+  }
 }
 
 .personal-account-page .user__accounts {
@@ -31847,13 +31961,30 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   font-family: "Gotham Pro", sans-serif;
 }
 
+@media all and (max-width: 767px) {
+  .personal-account-page .user__accounts {
+    margin-top: 32px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .personal-account-page .user__accounts {
+    margin-top: 16px;
+  }
+}
+
 .personal-account-page .user__accounts .section__content {
   padding: 0;
   font-weight: normal;
   font-size: 18px;
-  line-height: 140%;
   color: #757575;
   border: none;
+}
+
+@media all and (max-width: 600px) {
+  .personal-account-page .user__accounts .section__content {
+    font-size: 16px;
+  }
 }
 
 .personal-account-page .user__accounts .accounts__buttons {
@@ -31861,9 +31992,20 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+@media all and (max-width: 767px) {
+  .personal-account-page .user__accounts .accounts__buttons {
+    margin-top: 25px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 
 .personal-account-page .user__accounts .accounts__buttons button {
@@ -31889,8 +32031,22 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   margin-left: 20px;
 }
 
+@media all and (max-width: 767px) {
+  .personal-account-page .user__accounts .accounts__buttons button + button {
+    margin: 6px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .personal-account-page .user__accounts .accounts__buttons button {
+    margin: 6px;
+    width: 100%;
+  }
+}
+
 .personal-account-page .user__accounts .accounts__buttons button .btn-icon {
   padding: 12px 21px;
+  width: 58px;
   position: relative;
 }
 
@@ -31912,6 +32068,7 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   font-size: 14px;
   line-height: 140%;
   text-align: left;
+  white-space: nowrap;
 }
 
 .personal-account-page .user__accounts .accounts__buttons button.btn-facebook {
@@ -31968,6 +32125,19 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   align-items: center;
 }
 
+@media all and (max-width: 767px) {
+  .personal-account-page .checklist__cards {
+    margin-top: 26px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
 .personal-account-page .checklist__cards .checklist-card {
   padding-left: 12px;
   padding-right: 8px;
@@ -31981,6 +32151,19 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 
 .personal-account-page .checklist__cards .checklist-card + .checklist-card {
   margin-left: 30px;
+}
+
+@media all and (max-width: 767px) {
+  .personal-account-page .checklist__cards .checklist-card + .checklist-card {
+    margin-left: 7px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .personal-account-page .checklist__cards .checklist-card {
+    margin: 7px;
+    width: 100%;
+  }
 }
 
 .personal-account-page .checklist__cards .checklist-card.checklists-passed {
@@ -32017,12 +32200,24 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   margin-top: 11px;
 }
 
-.personal-account-page .checklist__cards .checklist-card .checklist-card__inner .checklist-card__title {
+.personal-account-page .checklist__cards .checklist-card .checklist-card__inner .checklist-card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.personal-account-page .checklist__cards .checklist-card .checklist-card__inner .checklist-card__header .checklist-card__title {
   margin-right: 8px;
   font-size: 14px;
 }
 
-.personal-account-page .checklist__cards .checklist-card .checklist-card__inner .checklist-card__percentage {
+.personal-account-page .checklist__cards .checklist-card .checklist-card__inner .checklist-card__header .checklist-card__percentage {
   padding: 4px;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.16);

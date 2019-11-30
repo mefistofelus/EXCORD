@@ -21,7 +21,7 @@
 
       <section class="user">
         <div class="p-grid">
-          <div class="p-lg-2 p-sm-12">
+          <div class="p-lg-2 p-col-12">
 
             <div class="user__img">
               <img src="../../img/personal-account/user-avatar.jpg" alt="user-avatar">
@@ -31,16 +31,32 @@
             </div>
           </div>
 
-          <div class="p-lg-10 p-sm-12">
-            <div class="p-grid p-dir-col p-justify-between user__info">
-              <div class="username__edit">
-                <h1 class="user__name">игорь васильев</h1>
-                <i class="material-icons">
-                  edit
-                </i>
-              </div>
+          <div class="p-lg-10 p-col-12">
+            <div class="user__info">
 
-              <div class="user__nickname">@personal_nik</div>
+              <div class="user__info--header">
+
+                <div class="user__names">
+                  <div class="username__edit">
+                    <h1 class="user__name">Анжелина Джоли</h1>
+                    <i class="material-icons">
+                      edit
+                    </i>
+                  </div>
+
+                  <div class="user__nickname">@personal_nik</div>
+                </div>
+
+                <div class="cta-button">
+                  <!-- Кнопка "Попробуй премиум" -->
+                  <button label="Попробуй премиум" type="button">
+                    <i class="material-icons">
+                      star
+                    </i>
+                    Попробуй премиум
+                  </button>
+                </div>
+              </div>
 
               <div class="user__checklists checklists-items">
 
@@ -59,16 +75,6 @@
                   <span class="checklists-info__item-descr">чек-листов сохраненно</span>
                 </div>
 
-              </div>
-
-              <div class="cta-button">
-                <!-- Кнопка "Попробуй премиум" -->
-                <button label="Попробуй премиум" type="button">
-                  <i class="material-icons">
-                    star
-                  </i>
-                  Попробуй премиум
-                </button>
               </div>
 
             </div>
@@ -99,7 +105,7 @@
             <span class="btn-icon">
               <img src="../../img/login/facebook.svg" alt="facebook">
             </span>
-            <span class="btn-descr">Джон Доу
+            <span class="btn-descr">Анжелина Джоли
               <a href="#" class="btn-disconnect">отменить связь</a>
             </span>
 
@@ -128,12 +134,14 @@
 
         <div class="checklist-card checklists-passed">
           <div class="checklist-card__inner">
-            <span class="checklist-card__title">
-              Пройденных чек-листов на этой неделе
-            </span>
-            <span class="checklist-card__percentage">
-              +30%
-            </span>
+            <div class="checklist-card__header">
+              <span class="checklist-card__title">
+                Пройденных чек-листов на этой неделе
+              </span>
+              <span class="checklist-card__percentage">
+                +30%
+              </span>
+            </div>
             <span class="checklist-card__counter">
               150
             </span>
@@ -145,12 +153,14 @@
 
         <div class="checklist-card checklists-created">
           <div class="checklist-card__inner">
-            <span class="checklist-card__title">
-              Созданных чек-листов на этой неделе
-            </span>
-            <span class="checklist-card__percentage">
-              +30%
-            </span>
+            <div class="checklist-card__header">
+              <span class="checklist-card__title">
+                Созданных чек-листов на этой неделе
+              </span>
+              <span class="checklist-card__percentage">
+                +30%
+              </span>
+            </div>
             <span class="checklist-card__counter">
               11
             </span>
@@ -162,12 +172,14 @@
 
         <div class="checklist-card checklists-saved">
           <div class="checklist-card__inner">
-            <span class="checklist-card__title">
-              Сохраненных чек-листов на этой неделе
-            </span>
-            <span class="checklist-card__percentage">
-              +30%
-            </span>
+            <div class="checklist-card__header">
+              <span class="checklist-card__title">
+                Сохраненных чек-листов на этой неделе
+              </span>
+              <span class="checklist-card__percentage">
+                +30%
+              </span>
+            </div>
             <span class="checklist-card__counter">
               28
             </span>
