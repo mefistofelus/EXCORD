@@ -20,6 +20,93 @@
     <div class="edit-account-page">
       <div class="p-grid">
         <h1 class="page-title">Редактирование личных данных</h1>
+        <div class="p-col-12 p-md-11 p-md-offset-1">
+          <form action="#">
+            <div class="main-settings">
+              <h2 class="section-title">Основные</h2>
+              <div class="p-grid">
+                <div class="p-col-12 p-md-offset-1">
+                  <div class="section-content">
+                    <!-- user-form -->
+                    <div class="user-form">
+                      <!-- name -->
+                      <span class="md-inputfield"><input pinputtext="" type="text"
+                          class="ui-inputtext ui-corner-all ui-state-default ui-state-filled ui-widget" required>
+                        <label>Ваше имя и фамилия</label>
+                      </span>
+                      <!-- email -->
+                      <span class="md-inputfield">
+                        <input pinputtext="" type="mail"
+                          class="email-input ui-inputtext ui-corner-all ui-state-default ui-state-filled ui-widget"
+                          required>
+                        <label>Ваша почта</label>
+                      </span>
+                      <!-- Изменить пароль -->
+                      <a href="#" class="change-pass">Изменить пароль</a>
+                      <!-- date -->
+                      <span class="md-inputfield">
+                        <input pinputtext="" type="date"
+                          class="date-input ui-inputtext ui-corner-all ui-state-default ui-state-filled ui-widget"
+                          required>
+                        <label>Дата рождения</label>
+                      </span>
+                      <!-- gender-form -->
+                      <div class="user-gender">
+                        <h3 class="form-subtitle">Пол</h3>
+
+                        <div class="gender-form">
+                          <input type="radio" id="gender-man" name="gender" value="Мужчина" checked>
+                          <label class="man" for="gender-man">Мужчина</label>
+
+                          <input type="radio" id="gender-women" name="gender" value="Женщина">
+                          <label class="women" for="gender-women">Женщина</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="add-settings">
+              <h2 class="section-title">Дополнительная информация</h2>
+              <div class="p-grid">
+                <div class="p-col-12 p-md-9 p-md-offset-1">
+                  <div class="section-content">
+                    <!-- user-form -->
+                    <div class="user-form">
+                      <form action="#">
+                        <!-- name -->
+                        <span class="md-inputfield"><input pinputtext="" type="text"
+                            class="user-country ui-inputtext ui-corner-all ui-state-default ui-state-filled ui-widget"
+                            required>
+                          <label>Страна</label>
+                        </span>
+                        <!-- email -->
+                        <span class="md-inputfield">
+                          <input pinputtext="" type="text"
+                            class="ui-inputtext ui-corner-all ui-state-default ui-state-filled ui-widget" required>
+                          <label>Немного о себе</label>
+                        </span>
+                        <!-- Кнопка "Сохранить изменения" -->
+                        <div class="form-btn">
+                          <button
+                            class="ui-button-info ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                            label="Сохранить изменения" pbutton="" type="submit">
+                            <span class="ui-button-text ui-clickable">Сохранить изменения</span>
+                            <!-- Этот спан со своими классами должен добавляться динамически в момент клика по кнопке. Также динамически должны вычислятся координаты клика по кнопке и подставлятся в значения top и left -->
+                            <span class="ink ripple-animate"
+                              style="height: 275px; width: 275px; top: -121.469px; left: 50px; pointer-events: none;"></span>
+                            <!-- Этот спан  -->
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
     </div>
     <!-- /.edit-account-page -->

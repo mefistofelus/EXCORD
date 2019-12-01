@@ -1381,10 +1381,161 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   width: calc(100% - 2em);
 }
 
+.edit-account-page {
+  padding: 85px 15px 0;
+  margin: 0 auto;
+  max-width: 1170px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
 .edit-account-page .page-title {
   font-family: "Gotham Pro", sans-serif;
   font-weight: bold;
   font-size: 36px;
   color: #252525;
+}
+
+.edit-account-page .section-title {
+  margin-top: 56px;
+  margin-bottom: 32px;
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #252525;
+}
+
+.edit-account-page .section-content .user-form {
+  margin-top: 32px;
+}
+
+.edit-account-page .section-content .user-form .md-inputfield .ui-inputtext {
+  padding-left: 15px;
+  width: 100%;
+  height: 1.8rem;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  color: #252525;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#009688), to(#009688)), -webkit-gradient(linear, left top, left bottom, from(#bdbdbd), to(#bdbdbd));
+  background-image: linear-gradient(to bottom, #009688, #009688), linear-gradient(to bottom, #bdbdbd, #bdbdbd);
+  caret-color: #000000;
+}
+
+.edit-account-page .section-content .user-form .md-inputfield input[type=date] {
+  /* &::-webkit-datetime-edit-fields-wrapper {
+                opacity: 0;
+              } */
+}
+
+.edit-account-page .section-content .user-form .md-inputfield input[type=date]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.edit-account-page .section-content .user-form .md-inputfield input[type=date]:focus::-webkit-datetime-edit-fields-wrapper {
+  opacity: 1;
+}
+
+.edit-account-page .section-content .user-form .md-inputfield label {
+  padding-left: 10px;
+  color: #BDBDBD;
+}
+
+.edit-account-page .section-content .user-form .md-inputfield + .md-inputfield {
+  margin-top: 40px;
+}
+
+.edit-account-page .section-content .user-form .change-pass {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  color: #039588;
+}
+
+.edit-account-page .section-content .user-form .user-gender {
+  margin-top: 32px;
+}
+
+.edit-account-page .section-content .user-form .user-gender .form-subtitle {
+  margin-bottom: 16px;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 20px;
+  color: #252525;
+}
+
+.edit-account-page .section-content .user-form .user-gender input[type="radio"] {
+  display: none;
+}
+
+.edit-account-page .section-content .user-form .user-gender label {
+  display: inline-block;
+  padding: 10px 40px;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #757575;
+  border-radius: 5px;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.edit-account-page .section-content .user-form .user-gender input[type="radio"]:checked + label {
+  color: #FFFFFF;
+  background: #039588;
+}
+
+.edit-account-page .main-settings .user-form {
+  max-width: 330px;
+}
+
+.edit-account-page .add-settings .user-form {
+  width: 100%;
+}
+
+.edit-account-page .add-settings .user-form .md-inputfield .user-country {
+  max-width: 330px;
+}
+
+.edit-account-page .form-btn {
+  text-align: center;
+  padding: 56px 0 25px;
+}
+
+.edit-account-page .form-btn button.ui-button {
+  padding: 10px 90px;
+  height: auto;
+  background-color: #1E554E;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media all and (max-width: 560px) {
+  .edit-account-page .form-btn button.ui-button {
+    width: 100%;
+  }
+}
+
+.edit-account-page .form-btn button.ui-button.ui-state-default.ui-button-info:hover {
+  background-color: #00796b;
+}
+
+.edit-account-page .form-btn button.ui-button .ui-button-text {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=style.css.map */
