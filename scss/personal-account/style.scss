@@ -104,7 +104,7 @@
           margin-bottom: 16px;
 
           .user__name {
-            margin-right: 24px;
+            margin-right: 60px;
             display: inline-block;
             font-family: $fontHeading;
             font-size: 36px;
@@ -382,8 +382,8 @@
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start;
 
       @include _767 {
         margin-top: 25px;

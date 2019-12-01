@@ -31711,7 +31711,7 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 }
 
 .personal-account-page .user .user__info .user__info--header .username__edit .user__name {
-  margin-right: 24px;
+  margin-right: 60px;
   display: inline-block;
   font-family: "Gotham Pro", sans-serif;
   font-size: 36px;
