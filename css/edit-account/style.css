@@ -1389,11 +1389,23 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   overflow: hidden;
 }
 
+@media all and (max-width: 560px) {
+  .edit-account-page {
+    padding-top: 40px;
+  }
+}
+
 .edit-account-page .page-title {
   font-family: "Gotham Pro", sans-serif;
   font-weight: bold;
   font-size: 36px;
   color: #252525;
+}
+
+@media all and (max-width: 360px) {
+  .edit-account-page .page-title {
+    font-size: 32px;
+  }
 }
 
 .edit-account-page .section-title {
@@ -1405,8 +1417,21 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   color: #252525;
 }
 
+@media all and (max-width: 560px) {
+  .edit-account-page .section-title {
+    margin-top: 36px;
+    margin-bottom: 20px;
+  }
+}
+
 .edit-account-page .section-content .user-form {
   margin-top: 32px;
+}
+
+@media all and (max-width: 560px) {
+  .edit-account-page .section-content .user-form {
+    margin-top: 15px;
+  }
 }
 
 .edit-account-page .section-content .user-form .md-inputfield .ui-inputtext {
@@ -1461,6 +1486,12 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   margin-top: 32px;
 }
 
+@media all and (max-width: 767px) {
+  .edit-account-page .section-content .user-form .user-gender .gender-form {
+    text-align: center;
+  }
+}
+
 .edit-account-page .section-content .user-form .user-gender .form-subtitle {
   margin-bottom: 16px;
   font-family: "Gotham Pro", sans-serif;
@@ -1497,6 +1528,12 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
   max-width: 330px;
 }
 
+@media all and (max-width: 767px) {
+  .edit-account-page .main-settings .user-form {
+    max-width: 100%;
+  }
+}
+
 .edit-account-page .add-settings .user-form {
   width: 100%;
 }
@@ -1508,6 +1545,12 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 .edit-account-page .form-btn {
   text-align: center;
   padding: 56px 0 25px;
+}
+
+@media all and (max-width: 560px) {
+  .edit-account-page .form-btn {
+    padding-top: 35px;
+  }
 }
 
 .edit-account-page .form-btn button.ui-button {
@@ -1523,6 +1566,13 @@ body .ui-fluid .ui-splitbutton .ui-button:first-child {
 @media all and (max-width: 560px) {
   .edit-account-page .form-btn button.ui-button {
     width: 100%;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .edit-account-page .form-btn button.ui-button {
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
 

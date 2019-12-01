@@ -14,11 +14,19 @@
   background-color: #fff;
   overflow: hidden;
 
+  @include _560 {
+    padding-top: 40px;
+  }
+
   .page-title {
     font-family: $fontHeading;
     font-weight: bold;
     font-size: 36px;
     color: $textBlackColor;
+
+    @include _360 {
+      font-size: 32px;
+    }
   }
 
   .section {
@@ -31,6 +39,11 @@
       font-weight: bold;
       font-size: 24px;
       color: $textBlackColor;
+
+      @include _560 {
+        margin-top: 36px;
+        margin-bottom: 20px;
+      }
     }
 
     // .section-content
@@ -41,6 +54,10 @@
         // .user-form
         &-form {
           margin-top: 32px;
+
+          @include _560 {
+            margin-top: 15px;
+          }
 
           .md-inputfield {
 
@@ -104,6 +121,12 @@
           .user-gender {
             margin-top: 32px;
 
+            .gender-form {
+              @include _767 {
+                text-align: center;
+              }
+            }
+
             .form-subtitle {
               margin-bottom: 16px;
               font-family: $fontHeading;
@@ -148,6 +171,10 @@
 
   .main-settings .user-form {
     max-width: 330px;
+
+    @include _767 {
+      max-width: 100%;
+    }
   }
 
   .add-settings .user-form {
@@ -161,6 +188,10 @@
   .form-btn {
     text-align: center;
     padding: 56px 0 25px;
+
+    @include _560 {
+      padding-top: 35px;
+    }
 
     button.ui-button {
       padding: 10px 90px;
@@ -177,6 +208,11 @@
 
       @include _560 {
         width: 100%;
+      }
+
+      @include _360 {
+        padding-left: 45px;
+        padding-right: 45px;
       }
 
       &.ui-state-default.ui-button-info:hover {
