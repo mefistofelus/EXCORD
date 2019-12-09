@@ -1,0 +1,502 @@
+// JUST SIMPLE IMPORT SCSS-FILES
+@import "../variables";
+@import "../fonts";
+@import "../mixins";
+@import "../primeflex";
+@import "../primeicons";
+@import "../icons";
+//@import "../utils";
+@import "../default";
+
+// Custom styles
+.landing-page {
+
+  .container {
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+
+  .section-hero {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #C6F1ED;
+
+    .page-title {
+      margin-bottom: 32px;
+      font-family: $fontHeading;
+      font-weight: bold;
+      font-size: 88px;
+      line-height: 84px;
+      text-transform: uppercase;
+      color: $textBlackColor;
+    }
+
+    .subtitle {
+      margin-bottom: 80px;
+      font-family: $fontContent;
+      font-size: 24px;
+      color: $textDescriptionColor;
+    }
+
+    button.btn-signup.ui-button {
+      padding: 8px 80px;
+      color: $primaryTextColor;
+      text-align: center;
+      background: #1E554E;
+      -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+        0px 0px 2px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+        0px 0px 2px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.2);
+      border: none;
+      border-radius: $borderRadius;
+      cursor: pointer;
+      -webkit-transition: $transitionDuration;
+      transition: $transitionDuration;
+
+      &.ui-state-default.ui-button-info:hover {
+        background-color: #00796b;
+      }
+
+      &.ui-state-default.ui-button-info:focus {
+        outline: none;
+      }
+
+      .ui-button-text {
+        font-family: $fontContent;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 140%;
+        text-align: center;
+        color: #FFFFFF;
+      }
+    }
+
+    .bg-img {
+      margin-left: 30px;
+    }
+  }
+
+  .section-features {
+    padding-top: 160px;
+    padding-bottom: 190px;
+
+    .features-items {
+      margin-right: 100px;
+
+      .features-item {
+        padding: 32px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        border-radius: $borderRadius;
+        -webkit-transition: $transitionDuration;
+        transition: $transitionDuration;
+        cursor: pointer;
+
+        &:hover {
+          background: #039588;
+        }
+
+        &:hover .features-item__text {
+          color: #F2F2F2;
+        }
+
+        &.active {
+          background: #039588;
+
+          .features-item__text {
+            color: #F2F2F2;
+          }
+        }
+
+        &__img {
+          margin-right: 32px;
+          border-radius: $borderRadius;
+
+          .feature-img {
+            border-radius: $borderRadius;
+          }
+        }
+
+
+        &__title {
+          margin-bottom: 16px;
+          font-family: $fontHeading;
+          font-weight: bold;
+          font-size: 32px;
+          line-height: 100%;
+          text-transform: uppercase;
+          color: $textBlackColor;
+        }
+
+        // .features-item__text
+
+        &__text {
+          font-family: $fontContent;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
+          color: $textDescriptionColor;
+          -webkit-transition: $transitionDuration;
+          transition: $transitionDuration;
+        }
+
+      }
+    }
+
+    .section-info {
+
+      &__title {
+        font-family: $fontHeading;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 130%;
+        vertical-align: top;
+        color: $textBlackColor;
+      }
+
+      &__description {
+        font-family: $fontContent;
+        font-weight: 400;
+        font-size: 16px;
+        color: $textSecondaryColor;
+
+        &>p {
+          padding-top: 32px;
+
+          &+p {
+            padding-top: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  .section-about {
+    padding-top: 247px;
+    padding-bottom: 247px;
+    background: linear-gradient(105.74deg, #F2F2F2 0.43%, #BCEBE6 99.41%);
+    position: relative;
+
+    .section-title {
+      font-family: $fontHeading;
+      font-weight: bold;
+      font-size: 56px;
+      color: $textBlackColor;
+    }
+
+    .section-description {
+      padding-bottom: 32px;
+      font-family: $fontContent;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: $textSecondaryColor;
+
+      &>p {
+        padding-top: 32px;
+
+        &+p {
+          padding-top: 22px;
+        }
+      }
+    }
+
+    .section-img {
+      margin-left: 30px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+
+  .section-pricing {
+    padding: 160px 0;
+
+    .section-title {
+      font-family: $fontHeading;
+      font-weight: bold;
+      font-size: 56px;
+      text-align: center;
+      color: $textBlackColor;
+    }
+
+    .pricing-plans {
+      margin-top: 56px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    .pricing-plan {
+      max-width: 312px;
+      border-radius: $borderRadius;
+      overflow: hidden;
+
+      &+.pricing-plan {
+        margin-left: 30px;
+      }
+
+      &__header {
+        padding: 32px;
+        text-align: center;
+
+        &-info {
+          margin-bottom: 5px;
+          font-family: $fontContent;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 140%;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: #E0E0E0;
+        }
+
+        &-title {
+          font-family: $fontHeading;
+          font-weight: bold;
+          font-size: 40px;
+          line-height: 38px;
+          text-transform: capitalize;
+          color: $textBlackColor;
+        }
+
+        &-price {
+          margin-top: 32px;
+          @extend .pricing-plan__header-title;
+          font-size: 56px;
+          color: #FFFFFF;
+
+        }
+
+        .pricing-text {
+          margin-top: 8px;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 140%;
+          color: #E0E0E0;
+        }
+      }
+
+      &__body {
+        padding: 32px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+
+        .pricing-plan__features {
+          margin: 0 auto;
+          padding: 0;
+          padding-bottom: 32px;
+          text-align: left;
+
+          .pricing-plan__feature {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            color: $textSecondaryColor;
+
+            &+.pricing-plan__feature {
+              margin-top: 16px;
+            }
+
+            &>i {
+              margin-right: 8px;
+              vertical-align: bottom;
+              color: #1E554E;
+            }
+          }
+        }
+
+        button.btn-order.ui-button {
+          padding: 8px 80px;
+          color: $primaryTextColor;
+          text-align: center;
+          background: #039588;
+          -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+            0px 0px 2px rgba(0, 0, 0, 0.14),
+            0px 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+            0px 0px 2px rgba(0, 0, 0, 0.14),
+            0px 1px 3px rgba(0, 0, 0, 0.2);
+          border: none;
+          border-radius: $borderRadius;
+          cursor: pointer;
+          -webkit-transition: $transitionDuration;
+          transition: $transitionDuration;
+
+          &.ui-state-default.ui-button-info:hover {
+            background-color: #00796b;
+          }
+
+          &.ui-state-default.ui-button-info:focus {
+            outline: none;
+          }
+
+          .ui-button-text {
+            font-family: $fontContent;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 140%;
+            text-align: center;
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      &.standart {
+
+        .pricing-plan__header {
+          background: #039588;
+        }
+
+        .pricing-plan__body {
+          background: #F2F2F2;
+        }
+      }
+
+      &.professional {
+
+        .pricing-plan__header {
+          background: #F2F2F2;
+
+          &-info {
+            color: $textSecondaryColor;
+          }
+
+          &-title {
+            color: $textBlackColor;
+          }
+
+          &-price {
+            color: #1E554E;
+          }
+
+          .pricing-text {
+            color: $textDescriptionColor;
+          }
+        }
+
+        .pricing-plan__body {
+          background: #1E554E;
+
+          .pricing-plan__feature {
+            color: #E0E0E0;
+
+            &>i {
+              color: #039588;
+            }
+          }
+
+          button.btn-order.ui-button {
+            background-color: #fff;
+
+            &.ui-state-default.ui-button-info:hover {
+              background-color: #E2E2E2;
+            }
+
+            .ui-button-text {
+              color: #1E554E;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-howto {
+    padding: 120px 0;
+    background-color: #F2F2F2;
+
+    .section {
+
+      &-video {
+        margin-right: 55px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-radius: $borderRadius;
+        overflow: hidden;
+        position: relative;
+
+        .video-controls {
+
+          button {
+            padding: 54px 13px;
+            display: block;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #039588;
+            border: none;
+            -webkit-transition: $transitionDuration;
+            transition: $transitionDuration;
+
+            &:hover {
+              background-color: #1E554E;
+              cursor: pointer;
+            }
+
+            &:focus {
+              outline: none;
+            }
+
+            &.next-video {
+              border-bottom: 2px solid rgba($color: $textBlackColor, $alpha: 0.12);
+            }
+
+            &>i {
+              color: $textDescriptionColor;
+            }
+          }
+        }
+      }
+
+      &-title {
+        font-family: $fontHeading;
+        font-weight: bold;
+        font-size: 56px;
+        color: $textBlackColor;
+      }
+
+      &-description {
+        font-weight: 400;
+        font-size: 16px;
+        color: $textDescriptionColor;
+
+        &>p {
+          padding-top: 32px;
+
+          &+p {
+            padding-top: 22px;
+          }
+        }
+      }
+    }
+  }
+}
