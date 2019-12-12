@@ -30730,9 +30730,19 @@ li {
   list-style-type: none;
 }
 
+.landing-page {
+  overflow: hidden;
+}
+
 .landing-page .container {
   margin: 0 auto;
   max-width: 1170px;
+}
+
+@media all and (max-width: 1024px) {
+  .landing-page .container {
+    padding: 0 15px;
+  }
 }
 
 .landing-page .section-hero {
@@ -30745,9 +30755,28 @@ li {
   -ms-flex-align: center;
   align-items: center;
   background-color: #C6F1ED;
+  position: relative;
 }
 
-.landing-page .section-hero .page-title {
+@media all and (max-width: 767px) {
+  .landing-page .section-hero {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.landing-page .section-hero .section-content {
+  position: relative;
+  z-index: 3;
+}
+
+@media all and (max-width: 600px) {
+  .landing-page .section-hero .section-content {
+    text-align: center;
+  }
+}
+
+.landing-page .section-hero .section-content .page-title {
   margin-bottom: 32px;
   font-family: "Gotham Pro", sans-serif;
   font-weight: bold;
@@ -30757,14 +30786,42 @@ li {
   color: #252525;
 }
 
-.landing-page .section-hero .subtitle {
+@media all and (max-width: 767px) {
+  .landing-page .section-hero .section-content .page-title {
+    margin-bottom: 20px;
+    font-size: 70px;
+    line-height: 66px;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .landing-page .section-hero .section-content .page-title {
+    font-size: 50px;
+    line-height: 47px;
+  }
+}
+
+.landing-page .section-hero .section-content .subtitle {
   margin-bottom: 80px;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-size: 24px;
   color: #353535;
 }
 
-.landing-page .section-hero button.btn-signup.ui-button {
+@media all and (max-width: 767px) {
+  .landing-page .section-hero .section-content .subtitle {
+    margin-bottom: 50px;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .landing-page .section-hero .section-content .subtitle {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+}
+
+.landing-page .section-hero .section-content button.btn-signup.ui-button {
   padding: 8px 80px;
   color: #FFFFFF;
   text-align: center;
@@ -30778,15 +30835,15 @@ li {
   transition: 0.3s;
 }
 
-.landing-page .section-hero button.btn-signup.ui-button.ui-state-default.ui-button-info:hover {
+.landing-page .section-hero .section-content button.btn-signup.ui-button.ui-state-default.ui-button-info:hover {
   background-color: #00796b;
 }
 
-.landing-page .section-hero button.btn-signup.ui-button.ui-state-default.ui-button-info:focus {
+.landing-page .section-hero .section-content button.btn-signup.ui-button.ui-state-default.ui-button-info:focus {
   outline: none;
 }
 
-.landing-page .section-hero button.btn-signup.ui-button .ui-button-text {
+.landing-page .section-hero .section-content button.btn-signup.ui-button .ui-button-text {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-weight: bold;
   font-size: 14px;
@@ -30799,13 +30856,60 @@ li {
   margin-left: 30px;
 }
 
+@media all and (max-width: 600px) {
+  .landing-page .section-hero .bg-img {
+    display: none;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .landing-page .section-hero .bg-img > img {
+    max-width: 600px;
+  }
+}
+
+@media all and (max-width: 979px) {
+  .landing-page .section-hero .bg-img > img {
+    max-width: 500px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .landing-page .section-hero .bg-img > img {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    max-width: 300px;
+    z-index: 1;
+  }
+}
+
 .landing-page .section-features {
   padding-top: 160px;
   padding-bottom: 190px;
 }
 
+@media all and (max-width: 767px) {
+  .landing-page .section-features {
+    padding-top: 80px;
+    padding-bottom: 95px;
+  }
+}
+
 .landing-page .section-features .features-items {
   margin-right: 100px;
+}
+
+@media all and (max-width: 1024px) {
+  .landing-page .section-features .features-items {
+    margin-right: 50px;
+  }
+}
+
+@media all and (max-width: 979px) {
+  .landing-page .section-features .features-items {
+    margin-right: 30px;
+  }
 }
 
 .landing-page .section-features .features-items .features-item {
@@ -30830,6 +30934,25 @@ li {
   color: #F2F2F2;
 }
 
+@media all and (max-width: 979px) {
+  .landing-page .section-features .features-items .features-item {
+    padding: 16px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .landing-page .section-features .features-items .features-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
 .landing-page .section-features .features-items .features-item.active {
   background: #039588;
 }
@@ -30841,6 +30964,13 @@ li {
 .landing-page .section-features .features-items .features-item__img {
   margin-right: 32px;
   border-radius: 5px;
+}
+
+@media all and (max-width: 767px) {
+  .landing-page .section-features .features-items .features-item__img {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
 }
 
 .landing-page .section-features .features-items .features-item__img .feature-img {
@@ -30857,6 +30987,12 @@ li {
   color: #252525;
 }
 
+@media all and (max-width: 979px) {
+  .landing-page .section-features .features-items .features-item__title {
+    font-size: 24px;
+  }
+}
+
 .landing-page .section-features .features-items .features-item__text {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-weight: 400;
@@ -30865,6 +31001,12 @@ li {
   color: #353535;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media all and (max-width: 767px) {
+  .landing-page .section-features .section-info {
+    margin-top: 35px;
+  }
 }
 
 .landing-page .section-features .section-info__title {
@@ -30898,14 +31040,31 @@ li {
   position: relative;
 }
 
-.landing-page .section-about .section-title {
+@media all and (max-width: 1024px) {
+  .landing-page .section-about {
+    padding-top: 85px;
+  }
+}
+
+.landing-page .section-about .section-content {
+  position: relative;
+  z-index: 3;
+}
+
+.landing-page .section-about .section-content .section-title {
   font-family: "Gotham Pro", sans-serif;
   font-weight: bold;
   font-size: 56px;
   color: #252525;
 }
 
-.landing-page .section-about .section-description {
+@media all and (max-width: 767px) {
+  .landing-page .section-about .section-content .section-title {
+    font-size: 46px;
+  }
+}
+
+.landing-page .section-about .section-content .section-description {
   padding-bottom: 32px;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-weight: 400;
@@ -30914,25 +31073,48 @@ li {
   color: #757575;
 }
 
-.landing-page .section-about .section-description > p {
+.landing-page .section-about .section-content .section-description > p {
   padding-top: 32px;
 }
 
-.landing-page .section-about .section-description > p + p {
+.landing-page .section-about .section-content .section-description > p + p {
   padding-top: 22px;
 }
 
 .landing-page .section-about .section-img {
   margin-left: 30px;
   position: absolute;
-  top: 50%;
+  bottom: 120px;
   right: 0;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+}
+
+@media all and (max-width: 1024px) {
+  .landing-page .section-about .section-img {
+    max-width: 600px;
+    bottom: 0;
+  }
+}
+
+@media all and (max-width: 979px) {
+  .landing-page .section-about .section-img {
+    max-width: 550px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .landing-page .section-about .section-img {
+    max-width: 450px;
+  }
 }
 
 .landing-page .section-pricing {
   padding: 160px 0;
+}
+
+@media all and (max-width: 767px) {
+  .landing-page .section-pricing {
+    padding: 80px 0;
+  }
 }
 
 .landing-page .section-pricing .section-title {
@@ -30941,6 +31123,12 @@ li {
   font-size: 56px;
   text-align: center;
   color: #252525;
+}
+
+@media all and (max-width: 767px) {
+  .landing-page .section-pricing .section-title {
+    font-size: 45px;
+  }
 }
 
 .landing-page .section-pricing .pricing-plans {
@@ -30956,6 +31144,18 @@ li {
   justify-content: center;
 }
 
+@media all and (max-width: 767px) {
+  .landing-page .section-pricing .pricing-plans {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 .landing-page .section-pricing .pricing-plan {
   max-width: 312px;
   border-radius: 5px;
@@ -30964,6 +31164,13 @@ li {
 
 .landing-page .section-pricing .pricing-plan + .pricing-plan {
   margin-left: 30px;
+}
+
+@media all and (max-width: 767px) {
+  .landing-page .section-pricing .pricing-plan + .pricing-plan {
+    margin-left: 0;
+    margin-top: 30px;
+  }
 }
 
 .landing-page .section-pricing .pricing-plan__header {
@@ -31128,8 +31335,26 @@ li {
   background-color: #F2F2F2;
 }
 
+@media all and (max-width: 1024px) {
+  .landing-page .section-howto {
+    padding: 70px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .landing-page .section-howto {
+    padding: 60px;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .landing-page .section-howto {
+    padding: 50px 0;
+  }
+}
+
 .landing-page .section-howto .section-video {
-  margin-right: 55px;
+  margin-right: 69px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31141,8 +31366,36 @@ li {
   position: relative;
 }
 
+@media all and (max-width: 1024px) {
+  .landing-page .section-howto .section-video {
+    margin-right: 30px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .landing-page .section-howto .section-video {
+    margin-right: 0;
+  }
+}
+
+.landing-page .section-howto .section-video:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-image: url("../../img/landing/video-playBtn.png");
+  background-size: 100% 100%;
+  width: 80px;
+  height: 80px;
+  z-index: 999;
+}
+
 .landing-page .section-howto .section-video .video-controls button {
   padding: 54px 13px;
+  padding-right: 16px;
   display: block;
   text-align: center;
   vertical-align: middle;
@@ -31150,6 +31403,11 @@ li {
   border: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  /* @include _560 {
+              max-height: 117px;
+              padding: 18px 3px;
+              padding-right: 3px;
+            } */
 }
 
 .landing-page .section-howto .section-video .video-controls button:hover {
@@ -31169,11 +31427,31 @@ li {
   color: #353535;
 }
 
+.landing-page .section-howto .section-video video {
+  display: block;
+}
+
+.landing-page .section-howto .section-video video:hover {
+  cursor: pointer;
+}
+
 .landing-page .section-howto .section-title {
   font-family: "Gotham Pro", sans-serif;
   font-weight: bold;
   font-size: 56px;
   color: #252525;
+}
+
+@media all and (max-width: 767px) {
+  .landing-page .section-howto .section-title {
+    font-size: 40px;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .landing-page .section-howto .section-title {
+    font-size: 36px;
+  }
 }
 
 .landing-page .section-howto .section-description {
@@ -31188,5 +31466,11 @@ li {
 
 .landing-page .section-howto .section-description > p + p {
   padding-top: 22px;
+}
+
+@media all and (max-width: 767px) {
+  .landing-page .section-howto .section-content {
+    margin-top: 30px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

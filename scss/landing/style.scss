@@ -10,10 +10,15 @@
 
 // Custom styles
 .landing-page {
+  overflow: hidden;
 
   .container {
     margin: 0 auto;
     max-width: 1170px;
+
+    @include _1024 {
+      padding: 0 15px;
+    }
   }
 
   .section-hero {
@@ -26,61 +31,119 @@
     -ms-flex-align: center;
     align-items: center;
     background-color: #C6F1ED;
+    position: relative;
 
-    .page-title {
-      margin-bottom: 32px;
-      font-family: $fontHeading;
-      font-weight: bold;
-      font-size: 88px;
-      line-height: 84px;
-      text-transform: uppercase;
-      color: $textBlackColor;
+    @include _767 {
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
 
-    .subtitle {
-      margin-bottom: 80px;
-      font-family: $fontContent;
-      font-size: 24px;
-      color: $textDescriptionColor;
-    }
+    .section-content {
+      position: relative;
+      z-index: 3;
 
-    button.btn-signup.ui-button {
-      padding: 8px 80px;
-      color: $primaryTextColor;
-      text-align: center;
-      background: #1E554E;
-      -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
-        0px 0px 2px rgba(0, 0, 0, 0.14),
-        0px 1px 3px rgba(0, 0, 0, 0.2);
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
-        0px 0px 2px rgba(0, 0, 0, 0.14),
-        0px 1px 3px rgba(0, 0, 0, 0.2);
-      border: none;
-      border-radius: $borderRadius;
-      cursor: pointer;
-      -webkit-transition: $transitionDuration;
-      transition: $transitionDuration;
-
-      &.ui-state-default.ui-button-info:hover {
-        background-color: #00796b;
-      }
-
-      &.ui-state-default.ui-button-info:focus {
-        outline: none;
-      }
-
-      .ui-button-text {
-        font-family: $fontContent;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 140%;
+      @include _600 {
         text-align: center;
-        color: #FFFFFF;
+      }
+
+      .page-title {
+        margin-bottom: 32px;
+        font-family: $fontHeading;
+        font-weight: bold;
+        font-size: 88px;
+        line-height: 84px;
+        text-transform: uppercase;
+        color: $textBlackColor;
+
+        @include _767 {
+          margin-bottom: 20px;
+          font-size: 70px;
+          line-height: 66px;
+        }
+
+        @include _560 {
+          font-size: 50px;
+          line-height: 47px;
+        }
+      }
+
+      .subtitle {
+        margin-bottom: 80px;
+        font-family: $fontContent;
+        font-size: 24px;
+        color: $textDescriptionColor;
+
+        @include _767 {
+          margin-bottom: 50px;
+        }
+
+        @include _560 {
+          margin-bottom: 30px;
+          font-size: 18px;
+        }
+      }
+
+      button.btn-signup.ui-button {
+        padding: 8px 80px;
+        color: $primaryTextColor;
+        text-align: center;
+        background: #1E554E;
+        -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+          0px 0px 2px rgba(0, 0, 0, 0.14),
+          0px 1px 3px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+          0px 0px 2px rgba(0, 0, 0, 0.14),
+          0px 1px 3px rgba(0, 0, 0, 0.2);
+        border: none;
+        border-radius: $borderRadius;
+        cursor: pointer;
+        -webkit-transition: $transitionDuration;
+        transition: $transitionDuration;
+
+        &.ui-state-default.ui-button-info:hover {
+          background-color: #00796b;
+        }
+
+        &.ui-state-default.ui-button-info:focus {
+          outline: none;
+        }
+
+        .ui-button-text {
+          font-family: $fontContent;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 140%;
+          text-align: center;
+          color: #FFFFFF;
+        }
       }
     }
 
     .bg-img {
       margin-left: 30px;
+
+      @include _600 {
+        display: none;
+      }
+
+      &>img {
+
+        @include _1024 {
+          max-width: 600px;
+        }
+
+        @include _979 {
+          max-width: 500px;
+        }
+
+        @include _767 {
+          position: absolute;
+          bottom: 50px;
+          right: 0;
+          max-width: 300px;
+          z-index: 1;
+        }
+      }
     }
   }
 
@@ -88,8 +151,21 @@
     padding-top: 160px;
     padding-bottom: 190px;
 
+    @include _767 {
+      padding-top: 80px;
+      padding-bottom: 95px;
+    }
+
     .features-items {
       margin-right: 100px;
+
+      @include _1024 {
+        margin-right: 50px;
+      }
+
+      @include _979 {
+        margin-right: 30px;
+      }
 
       .features-item {
         padding: 32px;
@@ -112,6 +188,21 @@
           color: #F2F2F2;
         }
 
+        @include _979 {
+          padding: 16px;
+        }
+
+        @include _767 {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          text-align: center;
+        }
+
         &.active {
           background: #039588;
 
@@ -123,6 +214,11 @@
         &__img {
           margin-right: 32px;
           border-radius: $borderRadius;
+
+          @include _767 {
+            margin-right: 0;
+            margin-bottom: 16px;
+          }
 
           .feature-img {
             border-radius: $borderRadius;
@@ -138,6 +234,10 @@
           line-height: 100%;
           text-transform: uppercase;
           color: $textBlackColor;
+
+          @include _979 {
+            font-size: 24px;
+          }
         }
 
         // .features-item__text
@@ -156,6 +256,10 @@
     }
 
     .section-info {
+
+      @include _767 {
+        margin-top: 35px;
+      }
 
       &__title {
         font-family: $fontHeading;
@@ -189,26 +293,39 @@
     background: linear-gradient(105.74deg, #F2F2F2 0.43%, #BCEBE6 99.41%);
     position: relative;
 
-    .section-title {
-      font-family: $fontHeading;
-      font-weight: bold;
-      font-size: 56px;
-      color: $textBlackColor;
+    @include _1024 {
+      padding-top: 85px;
     }
 
-    .section-description {
-      padding-bottom: 32px;
-      font-family: $fontContent;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 140%;
-      color: $textSecondaryColor;
+    .section-content {
+      position: relative;
+      z-index: 3;
 
-      &>p {
-        padding-top: 32px;
+      .section-title {
+        font-family: $fontHeading;
+        font-weight: bold;
+        font-size: 56px;
+        color: $textBlackColor;
 
-        &+p {
-          padding-top: 22px;
+        @include _767 {
+          font-size: 46px;
+        }
+      }
+
+      .section-description {
+        padding-bottom: 32px;
+        font-family: $fontContent;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: $textSecondaryColor;
+
+        &>p {
+          padding-top: 32px;
+
+          &+p {
+            padding-top: 22px;
+          }
         }
       }
     }
@@ -216,15 +333,30 @@
     .section-img {
       margin-left: 30px;
       position: absolute;
-      top: 50%;
+      bottom: 120px;
       right: 0;
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
+
+      @include _1024 {
+        max-width: 600px;
+        bottom: 0;
+      }
+
+      @include _979 {
+        max-width: 550px;
+      }
+
+      @include _767 {
+        max-width: 450px;
+      }
     }
   }
 
   .section-pricing {
     padding: 160px 0;
+
+    @include _767 {
+      padding: 80px 0;
+    }
 
     .section-title {
       font-family: $fontHeading;
@@ -232,6 +364,10 @@
       font-size: 56px;
       text-align: center;
       color: $textBlackColor;
+
+      @include _767 {
+        font-size: 45px;
+      }
     }
 
     .pricing-plans {
@@ -245,6 +381,16 @@
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
+
+      @include _767 {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
     }
 
     .pricing-plan {
@@ -254,6 +400,11 @@
 
       &+.pricing-plan {
         margin-left: 30px;
+
+        @include _767 {
+          margin-left: 0;
+          margin-top: 30px;
+        }
       }
 
       &__header {
@@ -431,10 +582,22 @@
     padding: 120px 0;
     background-color: #F2F2F2;
 
+    @include _1024 {
+      padding: 70px;
+    }
+
+    @include _767 {
+      padding: 60px;
+    }
+
+    @include _560 {
+      padding: 50px 0;
+    }
+
     .section {
 
       &-video {
-        margin-right: 55px;
+        margin-right: 69px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -445,10 +608,34 @@
         overflow: hidden;
         position: relative;
 
+        @include _1024 {
+          margin-right: 30px;
+        }
+
+        @include _767 {
+          margin-right: 0;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          background-image: url('../../img/landing/video-playBtn.png');
+          background-size: 100% 100%;
+          width: 80px;
+          height: 80px;
+          z-index: 999;
+        }
+
         .video-controls {
 
           button {
             padding: 54px 13px;
+            padding-right: 16px;
             display: block;
             text-align: center;
             vertical-align: middle;
@@ -456,6 +643,12 @@
             border: none;
             -webkit-transition: $transitionDuration;
             transition: $transitionDuration;
+
+            /* @include _560 {
+              max-height: 117px;
+              padding: 18px 3px;
+              padding-right: 3px;
+            } */
 
             &:hover {
               background-color: #1E554E;
@@ -475,6 +668,18 @@
             }
           }
         }
+
+        video {
+          display: block;
+
+          @include _560 {
+            //min-width: 100%;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
       }
 
       &-title {
@@ -482,6 +687,14 @@
         font-weight: bold;
         font-size: 56px;
         color: $textBlackColor;
+
+        @include _767 {
+          font-size: 40px;
+        }
+
+        @include _560 {
+          font-size: 36px;
+        }
       }
 
       &-description {
@@ -496,6 +709,13 @@
             padding-top: 22px;
           }
         }
+      }
+    }
+
+    .section-content {
+
+      @include _767 {
+        margin-top: 30px;
       }
     }
   }
