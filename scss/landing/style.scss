@@ -151,6 +151,11 @@
     padding-top: 160px;
     padding-bottom: 190px;
 
+    @include _1024 {
+      padding-top: 120px;
+      padding-bottom: 135px;
+    }
+
     @include _767 {
       padding-top: 80px;
       padding-bottom: 95px;
@@ -165,6 +170,10 @@
 
       @include _979 {
         margin-right: 30px;
+      }
+
+      @include _767 {
+        margin-right: 0;
       }
 
       .features-item {
@@ -268,6 +277,10 @@
         line-height: 130%;
         vertical-align: top;
         color: $textBlackColor;
+
+        @include _767 {
+          text-align: center;
+        }
       }
 
       &__description {
@@ -295,6 +308,10 @@
 
     @include _1024 {
       padding-top: 85px;
+    }
+
+    @include _767 {
+      padding-top: 70px;
     }
 
     .section-content {
@@ -353,6 +370,10 @@
 
   .section-pricing {
     padding: 160px 0;
+
+    @include _1024 {
+      padding: 120px 0;
+    }
 
     @include _767 {
       padding: 80px 0;
@@ -688,12 +709,16 @@
         font-size: 56px;
         color: $textBlackColor;
 
-        @include _767 {
-          font-size: 40px;
+        @include _1024 {
+          font-size: 50px;
+        }
+
+        @include _979 {
+          font-size: 37px;
         }
 
         @include _560 {
-          font-size: 36px;
+          font-size: 40px;
         }
       }
 
