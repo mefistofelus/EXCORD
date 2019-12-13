@@ -31424,6 +31424,10 @@ li {
   z-index: 999;
 }
 
+.landing-page .section-howto .section-video:hover::before {
+  cursor: pointer;
+}
+
 .landing-page .section-howto .section-video .video-controls button {
   padding: 54px 13px;
   padding-right: 16px;
