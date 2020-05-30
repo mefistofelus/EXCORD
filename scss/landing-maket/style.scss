@@ -205,7 +205,7 @@
         top: 87px;
         right: -295px;
         background-image: url(../../img/landing-maket/phone.png);
-        z-index: -2;
+        z-index: 2;
 
         @include _767 {
           top: 10px;
@@ -256,6 +256,69 @@
           font-size: 32px;
           line-height: 35px;
         }
+
+        // TITLE ANIMATION START
+        & span {
+          position: relative;
+          overflow: hidden;
+          display: block;
+        }
+
+        & span::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background: white;
+          animation: a-ltr-after 2s cubic-bezier(.77, 0, .18, 1) forwards;
+          transform: translateY(-101%);
+        }
+
+        & span::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #F6FDFB;
+          animation: a-ltr-before 2s cubic-bezier(.77, 0, .18, 1) forwards;
+          transform: translateY(0);
+        }
+
+        & span:nth-of-type(1)::before,
+        & span:nth-of-type(1)::after {
+          animation-delay: 0.1s;
+        }
+
+        & span:nth-of-type(2)::before,
+        & span:nth-of-type(2)::after {
+          animation-delay: 0.5s;
+        }
+
+        @keyframes a-ltr-after {
+          0% {
+            transform: translateY(-100%)
+          }
+
+          100% {
+            transform: translateY(101%)
+          }
+        }
+
+        @keyframes a-ltr-before {
+          0% {
+            transform: translateY(0)
+          }
+
+          100% {
+            transform: translateY(200%)
+          }
+        }
+
+        // TITLE ANIMATION END
 
         &>span {
           display: block;
@@ -582,6 +645,70 @@
       @include _560 {
         top: -10px;
       }
+
+      // TITLE ANIMATION START
+      & span {
+        position: relative;
+        overflow: hidden;
+        display: block;
+      }
+
+      & span::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        animation: a-ltr-after 2s cubic-bezier(.77, 0, .18, 1) forwards;
+        transform: translateY(-101%);
+      }
+
+      & span::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #F6FDFB;
+        animation: a-ltr-before 2s cubic-bezier(.77, 0, .18, 1) forwards;
+        transform: translateY(0);
+      }
+
+      & span:nth-of-type(1)::before,
+      & span:nth-of-type(1)::after {
+        animation-delay: 0.1s;
+      }
+
+      & span:nth-of-type(2)::before,
+      & span:nth-of-type(2)::after {
+        animation-delay: 0.5s;
+      }
+
+      @keyframes a-ltr-after {
+        0% {
+          transform: translateY(-100%)
+        }
+
+        100% {
+          transform: translateY(101%)
+        }
+      }
+
+      @keyframes a-ltr-before {
+        0% {
+          transform: translateY(0)
+        }
+
+        100% {
+          transform: translateY(200%)
+        }
+      }
+
+      // TITLE ANIMATION END
+
 
       .line {
         display: block;
