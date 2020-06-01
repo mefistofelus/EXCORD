@@ -105,7 +105,11 @@
     &-lang {
       font-weight: bold;
 
-      @include _767 {
+      @include _979 {
+        order: 1;
+      }
+
+      @include _560 {
         display: none;
       }
 
@@ -206,6 +210,13 @@
         right: -295px;
         background-image: url(../../img/landing-maket/phone.png);
         z-index: 2;
+        opacity: 0;
+        animation: fade-in 2.5s cubic-bezier(.77, 0, .18, 1) forwards;
+        animation-delay: 1s;
+
+        @include _979 {
+          right: -330px;
+        }
 
         @include _767 {
           top: 10px;
@@ -225,12 +236,20 @@
       font-weight: normal;
       color: $textBlackColor;
 
-      .title {
+      .section-title {
         margin-bottom: 72px;
+
+        @include _767 {
+          margin-bottom: 40px;
+        }
+      }
+
+      .title {
         font-weight: bold;
-        // font-size: 132px;
         line-height: 126px;
         letter-spacing: 0.16em;
+        overflow: hidden;
+        position: relative;
         text-transform: uppercase;
         transition: all 0.35s ease-in;
 
@@ -247,7 +266,6 @@
         }
 
         @include _767 {
-          margin-bottom: 40px;
           font-size: 60px;
           line-height: 55px;
         }
@@ -257,7 +275,12 @@
           line-height: 35px;
         }
 
-        // TITLE ANIMATION START
+        @include _360 {
+          font-size: 27px;
+          line-height: 30px;
+        }
+
+        /* // TITLE ANIMATION START
         & span {
           position: relative;
           overflow: hidden;
@@ -271,7 +294,7 @@
           right: 0;
           width: 100%;
           height: 100%;
-          background: white;
+          background: rgb(129, 129, 129);
           animation: a-ltr-after 2s cubic-bezier(.77, 0, .18, 1) forwards;
           transform: translateY(-101%);
         }
@@ -283,7 +306,7 @@
           right: 0;
           width: 100%;
           height: 100%;
-          background-color: #F6FDFB;
+          background-color: transparent;
           animation: a-ltr-before 2s cubic-bezier(.77, 0, .18, 1) forwards;
           transform: translateY(0);
         }
@@ -300,7 +323,7 @@
 
         @keyframes a-ltr-after {
           0% {
-            transform: translateY(-100%)
+            transform: translateY(-10%)
           }
 
           100% {
@@ -318,19 +341,42 @@
           }
         }
 
-        // TITLE ANIMATION END
+        // TITLE ANIMATION END */
 
         &>span {
           display: block;
-          // transform: translateY(-100%);
-          overflow: hidden;
+          //transition: $transitionDuration;
         }
 
-        /* &:hover {
-            transform: translateY(0);
-          }
-        } */
+        .slide-up {
 
+          &.animated {
+            //transform: translateY(-100%);
+            animation: slide-up 2.5s cubic-bezier(.77, 0, .18, 1) forwards;
+          }
+
+          @keyframes slide-up {
+            0% {
+              opacity: 0.5;
+              transform: translateY(101%)
+            }
+
+            100% {
+              opacity: 1;
+              transform: translateY(0%)
+            }
+          }
+
+          @keyframes fade-in {
+            0% {
+              opacity: 0;
+            }
+
+            100% {
+              opacity: 1;
+            }
+          }
+        }
       }
     }
 
@@ -441,10 +487,12 @@
 
       @include _767 {
         margin-bottom: 55px;
+        margin-top: 30px;
       }
 
       @include _560 {
         margin-bottom: 40px;
+        margin-top: 15px;
       }
 
       &::before {
@@ -471,12 +519,29 @@
         object-fit: cover;
       }
 
+      .oh {
+        overflow: hidden;
+
+        &+.oh {
+          margin-top: 72px;
+
+          @include _767 {
+            margin-top: 40px;
+          }
+        }
+      }
+
       .descr-text {
         font-family: Roboto Medium;
         font-weight: 500;
         font-size: 106px;
         line-height: 110px;
         color: #252525;
+        position: relative;
+
+        &.animated {
+          animation: slide-up 2.5s cubic-bezier(.77, 0, .18, 1) forwards;
+        }
 
         @include _1170 {
           line-height: 82px;
@@ -501,36 +566,37 @@
 
         &+.descr-text {
           margin-top: 72px;
-
-          @include _767 {
-            margin-top: 40px;
-          }
-        }
-
-        &:last-child::before {
-          content: "";
-          display: block;
-          position: absolute;
-          top: 74%;
-          left: -18%;
-          width: 210px;
-          height: 512px;
-          background-image: url(../../img/landing-maket/section-arrow.png);
-          background-repeat: no-repeat;
-          object-fit: cover;
-
-          @include _1170 {
-            display: none;
-          }
         }
       }
     }
 
     .btns-block {
       margin-left: 30px;
+      position: relative;
+
+      @include _979 {
+        margin: 0 auto;
+      }
 
       @include _560 {
-        margin-left: 0;
+        margin-left: auto;
+        text-align: center;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -390px;
+        left: -65%;
+        width: 210px;
+        height: 512px;
+        background-image: url(../../img/landing-maket/section-arrow.png);
+        background-repeat: no-repeat;
+
+        @include _1170 {
+          display: none;
+        }
       }
 
       /* .section-arrow {
@@ -558,14 +624,15 @@
         }
 
         @include _560 {
+          width: 100%;
           padding: 8px 30px;
           font-size: 14px;
         }
 
-        @include _360 {
-          padding: 8px 24px;
-          font-size: 14px;
-        }
+        // @include _360 {
+        //   padding: 8px 24px;
+        //   font-size: 14px;
+        // }
 
         &+.btn {
           margin-left: 40px;
@@ -575,7 +642,8 @@
           }
 
           @include _560 {
-            margin-left: 10px;
+            margin-left: 0;
+            margin-top: 15px;
           }
         }
       }
@@ -643,75 +711,12 @@
       }
 
       @include _560 {
-        top: -10px;
+        top: -13px;
       }
-
-      // TITLE ANIMATION START
-      & span {
-        position: relative;
-        overflow: hidden;
-        display: block;
-      }
-
-      & span::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background: white;
-        animation: a-ltr-after 2s cubic-bezier(.77, 0, .18, 1) forwards;
-        transform: translateY(-101%);
-      }
-
-      & span::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #F6FDFB;
-        animation: a-ltr-before 2s cubic-bezier(.77, 0, .18, 1) forwards;
-        transform: translateY(0);
-      }
-
-      & span:nth-of-type(1)::before,
-      & span:nth-of-type(1)::after {
-        animation-delay: 0.1s;
-      }
-
-      & span:nth-of-type(2)::before,
-      & span:nth-of-type(2)::after {
-        animation-delay: 0.5s;
-      }
-
-      @keyframes a-ltr-after {
-        0% {
-          transform: translateY(-100%)
-        }
-
-        100% {
-          transform: translateY(101%)
-        }
-      }
-
-      @keyframes a-ltr-before {
-        0% {
-          transform: translateY(0)
-        }
-
-        100% {
-          transform: translateY(200%)
-        }
-      }
-
-      // TITLE ANIMATION END
-
 
       .line {
         display: block;
+        overflow: hidden;
       }
 
       .line-first {
@@ -742,13 +747,20 @@
 
         @include _560 {
           font-size: 17px;
-          line-height: 7px;
+          line-height: 14px;
         }
       }
 
       .line-second {
         margin-top: -25px;
         font-size: 107px;
+        color: transparent;
+        transition: .5s;
+        -webkit-text-stroke: 1px $textBlackColor;
+
+        &:hover {
+          color: $textBlackColor;
+        }
 
         @include _1170 {
           font-size: 66px;
@@ -923,6 +935,10 @@
       background-size: cover;
     } */
 
+    .oh {
+      overflow: hidden;
+    }
+
     .section-title {
       margin-bottom: 40px;
       font-family: $fontHeading;
@@ -931,6 +947,20 @@
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: $textBlackColor;
+
+      &.animated {
+        animation: long-slide-up 2.5s cubic-bezier(.77, 0, .18, 1) forwards;
+
+        @keyframes long-slide-up {
+          0% {
+            transform: translateY(200%);
+          }
+
+          100% {
+            transform: translateY(0%);
+          }
+        }
+      }
 
       @include _1024 {
         font-size: 58px;
@@ -955,11 +985,42 @@
         margin-bottom: 15px;
         line-height: 24px;
       }
+
+      @include _360 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        line-height: 19px;
+      }
     }
 
     .icons-block {
       .soc-icon {
+        display: inline-block;
         text-decoration: none;
+        overflow: hidden;
+
+        .animated {
+          animation: slide-right 2.5s cubic-bezier(.77, 0, .18, 1) forwards;
+
+          @keyframes slide-right {
+            0% {
+              opacity: 0;
+              transform: translateX(-100%);
+            }
+
+            100% {
+              opacity: 1;
+              transform: translateX(0%);
+            }
+          }
+
+          @for $i from 1 through 3 {
+            &.icon-#{$i} {
+              opacity: 0;
+              animation-delay: .5s * $i;
+            }
+          }
+        }
 
         &+.soc-icon {
           margin-left: 90px;
@@ -1010,7 +1071,12 @@
         }
 
         @include _560 {
+          font-size: 12px;
           order: 1;
+        }
+
+        @include _360 {
+          font-size: 9px;
         }
       }
 
