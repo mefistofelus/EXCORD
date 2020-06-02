@@ -472,6 +472,11 @@
   }
 
   .section-text {
+    margin: 0 auto;
+    max-width: 1920px;
+    background-image: url(../../img/landing-maket/section-arrow.png);
+    background-position: left 90%;
+    background-repeat: no-repeat;
 
     .section-content {
       margin-bottom: 120px;
@@ -583,21 +588,21 @@
         text-align: center;
       }
 
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: -390px;
-        left: -65%;
-        width: 210px;
-        height: 512px;
-        background-image: url(../../img/landing-maket/section-arrow.png);
-        background-repeat: no-repeat;
+      // &::before {
+      //   content: "";
+      //   display: block;
+      //   position: absolute;
+      //   top: -390px;
+      //   left: -65%;
+      //   width: 210px;
+      //   height: 512px;
+      //   background-image: url(../../img/landing-maket/section-arrow.png);
+      //   background-repeat: no-repeat;
 
-        @include _1170 {
-          display: none;
-        }
-      }
+      //   @include _1170 {
+      //     display: none;
+      //   }
+      // }
 
       /* .section-arrow {
         position: relative;

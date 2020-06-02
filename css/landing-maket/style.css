@@ -1386,6 +1386,14 @@ li {
   width: 100%;
 }
 
+.landing .section-text {
+  margin: 0 auto;
+  max-width: 1920px;
+  background-image: url(../../img/landing-maket/section-arrow.png);
+  background-position: left 90%;
+  background-repeat: no-repeat;
+}
+
 .landing .section-text .section-content {
   margin-bottom: 120px;
   position: relative;
@@ -1534,24 +1542,6 @@ li {
   .landing .section-text .btns-block {
     margin-left: auto;
     text-align: center;
-  }
-}
-
-.landing .section-text .btns-block::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -390px;
-  left: -65%;
-  width: 210px;
-  height: 512px;
-  background-image: url(../../img/landing-maket/section-arrow.png);
-  background-repeat: no-repeat;
-}
-
-@media all and (max-width: 1170px) {
-  .landing .section-text .btns-block::before {
-    display: none;
   }
 }
 
