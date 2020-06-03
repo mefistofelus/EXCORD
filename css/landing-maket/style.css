@@ -1392,6 +1392,12 @@ li {
   max-width: 1920px;
 }
 
+@media all and (max-width: 767px) {
+  .landing .section-text {
+    padding-bottom: 0;
+  }
+}
+
 .landing .section-text .section-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1559,6 +1565,12 @@ li {
 @media all and (max-width: 979px) {
   .landing .section-text .btns-block {
     margin: 0 auto 50px;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .landing .section-text .btns-block {
+    margin-bottom: 0;
   }
 }
 

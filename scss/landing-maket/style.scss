@@ -479,6 +479,10 @@
     // background-position: left 90%;
     // background-repeat: no-repeat;
 
+    @include _767 {
+      padding-bottom: 0;
+    }
+
     .section-wrapper {
       display: flex;
       align-items: flex-end;
@@ -600,6 +604,10 @@
 
       @include _979 {
         margin: 0 auto 50px;
+      }
+
+      @include _560 {
+        margin-bottom: 0;
       }
 
       @include _560 {
