@@ -209,7 +209,7 @@
         top: 87px;
         right: -295px;
         background-image: url(../../img/landing-maket/phone.png);
-        z-index: 2;
+        z-index: -2;
         opacity: 0;
         animation: fade-in 2.5s cubic-bezier(.77, 0, .18, 1) forwards;
         animation-delay: 1s;
@@ -473,10 +473,28 @@
 
   .section-text {
     margin: 0 auto;
+    padding-bottom: 80px;
     max-width: 1920px;
-    background-image: url(../../img/landing-maket/section-arrow.png);
-    background-position: left 90%;
-    background-repeat: no-repeat;
+    // background-image: url(../../img/landing-maket/section-arrow.png);
+    // background-position: left 90%;
+    // background-repeat: no-repeat;
+
+    .section-wrapper {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .section-image {
+      margin-right: 40px;
+
+      @include _979 {
+        margin-right: 20px;
+      }
+
+      @include _767 {
+        display: none;
+      }
+    }
 
     .section-content {
       margin-bottom: 120px;
@@ -577,10 +595,11 @@
 
     .btns-block {
       margin-left: 30px;
+      margin-bottom: 50px;
       position: relative;
 
       @include _979 {
-        margin: 0 auto;
+        margin: 0 auto 50px;
       }
 
       @include _560 {

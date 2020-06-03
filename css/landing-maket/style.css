@@ -773,7 +773,7 @@ body {
   padding: 0;
   margin: 0;
   position: relative;
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   color: #424242;
   -webkit-font-smoothing: antialiased;
@@ -1054,7 +1054,7 @@ li {
   top: 87px;
   right: -295px;
   background-image: url(../../img/landing-maket/phone.png);
-  z-index: 2;
+  z-index: -2;
   opacity: 0;
   -webkit-animation: fade-in 2.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
           animation: fade-in 2.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
@@ -1388,10 +1388,33 @@ li {
 
 .landing .section-text {
   margin: 0 auto;
+  padding-bottom: 80px;
   max-width: 1920px;
-  background-image: url(../../img/landing-maket/section-arrow.png);
-  background-position: left 90%;
-  background-repeat: no-repeat;
+}
+
+.landing .section-text .section-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.landing .section-text .section-image {
+  margin-right: 40px;
+}
+
+@media all and (max-width: 979px) {
+  .landing .section-text .section-image {
+    margin-right: 20px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .landing .section-text .section-image {
+    display: none;
+  }
 }
 
 .landing .section-text .section-content {
@@ -1524,6 +1547,7 @@ li {
 
 .landing .section-text .btns-block {
   margin-left: 30px;
+  margin-bottom: 50px;
   position: relative;
   /* .section-arrow {
         position: relative;
@@ -1534,7 +1558,7 @@ li {
 
 @media all and (max-width: 979px) {
   .landing .section-text .btns-block {
-    margin: 0 auto;
+    margin: 0 auto 50px;
   }
 }
 
