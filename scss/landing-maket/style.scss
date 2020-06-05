@@ -749,6 +749,46 @@
       .line {
         display: block;
         overflow: hidden;
+
+        &.animated-up {
+          transition: $transitionDuration;
+          animation: skewedUp 1.5s cubic-bezier(.77, 0, .18, 1) forwards;
+
+          @keyframes skewedUp {
+            0% {
+              transform: skew(0);
+            }
+
+            50% {
+              transform: skew(-5deg, -2deg);
+            }
+
+            100% {
+              transform: skew(0);
+              transform: none;
+            }
+          }
+        }
+
+        &.animated-down {
+          transition: $transitionDuration;
+          animation: skewedDown 1.5s cubic-bezier(.77, 0, .18, 1) forwards;
+
+          @keyframes skewedDown {
+            0% {
+              transform: skew(0);
+            }
+
+            50% {
+              transform: skew(5deg, 2deg);
+            }
+
+            100% {
+              transform: skew(0);
+              transform: none;
+            }
+          }
+        }
       }
 
       .line-first {

@@ -773,7 +773,7 @@ body {
   padding: 0;
   margin: 0;
   position: relative;
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   color: #424242;
   -webkit-font-smoothing: antialiased;
@@ -1708,6 +1708,88 @@ li {
 .landing .section-features .section-title .line {
   display: block;
   overflow: hidden;
+}
+
+.landing .section-features .section-title .line.animated-up {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: skewedUp 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: skewedUp 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+@-webkit-keyframes skewedUp {
+  0% {
+    -webkit-transform: skew(0);
+            transform: skew(0);
+  }
+  50% {
+    -webkit-transform: skew(-5deg, -2deg);
+            transform: skew(-5deg, -2deg);
+  }
+  100% {
+    -webkit-transform: skew(0);
+            transform: skew(0);
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes skewedUp {
+  0% {
+    -webkit-transform: skew(0);
+            transform: skew(0);
+  }
+  50% {
+    -webkit-transform: skew(-5deg, -2deg);
+            transform: skew(-5deg, -2deg);
+  }
+  100% {
+    -webkit-transform: skew(0);
+            transform: skew(0);
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.landing .section-features .section-title .line.animated-down {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: skewedDown 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: skewedDown 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+@-webkit-keyframes skewedDown {
+  0% {
+    -webkit-transform: skew(0);
+            transform: skew(0);
+  }
+  50% {
+    -webkit-transform: skew(5deg, 2deg);
+            transform: skew(5deg, 2deg);
+  }
+  100% {
+    -webkit-transform: skew(0);
+            transform: skew(0);
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes skewedDown {
+  0% {
+    -webkit-transform: skew(0);
+            transform: skew(0);
+  }
+  50% {
+    -webkit-transform: skew(5deg, 2deg);
+            transform: skew(5deg, 2deg);
+  }
+  100% {
+    -webkit-transform: skew(0);
+            transform: skew(0);
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 .landing .section-features .section-title .line-first {

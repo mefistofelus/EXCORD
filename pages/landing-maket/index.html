@@ -148,8 +148,13 @@
 
         <section class="section section-features">
           <div class="section-title">
-            <span class="line line-first">преимущества</span>
-            <span class="line line-second">нашего сервиса</span>
+            <!-- Классы "animated-up" и "animated-down", отвечающие за анимацию, необходимо динамически добавлять и удалять
+            при скролле вверх и вниз соответственно, с интервалом "1.5s".
+          Например: при скролле вверх,довбавляется класс "animated-up" и удаляеться через 1,5 секунды (указанное в
+          стилях время анимации), при скролле вниз довбавляется класс "animated-down" и удаляеться через 1,5 секунды
+          (указанное в стилях время анимации) -->
+            <span class="line line-first animated-down">преимущества</span>
+            <span class="line line-second animated-down">нашего сервиса</span>
           </div>
           <!-- /.section-title -->
 
