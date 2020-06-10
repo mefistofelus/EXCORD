@@ -12,9 +12,9 @@
 // Custom styles
 .login {
   max-width: 845px;
-  height: 685px;
+  // height: 685px;
   margin: 115px auto;
-  padding: 22px 0 60px;
+  padding: 22px 0;
   background: #FFFFFF;
   border: 3px solid #0F71D4;
   box-sizing: border-box;
@@ -113,6 +113,92 @@
           background-color: #125290;
         }
       }
+    }
+
+    .form-text {
+      font-family: $fontHeading;
+      font-size: 10px;
+      line-height: 10px;
+      color: $accentTextColor;
+
+      .register-link {
+        text-decoration: none;
+      }
+
+      .divider {
+        margin: 10px auto;
+        position: relative;
+
+        span {
+          display: inline-block;
+          position: relative;
+          padding: 0 17px;
+          background-color: $bodyBgColor;
+          z-index: 3;
+        }
+
+        &::before {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          background-color: #909090;
+        }
+
+        &::after {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 100%;
+          width: 55px;
+          background-color: $bodyBgColor;
+        }
+      }
+
+      .btns-block {
+
+        &__buttons {
+          margin: 15px auto;
+
+        }
+
+        &__btn {
+          text-decoration: none;
+        }
+
+        &__btn+.btns-block__btn {
+          margin-left: 20px;
+
+          @include _560 {
+            margin-left: 10px;
+          }
+        }
+
+
+        &__info {
+          max-width: 265px;
+          margin: 0 auto;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 144.69%;
+          letter-spacing: 0.03em;
+          color: #909090;
+        }
+      }
+    }
+  }
+
+  .login-img {
+    text-align: center;
+
+    @include _560 {
+      display: none;
     }
   }
 }

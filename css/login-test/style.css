@@ -2110,7 +2110,7 @@ body {
   padding: 0;
   margin: 0;
   position: relative;
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   color: #424242;
   -webkit-font-smoothing: antialiased;
@@ -2157,9 +2157,8 @@ li {
 
 .login {
   max-width: 845px;
-  height: 685px;
   margin: 115px auto;
-  padding: 22px 0 60px;
+  padding: 22px 0;
   background: #FFFFFF;
   border: 3px solid #0F71D4;
   -webkit-box-sizing: border-box;
@@ -2267,5 +2266,91 @@ li {
 
 .login-content .login-form .btn:hover {
   background-color: #125290;
+}
+
+.login-content .form-text {
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 10px;
+  line-height: 10px;
+  color: #000000;
+}
+
+.login-content .form-text .register-link {
+  text-decoration: none;
+}
+
+.login-content .form-text .divider {
+  margin: 10px auto;
+  position: relative;
+}
+
+.login-content .form-text .divider span {
+  display: inline-block;
+  position: relative;
+  padding: 0 17px;
+  background-color: #FFFFFF;
+  z-index: 3;
+}
+
+.login-content .form-text .divider::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #909090;
+}
+
+.login-content .form-text .divider::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 100%;
+  width: 55px;
+  background-color: #FFFFFF;
+}
+
+.login-content .form-text .btns-block__buttons {
+  margin: 15px auto;
+}
+
+.login-content .form-text .btns-block__btn {
+  text-decoration: none;
+}
+
+.login-content .form-text .btns-block__btn + .btns-block__btn {
+  margin-left: 20px;
+}
+
+@media all and (max-width: 560px) {
+  .login-content .form-text .btns-block__btn + .btns-block__btn {
+    margin-left: 10px;
+  }
+}
+
+.login-content .form-text .btns-block__info {
+  max-width: 265px;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 144.69%;
+  letter-spacing: 0.03em;
+  color: #909090;
+}
+
+.login .login-img {
+  text-align: center;
+}
+
+@media all and (max-width: 560px) {
+  .login .login-img {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
