@@ -4,14 +4,16 @@
 @import "../mixins";
 @import "../primeflex";
 @import "../forms";
-//@import "../primeicons";
-//@import "../icons";
+@import "../primeicons";
+// @import "../icons";
 //@import "../utils";
 @import "../default";
 
 // Custom styles
 .login {
   max-width: 845px;
+  height: 685px;
+  margin: 115px auto;
   padding: 22px 0 60px;
   background: #FFFFFF;
   border: 3px solid #0F71D4;
@@ -19,4 +21,98 @@
   box-shadow: 0px 0px 100px rgba(15, 113, 212, 0.5);
   border-radius: 15px;
   overflow: hidden;
+
+  &-content {
+    padding: 22px 25px;
+    text-align: center;
+
+    .logo {
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
+
+    .login-form {
+      margin-bottom: 45px;
+
+      .form-title {
+        margin-bottom: 33px;
+        font-family: $fontHeading;
+        font-weight: bold;
+        font-size: 25px;
+        color: $accentTextColor;
+      }
+
+      .md-inputfield i {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        z-index: 999;
+        opacity: 0;
+      }
+
+      .ui-inputtext {
+        margin-bottom: 33px;
+        padding: 13px;
+        width: 100%;
+        text-align: center;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        border: 1px solid transparent;
+        border-radius: 10px;
+        transition: $transitionDuration;
+
+        &:hover {
+          border: 1px solid #000000;
+        }
+
+        &:focus {
+          border: 1px solid #126FD7;
+          caret-color: #126FD7;
+        }
+      }
+
+      .ui-inputtext~label {
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: $transitionDuration;
+      }
+
+      .ui-inputtext:hover~label {
+        color: #1C1C1C;
+      }
+
+      .ui-inputtext:focus~label {
+        top: -17%;
+        color: #126FD7;
+      }
+
+      .ui-inputtext:focus~i {
+        opacity: 1;
+      }
+
+      .btn {
+        display: inline-block;
+        border: none;
+        color: #fff;
+        text-decoration: none;
+        padding: 16px 85px;
+        font-family: $fontHeading;
+        font-weight: normal;
+        font-size: 15px;
+        text-align: center;
+        outline: none;
+        background-color: #1975D0;
+        box-shadow: 0px 0px 4px rgba(25, 117, 208, 0.5);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: $transitionDuration;
+
+        &:hover {
+          // background-color: darken(#1975D0, 14%);
+          background-color: #125290;
+        }
+      }
+    }
+  }
 }
