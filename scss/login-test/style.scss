@@ -175,7 +175,7 @@
         &__btn+.btns-block__btn {
           margin-left: 20px;
 
-          @include _560 {
+          @include _767 {
             margin-left: 10px;
           }
         }
@@ -199,6 +199,10 @@
 
     @include _560 {
       display: none;
+    }
+
+    &>img {
+      max-width: 100%;
     }
   }
 }

@@ -2328,7 +2328,7 @@ li {
   margin-left: 20px;
 }
 
-@media all and (max-width: 560px) {
+@media all and (max-width: 767px) {
   .login-content .form-text .btns-block__btn + .btns-block__btn {
     margin-left: 10px;
   }
@@ -2352,5 +2352,9 @@ li {
   .login .login-img {
     display: none;
   }
+}
+
+.login .login-img > img {
+  max-width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
